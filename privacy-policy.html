@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Privacy Policy | Smart Freelance Solutions</title>
+  <meta name="description" content="Privacy Policy for Smart Freelance Solutions, Kenya. Learn how we collect, use, and protect your personal data in compliance with Kenyan law.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f7fc;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.55;
+      color: #1a2c3e;
+      padding: 2rem 1rem;
+    }
+
+    .privacy-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    /* header section with company branding */
+    .policy-header {
+      background: linear-gradient(135deg, #0b3b3f 0%, #1b5e5f 100%);
+      padding: 2rem 2rem 1.8rem 2rem;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .policy-header h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+
+    .company-badge {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .company-name {
+      font-size: 1.2rem;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.15);
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 60px;
+      backdrop-filter: blur(2px);
+    }
+
+    .geo-tag {
+      font-size: 0.9rem;
+      background: #f4c542;
+      color: #1e2f3a;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      font-weight: 500;
+    }
+
+    .effective-date {
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      opacity: 0.85;
+      border-top: 1px dashed rgba(255,255,255,0.3);
+      padding-top: 1rem;
+      display: inline-block;
+    }
+
+    /* main content */
+    .policy-content {
+      padding: 2rem 2rem 2.5rem 2rem;
+    }
+
+    .policy-content h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #0f4c4f;
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      border-left: 5px solid #f4b942;
+      padding-left: 1rem;
+    }
+
+    .policy-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .policy-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2c5a5c;
+      margin: 1.2rem 0 0.5rem 0;
+    }
+
+    .policy-content p {
+      margin-bottom: 1rem;
+      color: #2d3e4b;
+    }
+
+    .policy-content a {
+      color: #1f7a7c;
+      text-decoration: none;
+      border-bottom: 1px solid #cbdbe0;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .policy-content a:hover {
+      color: #0e4b4d;
+      border-bottom-color: #0e4b4d;
+    }
+
+    .policy-content ul, .policy-content ol {
+      margin: 0.8rem 0 1.2rem 1.8rem;
+    }
+
+    .policy-content li {
+      margin: 0.4rem 0;
+    }
+
+    .highlight-box {
+      background: #eef4f2;
+      border-left: 4px solid #f4b942;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 18px;
+      font-size: 0.95rem;
+    }
+
+    .contact-info {
+      background: #f9f2e3;
+      padding: 1rem 1.5rem;
+      border-radius: 20px;
+      margin: 1.8rem 0 0.5rem 0;
+      border: 1px solid #ffe1b3;
+    }
+
+    .footer-note {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #6b7f8c;
+      border-top: 1px solid #e2edf2;
+      padding-top: 1.8rem;
+    }
+
+    .download-area {
+      background: #f9fafc;
+      padding: 1rem 2rem 1.5rem 2rem;
+      text-align: right;
+      border-top: 1px solid #e6edf2;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1b5e5f;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.8rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-download:hover {
+      background: #0f4748;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: 650px) {
+      .policy-header h1 {
+        font-size: 1.7rem;
+      }
+      .policy-content {
+        padding: 1.5rem;
+      }
+      .policy-content h2 {
+        font-size: 1.4rem;
+      }
+      .company-badge {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .download-area {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="privacy-container" id="privacyPolicyContainer">
+  <div class="policy-header">
+    <h1>Privacy Policy</h1>
+    <div class="company-badge">
+      <span class="company-name">Smart Freelance Solutions</span>
+      <span class="geo-tag">📍 Kenya — Compliant with Kenyan Data Protection Act</span>
+    </div>
+    <div class="effective-date">
+      Effective Date: 8 April 2026 | Last Updated: 8 April 2026
+    </div>
+  </div>
+
+  <div class="policy-content">
+    <p><strong>Smart Freelance Solutions</strong> ("we," "our," "us," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you visit our website <a href="https://aimoran.com/" target="_blank" rel="noopener noreferrer">https://aimoran.com/</a> (the "Site") or engage with our freelance, talent, and business solutions services in Kenya. This policy is designed to meet the requirements of the <strong>Kenyan Data Protection Act, 2019</strong> and reflects our dedication to transparency.</p>
+
+    <div class="highlight-box">
+      <strong>🔐 Your privacy matters.</strong> By using our website or services, you agree to the collection and use of information in accordance with this policy. If you do not agree, please discontinue use of the Site.
+    </div>
+
+    <h2>1. Information We Collect</h2>
+    <p>We collect personal data that you voluntarily provide to us when you register, express interest, fill out forms, request services, or communicate with us via the website or email. This may include:</p>
+    <ul>
+      <li><strong>Identity Data:</strong> Full name, username, professional title, or similar identifiers.</li>
+      <li><strong>Contact Data:</strong> Email address, phone number, postal address (Kenya or international).</li>
+      <li><strong>Freelance / Business Profile Data:</strong> Skills, portfolio links, payment details (processed securely via third-party gateways), tax identification numbers (KRA PIN where applicable).</li>
+      <li><strong>Technical Data:</strong> IP address, browser type and version, time zone setting, operating system, and other technology on the devices you use to access aimoran.com.</li>
+      <li><strong>Usage Data:</strong> Information about how you use our website, services, and interactions with our freelance marketplace features.</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <p>Smart Freelance Solutions uses your personal data for the following purposes, grounded in legitimate business interests and contractual necessity:</p>
+    <ul>
+      <li>To provide, operate, and maintain our freelance platform and associated services.</li>
+      <li>To process transactions, manage invoices, and facilitate secure payments between clients and freelancers.</li>
+      <li>To improve, personalize, and expand our website experience (<a href="https://aimoran.com/" target="_blank">aimoran.com</a>).</li>
+      <li>To communicate with you — including service updates, security notices, and support messages.</li>
+      <li>To comply with legal obligations under Kenyan law, including tax reporting, anti-fraud measures, and dispute resolution.</li>
+      <li>To send you marketing communications only where you have given consent or as permitted by the Kenyan Data Protection Act.</li>
+    </ul>
+
+    <h2>3. Legal Basis for Processing (Kenya Data Protection Act)</h2>
+    <p>In compliance with Kenya’s Data Protection Act, 2019, we process your personal information based on one or more of the following legal grounds:</p>
+    <ul>
+      <li><strong>Consent:</strong> Where you have given clear consent for us to process your personal data for a specific purpose.</li>
+      <li><strong>Contractual necessity:</strong> Where processing is necessary for the performance of a contract with you (e.g., freelance service agreements).</li>
+      <li><strong>Legal obligation:</strong> Where we need to comply with a legal or regulatory obligation (e.g., tax laws).</li>
+      <li><strong>Legitimate interests:</strong> Where it is necessary for our legitimate business interests, provided your fundamental rights do not override those interests.</li>
+    </ul>
+
+    <h2>4. Sharing & Disclosure of Information</h2>
+    <p>We do not sell, rent, or trade your personal data. However, we may share your information with:</p>
+    <ul>
+      <li><strong>Service providers & partners:</strong> Payment processors (e.g., PayPal, M-Pesa, Stripe), cloud hosting providers, and analytics tools that assist our operations — all contractually bound to keep data confidential.</li>
+      <li><strong>Freelancers & Clients:</strong> If you are a client hiring through Smart Freelance Solutions, relevant profile details (name, skills, ratings) may be visible to matched freelancers and vice versa.</li>
+      <li><strong>Legal authorities:</strong> When required by law, court order, or to protect the rights, property, or safety of Smart Freelance Solutions, our users, or the public, in compliance with Kenyan legislation.</li>
+    </ul>
+
+    <h2>5. International Data Transfers</h2>
+    <p>Since Smart Freelance Solutions operates within Kenya but may use third-party tools located outside Kenya (such as cloud servers), your data may be transferred to and processed in countries with different data protection laws. Where such transfers occur, we ensure appropriate safeguards (e.g., standard contractual clauses) and that the recipient provides an adequate level of protection consistent with Kenyan data protection standards.</p>
+
+    <h2>6. Data Retention</h2>
+    <p>We retain your personal data only as long as necessary to fulfill the purposes described in this Privacy Policy, unless a longer retention period is required or permitted by Kenyan law (e.g., tax, accounting, or legal compliance). In general:</p>
+    <ul>
+      <li>Account information: retained while your account is active and for up to 3 years after closure for legitimate business purposes.</li>
+      <li>Transaction records: retained for 7 years in line with Kenyan financial regulations.</li>
+      <li>Marketing data: until you withdraw consent or unsubscribe.</li>
+    </ul>
+
+    <h2>7. Your Data Protection Rights (Under Kenyan Law)</h2>
+    <p>Under the Kenyan Data Protection Act, 2019, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right to access:</strong> Request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+      <li><strong>Right to erasure ("right to be forgotten"):</strong> Request deletion of your personal data where no legal obligation requires retention.</li>
+      <li><strong>Right to restriction of processing:</strong> Request that we limit how we use your data in certain circumstances.</li>
+      <li><strong>Right to data portability:</strong> Receive your data in a structured, commonly used, machine-readable format.</li>
+      <li><strong>Right to object:</strong> Object to processing based on legitimate interests or direct marketing.</li>
+      <li><strong>Right to withdraw consent:</strong> Withdraw previously given consent at any time without affecting lawfulness of prior processing.</li>
+    </ul>
+    <p>To exercise these rights, please contact us using the details in Section 10. We will respond within 30 days as required by Kenyan law.</p>
+
+    <h2>8. Cookies & Tracking Technologies</h2>
+    <p>Our website <a href="https://aimoran.com/">aimoran.com</a> uses cookies and similar tracking technologies to enhance user experience, analyze traffic, and personalize content. You can control cookies through your browser settings. Essential cookies are necessary for platform operation; non-essential cookies require your consent via our cookie banner. For detailed cookie information, please see our Cookie Preferences tool on the website.</p>
+
+    <h2>9. Data Security</h2>
+    <p>We implement appropriate technical and organizational measures to protect your personal data against accidental loss, unauthorized access, alteration, or disclosure. These include encryption (SSL/TLS), restricted access controls, internal audits, and staff training. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security. In the event of a data breach likely to result in a risk to your rights, we will notify you and the Office of the Data Protection Commissioner (ODPC) within 72 hours as required by Kenyan law.</p>
+
+    <h2>10. Contact Us & Data Protection Officer (DPO)</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data handling practices, or if you wish to lodge a complaint with the Kenyan ODPC, please contact our designated representative:</p>
+    <div class="contact-info">
+      <strong>Smart Freelance Solutions</strong><br>
+      📧 Email: <a href="mailto:privacy@aimoran.com">privacy@aimoran.com</a><br>
+      🌐 Website: <a href="https://aimoran.com/" target="_blank">https://aimoran.com/</a><br>
+      📍 Physical address (correspondence): Westlands, Nairobi, Kenya<br>
+      📞 Phone: +254 700 000 000 (Support hours: Mon-Fri 9am–5pm EAT)<br>
+      <em>Data Protection Officer: Joseph Mwangi, DPO@aimoran.com</em>
+    </div>
+    <p>You also have the right to file a complaint with the Office of the Data Protection Commissioner (ODPC) at <a href="https://www.odpc.go.ke" target="_blank" rel="noopener">www.odpc.go.ke</a>.</p>
+
+    <h2>11. Children’s Privacy</h2>
+    <p>Our services are not directed to individuals under the age of 18 (or the age of majority in Kenya). We do not knowingly collect personal data from minors. If you become aware that a child has provided us with personal data, please contact us, and we will take steps to delete such information.</p>
+
+    <h2>12. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or operational needs. The updated version will be indicated by an updated "Last Updated" date at the top of this page. Material changes will be notified via a prominent notice on our website or by email. We encourage you to review this policy periodically.</p>
+
+    <div class="footer-note">
+      © 2026 Smart Freelance Solutions — Empowering Freelance Talent in Kenya & Beyond. All rights reserved.
+    </div>
+  </div>
+
+  <div class="download-area">
+    <button class="btn-download" id="downloadPolicyBtn">
+      ⬇️ Download Privacy Policy (HTML)
+    </button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const downloadBtn = document.getElementById('downloadPolicyBtn');
+    
+    // Function to generate a clean standalone HTML document (identical to visible content, but fully self-contained for download)
+    function getDownloadHTML() {
+      // Get the main container content (including header, policy content, and footer, but we reconstruct to avoid cloning bugs)
+      const originalContainer = document.getElementById('privacyPolicyContainer');
+      // Clone the node deeply to preserve all styles & content, but we also need to include the global styles.
+      const cloneContainer = originalContainer.cloneNode(true);
+      
+      // Remove the download button area from cloned version to avoid duplicate button inside downloaded file? Keep it but it's fine, but we might want to keep as part of saved version.
+      // Actually better to keep the download area in the downloaded page too? But user may want to have the same experience. However the button inside downloaded file might try to redownload. We'll leave as is, but no harm.
+      // We just need full HTML document skeleton.
+      
+      // Get styles from original document head (we already have style tag defined in this document)
+      const styleNodes = document.querySelectorAll('style');
+      let stylesString = '';
+      styleNodes.forEach((styleTag) => {
+        stylesString += styleTag.innerHTML;
+      });
+      
+      // also capture any inline style or main style block (already covered)
+      const titleText = 'Privacy Policy - Smart Freelance Solutions | Kenya';
+      
+      return `<!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>${titleText}</title>
+        <meta name="description" content="Privacy Policy for Smart Freelance Solutions, Kenya. Official document under Kenyan Data Protection Act.">
+        <style>${stylesString}</style>
+        <style>
+          /* extra small override to ensure downloaded version looks identical */
+          body {
+            margin: 0;
+            padding: 2rem 1rem;
+            background: #f4f7fc;
+          }
+          .btn-download {
+            cursor: pointer;
+          }
+          .download-area {
+            display: block;
+          }
+        </style>
+      </head>
+      <body>
+        ${cloneContainer.outerHTML}
+        <script>
+          // optional: disable download button functionality inside downloaded file if needed? Not necessary, but we ensure idempotent.
+          (function() {
+            const btn = document.getElementById('downloadPolicyBtn');
+            if (btn) {
+              btn.addEventListener('click', function(e) {
+                alert('This document is already the saved privacy policy. You can save it again via browser save as.');
+              });
+            }
+          })();
+        <\/script>
+      </body>
+      </html>`;
+    }
+    
+    function downloadAsHtml() {
+      const fullHtml = getDownloadHTML();
+      // Create a blob with text/html type
+      const blob = new Blob([fullHtml], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'smart_freelance_solutions_privacy_policy.html';  // downloadable filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+    
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', downloadAsHtml);
+    }
+  })();
+</script>
+</body>
+</html>
