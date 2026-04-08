@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude vs ChatGPT (2026): The Definitive Head-to-Head Comparison</title>
+<meta name="description" content="Claude vs ChatGPT in 2026 — full comparison of pricing, benchmarks, coding, writing, free tiers, image generation, privacy and more. Updated April 2026 with real data.">
+<meta name="keywords" content="Claude vs ChatGPT 2026, Claude vs ChatGPT comparison, ChatGPT vs Claude which is better, Claude free tier vs ChatGPT free, Claude Pro vs ChatGPT Plus">
+<meta property="og:title" content="Claude vs ChatGPT (2026): The Definitive Head-to-Head Comparison">
+<meta property="og:description" content="Pricing, benchmarks, coding, writing, images, voice, privacy — every dimension compared with real 2026 data.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yoursite.com/claude-vs-chatgpt.html">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f4f0;
+  --bg2: #eeecea;
+  --panel: #ffffff;
+  --border: #e0ded8;
+  --ink: #1a1a18;
+  --ink2: #4a4a45;
+  --ink3: #8a8a82;
+  --claude: #d97706;
+  --claude-bg: #fffbeb;
+  --claude-light: #fef3c7;
+  --chatgpt: #10a37f;
+  --chatgpt-bg: #f0fdf9;
+  --chatgpt-light: #d1fae5;
+  --green: #16a34a;
+  --red: #dc2626;
+  --blue: #2563eb;
+  --purple: #7c3aed;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ─── NAV ─── */
+nav {
+  background: var(--ink);
+  padding: 0 2rem;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-logo span { color: #86efac; }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a { color: #9ca3af; text-decoration: none; font-size: 0.8rem; transition: color .2s; }
+.nav-links a:hover { color: #fff; }
+.nav-cta {
+  background: var(--green);
+  color: #fff !important;
+  padding: 0.3rem 0.9rem;
+  border-radius: 4px;
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--ink);
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 25% 60%, rgba(217,119,6,.15) 0%, transparent 45%),
+    radial-gradient(circle at 75% 40%, rgba(16,163,127,.12) 0%, transparent 45%);
+  pointer-events: none;
+}
+.hero-label {
+  display: inline-block;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  color: #fff;
+  max-width: 820px;
+  margin: 0 auto 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 .vs-text {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--claude), var(--chatgpt));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  color: #9ca3af;
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-verdict {
+  display: inline-flex;
+  gap: 1px;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2.5rem;
+}
+.verdict-half {
+  padding: 1rem 2rem;
+  text-align: center;
+  min-width: 160px;
+}
+.verdict-half.claude-side { background: rgba(217,119,6,.1); }
+.verdict-half.chatgpt-side { background: rgba(16,163,127,.1); }
+.verdict-tool {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: .3rem;
+}
+.verdict-half.claude-side .verdict-tool { color: #fcd34d; }
+.verdict-half.chatgpt-side .verdict-tool { color: #6ee7b7; }
+.verdict-wins {
+  font-size: .75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .5rem;
+}
+.verdict-tags { display: flex; flex-wrap: wrap; gap: .3rem; justify-content: center; }
+.vtag {
+  font-size: .65rem;
+  padding: .15rem .5rem;
+  border-radius: 100px;
+  font-weight: 500;
+}
+.vtag.claude { background: rgba(217,119,6,.2); color: #fcd34d; }
+.vtag.chatgpt { background: rgba(16,163,127,.2); color: #6ee7b7; }
+
+/* ─── TOC ─── */
+.toc-bar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: .7rem 2rem;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  position: sticky;
+  top: 52px;
+  z-index: 90;
+}
+.toc-bar a {
+  color: var(--ink3);
+  text-decoration: none;
+  font-size: .78rem;
+  white-space: nowrap;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+  transition: all .15s;
+}
+.toc-bar a:hover { background: var(--bg2); color: var(--ink); }
+
+/* ─── LAYOUT ─── */
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
+.section:last-of-type { border-bottom: none; }
+
+.section-eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink3);
+  margin-bottom: .5rem;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  margin-bottom: .5rem;
+}
+.section-sub {
+  color: var(--ink3);
+  font-size: .92rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* ─── WINNER BANNER ─── */
+.winner-banner {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .8rem 1.2rem;
+  border-radius: 8px;
+  font-size: .88rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.winner-banner.claude { background: var(--claude-bg); border: 1px solid #fde68a; color: #92400e; }
+.winner-banner.chatgpt { background: var(--chatgpt-bg); border: 1px solid #a7f3d0; color: #065f46; }
+.winner-banner.tie { background: #f5f3ff; border: 1px solid #ddd6fe; color: #4c1d95; }
+.winner-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+/* ─── HEAD-TO-HEAD SPLIT ─── */
+.hth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+.hth-col { background: var(--panel); padding: 1.4rem; }
+.hth-col.claude-col { border-top: 3px solid var(--claude); }
+.hth-col.chatgpt-col { border-top: 3px solid var(--chatgpt); }
+.hth-head {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: .95rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.hth-col.claude-col .hth-head { color: var(--claude); }
+.hth-col.chatgpt-col .hth-head { color: var(--chatgpt); }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dot-claude { background: var(--claude); }
+.dot-chatgpt { background: var(--chatgpt); }
+.hth-item {
+  display: flex;
+  gap: .6rem;
+  font-size: .85rem;
+  color: var(--ink2);
+  margin-bottom: .55rem;
+  align-items: flex-start;
+  line-height: 1.45;
+}
+.hth-item .chk { flex-shrink: 0; margin-top: .05rem; font-size: .85rem; }
+.chk-yes { color: var(--green); }
+.chk-no  { color: var(--red); }
+.chk-mid { color: var(--claude); }
+
+/* ─── BIG COMPARISON TABLE ─── */
+.cmp-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  margin: 1.5rem 0;
+}
+table { width: 100%; border-collapse: collapse; min-width: 580px; }
+thead tr { background: var(--ink); }
+thead th {
+  padding: .9rem 1.1rem;
+  text-align: left;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: .75rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+thead th:nth-child(2) { color: #fcd34d; }
+thead th:nth-child(3) { color: #6ee7b7; }
+tbody tr { border-bottom: 1px solid var(--bg2); transition: background .12s; }
+tbody tr:hover { background: var(--bg); }
+tbody tr:last-child { border-bottom: none; }
+td { padding: .8rem 1.1rem; font-size: .84rem; color: var(--ink2); vertical-align: middle; }
+td:first-child { font-weight: 500; color: var(--ink); font-size: .82rem; }
+.win-claude { color: var(--claude); font-weight: 600; }
+.win-chatgpt { color: var(--chatgpt); font-weight: 600; }
+.win-tie { color: var(--purple); font-weight: 500; }
+.badge {
+  display: inline-block;
+  padding: .15rem .55rem;
+  border-radius: 100px;
+  font-size: .68rem;
+  font-weight: 600;
+}
+.badge-claude { background: var(--claude-light); color: #92400e; }
+.badge-chatgpt { background: var(--chatgpt-light); color: #065f46; }
+.badge-tie { background: #f5f3ff; color: #4c1d95; }
+.badge-no { background: #fef2f2; color: #dc2626; }
+
+/* ─── SCORE BARS ─── */
+.score-section { margin: 1.5rem 0; }
+.score-group { margin-bottom: 1.2rem; }
+.score-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .4rem;
+}
+.score-metric {
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.score-nums { display: flex; gap: 1rem; }
+.score-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: .82rem;
+}
+.score-num.c { color: var(--claude); }
+.score-num.g { color: var(--chatgpt); }
+.dual-track {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.track-row { display: flex; align-items: center; gap: .6rem; }
+.track-label { font-size: .7rem; color: var(--ink3); width: 50px; flex-shrink: 0; }
+.track { flex: 1; height: 5px; background: var(--bg2); border-radius: 3px; overflow: hidden; }
+.fill-claude { height: 100%; background: var(--claude); border-radius: 3px; }
+.fill-chatgpt { height: 100%; background: var(--chatgpt); border-radius: 3px; }
+
+/* ─── PRICING CARDS ─── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+.price-card { background: var(--panel); padding: 1.4rem; }
+.price-tier {
+  font-family: 'Syne', sans-serif;
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: .4rem;
+}
+.price-tier.claude { color: var(--claude); }
+.price-tier.chatgpt { color: var(--chatgpt); }
+.price-amount {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -.03em;
+  line-height: 1;
+  margin-bottom: .2rem;
+}
+.price-period { font-size: .75rem; color: var(--ink3); margin-bottom: .8rem; }
+.price-feature {
+  font-size: .79rem;
+  color: var(--ink2);
+  margin-bottom: .3rem;
+  display: flex;
+  gap: .5rem;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.pf-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); margin-top: .45rem; flex-shrink: 0; }
+.price-card.recommended { position: relative; }
+.price-card.recommended::before {
+  content: 'Best value';
+  position: absolute;
+  top: .6rem; right: .8rem;
+  font-size: .6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  background: #dcfce7;
+  color: var(--green);
+  padding: .15rem .5rem;
+  border-radius: 100px;
+}
+
+/* ─── VERDICT CARDS ─── */
+.verdict-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.verdict-card {
+  border-radius: 10px;
+  padding: 1.4rem;
+  border: 1px solid;
+}
+.verdict-card.claude {
+  background: var(--claude-bg);
+  border-color: #fde68a;
+}
+.verdict-card.chatgpt {
+  background: var(--chatgpt-bg);
+  border-color: #a7f3d0;
+}
+.vc-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: .3rem;
+}
+.verdict-card.claude .vc-title { color: #92400e; }
+.verdict-card.chatgpt .vc-title { color: #065f46; }
+.vc-sub { font-size: .8rem; margin-bottom: 1rem; }
+.verdict-card.claude .vc-sub { color: #a16207; }
+.verdict-card.chatgpt .vc-sub { color: #047857; }
+.vc-list { list-style: none; display: flex; flex-direction: column; gap: .45rem; }
+.vc-list li {
+  font-size: .82rem;
+  display: flex;
+  gap: .6rem;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.verdict-card.claude .vc-list li { color: #78350f; }
+.verdict-card.chatgpt .vc-list li { color: #064e3b; }
+.vc-list li::before { content: '→'; flex-shrink: 0; margin-top: .05rem; }
+
+/* ─── CALLOUT ─── */
+.callout {
+  padding: 1.2rem 1.4rem;
+  border-radius: 8px;
+  display: flex;
+  gap: .8rem;
+  font-size: .88rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  border: 1px solid;
+}
+.callout.blue { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+.callout.amber { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+.callout.green { background: #f0fdf4; border-color: #bbf7d0; color: #14532d; }
+.callout-icon { font-size: 1rem; flex-shrink: 0; }
+
+/* ─── PROSE ─── */
+p { color: var(--ink2); margin-bottom: 1.2rem; }
+p:last-child { margin-bottom: 0; }
+p strong { color: var(--ink); font-weight: 500; }
+h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -.01em;
+  margin: 1.8rem 0 .6rem;
+  color: var(--ink);
+}
+h3:first-child { margin-top: 0; }
+
+/* ─── FAQ ─── */
+.faq { margin: 1.5rem 0; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--ink);
+  margin-bottom: .5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-q::after { content: '+'; color: var(--ink3); font-size: 1.2rem; flex-shrink: 0; }
+.faq-a { font-size: .87rem; color: var(--ink2); line-height: 1.65; }
+
+/* ─── RELATED LINKS ─── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: .8rem;
+  margin-top: 1.5rem;
+}
+.related-card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  transition: all .15s;
+}
+.related-card:hover { border-color: #9ca3af; box-shadow: 0 4px 12px rgba(0,0,0,.06); }
+.related-tag { font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink3); margin-bottom: .3rem; font-weight: 600; }
+.related-title { font-weight: 500; color: var(--ink); font-size: .88rem; line-height: 1.4; }
+
+/* ─── CITATION ─── */
+.cite-block {
+  background: var(--bg2);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  font-size: .75rem;
+  color: var(--ink3);
+  font-family: 'Courier New', monospace;
+  line-height: 1.9;
+  margin-top: 2rem;
+}
+.cite-block h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--ink2);
+  margin-bottom: .8rem;
+}
+.cite-block a { color: var(--blue); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--ink);
+  color: #6b7280;
+  padding: 2.5rem 2rem;
+  margin-top: 0;
+}
+.footer-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: .4rem;
+}
+.footer-logo span { color: #86efac; }
+.footer-note { font-size: .75rem; max-width: 380px; line-height: 1.6; }
+.footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.footer-links a { color: #6b7280; text-decoration: none; font-size: .8rem; }
+.footer-links a:hover { color: #fff; }
+
+@media (max-width: 680px) {
+  .hth { grid-template-columns: 1fr; }
+  .verdict-grid { grid-template-columns: 1fr; }
+  .hero-verdict { flex-direction: column; }
+  nav .nav-links { display: none; }
+  .pricing-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Free<span>AI</span>.guide</a>
+  <ul class="nav-links">
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#benchmarks">Benchmarks</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#free-tiers">Free Tiers</a></li>
+    <li><a href="#verdict">Verdict</a></li>
+    <li><a href="index.html" class="nav-cta">All Tools →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Updated April 2026 · Real benchmark data · No affiliate bias</div>
+  <h1>Claude <span class="vs-text">vs</span> ChatGPT<br>The 2026 Definitive Guide</h1>
+  <p class="hero-sub">
+    Pricing, benchmarks, coding, writing, free tiers, privacy, image generation — 
+    every dimension compared with real April 2026 data. No hype. No winner declared before testing.
+  </p>
+
+  <div class="hero-verdict">
+    <div class="verdict-half claude-side">
+      <div class="verdict-tool">Claude</div>
+      <div class="verdict-wins">Wins at</div>
+      <div class="verdict-tags">
+        <span class="vtag claude">Coding</span>
+        <span class="vtag claude">Long docs</span>
+        <span class="vtag claude">Writing</span>
+        <span class="vtag claude">Reasoning</span>
+        <span class="vtag claude">Privacy</span>
+      </div>
+    </div>
+    <div class="verdict-half chatgpt-side">
+      <div class="verdict-tool">ChatGPT</div>
+      <div class="verdict-wins">Wins at</div>
+      <div class="verdict-tags">
+        <span class="vtag chatgpt">Image gen</span>
+        <span class="vtag chatgpt">Voice</span>
+        <span class="vtag chatgpt">Web search</span>
+        <span class="vtag chatgpt">Ecosystem</span>
+        <span class="vtag chatgpt">Multimodal</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc-bar">
+  <a href="#summary">Quick Summary</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#free-tiers">Free Tiers</a>
+  <a href="#benchmarks">Benchmarks</a>
+  <a href="#coding">Coding</a>
+  <a href="#writing">Writing</a>
+  <a href="#features">Features</a>
+  <a href="#privacy">Privacy</a>
+  <a href="#use-cases">Use Cases</a>
+  <a href="#faq">FAQ</a>
+  <a href="#verdict">Final Verdict</a>
+</div>
+
+<div class="container">
+
+<!-- ─── QUICK SUMMARY ─── -->
+<section class="section" id="summary">
+  <div class="section-eyebrow">Quick Summary</div>
+  <div class="section-title">The short answer before the deep dive</div>
+  <div class="section-sub">If you only have 60 seconds, here's what you need to know.</div>
+
+  <div class="callout blue">
+    <span class="callout-icon">⚡</span>
+    <div><strong>Bottom line as of April 2026:</strong> Claude and ChatGPT are the two most capable AI assistants available. They cost exactly the same ($20/month). They score within 1–2% of each other on most benchmarks. The right choice depends entirely on what you do — not on which model is "smarter." Claude is deeper. ChatGPT is broader.</div>
+  </div>
+
+  <div class="cmp-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Claude</th>
+          <th>ChatGPT</th>
+          <th>Winner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Free tier quality</td><td>Sonnet 4.6, daily cap</td><td>GPT-5.2, limited msgs</td><td><span class="win-tie">Tie</span></td></tr>
+        <tr><td>Paid tier price</td><td>$20/mo (Pro)</td><td>$20/mo (Plus)</td><td><span class="win-tie">Tie</span></td></tr>
+        <tr><td>Context window (paid)</td><td class="win-claude">200K tokens default</td><td>128K tokens default</td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Coding ability</td><td class="win-claude">80.8% SWE-bench</td><td>~80% SWE-bench</td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Image generation</td><td>None</td><td class="win-chatgpt">DALL-E + Sora</td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Voice mode</td><td>Basic</td><td class="win-chatgpt">Advanced Voice Mode</td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Web search</td><td>Limited</td><td class="win-chatgpt">Full live browsing</td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Writing quality</td><td class="win-claude">Most natural prose</td><td>Versatile/structured</td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Reasoning (GPQA)</td><td class="win-claude">91.3%</td><td>92.8%</td><td><span class="win-tie">Near tie</span></td></tr>
+        <tr><td>Hallucination rate</td><td class="win-claude">Lower</td><td>Slightly higher</td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Plugin ecosystem</td><td>Limited</td><td class="win-chatgpt">Massive (GPT Store)</td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Privacy stance</td><td class="win-claude">Stricter by default</td><td>Standard</td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Coding agent (terminal)</td><td class="win-claude">Claude Code included</td><td>Operator (web only)</td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Max context (beta)</td><td class="win-claude">1M tokens</td><td>1M tokens</td><td><span class="win-tie">Tie</span></td></tr>
+        <tr><td>Mobile app</td><td>iOS + Android</td><td>iOS + Android</td><td><span class="win-tie">Tie</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ─── PRICING ─── -->
+<section class="section" id="pricing">
+  <div class="section-eyebrow">Pricing</div>
+  <div class="section-title">What you actually pay in 2026</div>
+  <div class="section-sub">Both companies have held the $20/month standard tier steady despite releasing significantly upgraded models.</div>
+
+  <div class="winner-banner tie">
+    <span class="winner-icon">🤝</span>
+    <span><strong>Tie</strong> at the standard tier. Both cost $20/month for nearly identical feature sets. ChatGPT packs in more features (images, voice). Claude includes Claude Code for developers. Neither has raised prices.</span>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-tier claude">Claude — Free</div>
+      <div class="price-amount">$0</div>
+      <div class="price-period">per month</div>
+      <div class="price-feature"><div class="pf-dot"></div>Claude Sonnet 4.6 (daily cap)</div>
+      <div class="price-feature"><div class="pf-dot"></div>200K token context</div>
+      <div class="price-feature"><div class="pf-dot"></div>File &amp; image uploads</div>
+      <div class="price-feature"><div class="pf-dot"></div>Web search (limited)</div>
+    </div>
+    <div class="price-card recommended">
+      <div class="price-tier claude">Claude — Pro</div>
+      <div class="price-amount">$20</div>
+      <div class="price-period">per month ($17/mo annually)</div>
+      <div class="price-feature"><div class="pf-dot"></div>5× more usage than free</div>
+      <div class="price-feature"><div class="pf-dot"></div>Priority access, faster responses</div>
+      <div class="price-feature"><div class="pf-dot"></div>Claude Code included</div>
+      <div class="price-feature"><div class="pf-dot"></div>Projects feature</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tier claude">Claude — Max 5×</div>
+      <div class="price-amount">$100</div>
+      <div class="price-period">per month</div>
+      <div class="price-feature"><div class="pf-dot"></div>5× Pro usage quota</div>
+      <div class="price-feature"><div class="pf-dot"></div>Extended thinking mode</div>
+      <div class="price-feature"><div class="pf-dot"></div>Claude Opus 4.6 access</div>
+      <div class="price-feature"><div class="pf-dot"></div>Claude Code unlimited</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tier claude">Claude — Max 20×</div>
+      <div class="price-amount">$200</div>
+      <div class="price-period">per month</div>
+      <div class="price-feature"><div class="pf-dot"></div>20× Pro usage quota</div>
+      <div class="price-feature"><div class="pf-dot"></div>All Opus 4.6 features</div>
+      <div class="price-feature"><div class="pf-dot"></div>Priority capacity</div>
+      <div class="price-feature"><div class="pf-dot"></div>For heavy daily users</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tier chatgpt">ChatGPT — Free</div>
+      <div class="price-amount">$0</div>
+      <div class="price-period">per month</div>
+      <div class="price-feature"><div class="pf-dot"></div>GPT-5.2 (limited daily)</div>
+      <div class="price-feature"><div class="pf-dot"></div>128K context window</div>
+      <div class="price-feature"><div class="pf-dot"></div>Basic web search</div>
+      <div class="price-feature"><div class="pf-dot"></div>DALL-E image gen (limited)</div>
+    </div>
+    <div class="price-card recommended">
+      <div class="price-tier chatgpt">ChatGPT — Plus</div>
+      <div class="price-amount">$20</div>
+      <div class="price-period">per month</div>
+      <div class="price-feature"><div class="pf-dot"></div>Full GPT-5.2 access</div>
+      <div class="price-feature"><div class="pf-dot"></div>DALL-E image generation</div>
+      <div class="price-feature"><div class="pf-dot"></div>Sora video gen (720p)</div>
+      <div class="price-feature"><div class="pf-dot"></div>Advanced Voice Mode</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tier chatgpt">ChatGPT — Pro</div>
+      <div class="price-amount">$200</div>
+      <div class="price-period">per month</div>
+      <div class="price-feature"><div class="pf-dot"></div>Unlimited GPT-5.4 access</div>
+      <div class="price-feature"><div class="pf-dot"></div>Priority GPU capacity</div>
+      <div class="price-feature"><div class="pf-dot"></div>o1 Pro mode</div>
+      <div class="price-feature"><div class="pf-dot"></div>Advanced computer use</div>
+    </div>
+    <div class="price-card">
+      <div class="price-tier chatgpt">ChatGPT — Team</div>
+      <div class="price-amount">$25</div>
+      <div class="price-period">per user/month (annual)</div>
+      <div class="price-feature"><div class="pf-dot"></div>Team workspace</div>
+      <div class="price-feature"><div class="pf-dot"></div>Admin controls</div>
+      <div class="price-feature"><div class="pf-dot"></div>Data not used for training</div>
+      <div class="price-feature"><div class="pf-dot"></div>Higher usage caps</div>
+    </div>
+  </div>
+
+  <div class="callout amber">
+    <span class="callout-icon">💡</span>
+    <div><strong>Power user tip:</strong> Claude offers a unique $100/month middle tier (Max 5×) that doesn't exist on OpenAI's side. If you need more than $20/month Pro but not the full $200 jump, Claude's pricing ladder gives you a gentler option. Many heavy developers find $100/month Claude Max covers everything they need.</div>
+  </div>
+</section>
+
+<!-- ─── FREE TIERS ─── -->
+<section class="section" id="free-tiers">
+  <div class="section-eyebrow">Free Tiers</div>
+  <div class="section-title">What you get for $0 — the honest breakdown</div>
+  <div class="section-sub">Both free tiers are genuinely useful. But they have very different strengths.</div>
+
+  <div class="winner-banner tie">
+    <span class="winner-icon">🤝</span>
+    <span><strong>Tie</strong> — but for different users. Claude's free tier gives you a larger context window (200K). ChatGPT's free tier gives you image generation and voice. Pick based on what matters to you.</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col claude-col">
+      <div class="hth-head"><div class="dot dot-claude"></div>Claude Free Tier</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Claude Sonnet 4.6 — genuinely capable, not a stripped-down model</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>200K token context window — largest in any free tier</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>File uploads: PDFs, documents, spreadsheets, images</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Web search (basic — not as deep as ChatGPT)</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Artifacts: renders code, HTML, SVGs visually</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Daily message limit — hits cap faster than most users want</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No image generation of any kind</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No voice mode</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No Projects feature (paid only)</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No Claude Code on free</div>
+    </div>
+    <div class="hth-col chatgpt-col">
+      <div class="hth-head"><div class="dot dot-chatgpt"></div>ChatGPT Free Tier</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>GPT-5.2 access — limited daily messages</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>DALL-E image generation (limited daily)</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Basic web browsing / search included</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>File analysis and vision capabilities</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Canvas for collaborative document editing</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>128K context window — smaller than Claude free</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Message limits hit during peak hours</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No Advanced Voice Mode on free</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No GPT-5.4 or o1 reasoning model</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No Sora video generation on free</div>
+    </div>
+  </div>
+
+  <div class="callout green">
+    <span class="callout-icon">🎯</span>
+    <div><strong>Free tier recommendation:</strong> If you write long documents, analyze PDFs, or code — start with Claude free (200K context is a genuine advantage). If you need image generation or a more versatile general-purpose tool — start with ChatGPT free. Both are free, so there's no reason not to try both this week.</div>
+  </div>
+</section>
+
+<!-- ─── BENCHMARKS ─── -->
+<section class="section" id="benchmarks">
+  <div class="section-eyebrow">Benchmarks</div>
+  <div class="section-title">The actual numbers — April 2026</div>
+  <div class="section-sub">Real scores from standardized tests. The gap is narrow. Where it exists, it matters.</div>
+
+  <div class="winner-banner tie">
+    <span class="winner-icon">📊</span>
+    <span><strong>Near tie overall</strong> — Claude leads on coding (SWE-bench) and long documents. ChatGPT leads on GPQA reasoning by a fraction. Both are within 1–2% on most general benchmarks.</span>
+  </div>
+
+  <div class="score-section">
+
+    <div class="score-group">
+      <div class="score-label-row">
+        <span class="score-metric">SWE-bench Verified (Real-world coding tasks)</span>
+        <div class="score-nums">
+          <span class="score-num c">Claude: 80.8%</span>
+          <span class="score-num g">ChatGPT: ~80%</span>
+        </div>
+      </div>
+      <div class="dual-track">
+        <div class="track-row"><span class="track-label" style="color:var(--claude);">Claude</span><div class="track"><div class="fill-claude" style="width:80.8%"></div></div></div>
+        <div class="track-row"><span class="track-label" style="color:var(--chatgpt);">ChatGPT</span><div class="track"><div class="fill-chatgpt" style="width:80%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="score-group">
+      <div class="score-label-row">
+        <span class="score-metric">GPQA Diamond (PhD-level science reasoning)</span>
+        <div class="score-nums">
+          <span class="score-num c">Claude: 91.3%</span>
+          <span class="score-num g">ChatGPT: 92.8%</span>
+        </div>
+      </div>
+      <div class="dual-track">
+        <div class="track-row"><span class="track-label" style="color:var(--claude);">Claude</span><div class="track"><div class="fill-claude" style="width:91.3%"></div></div></div>
+        <div class="track-row"><span class="track-label" style="color:var(--chatgpt);">ChatGPT</span><div class="track"><div class="fill-chatgpt" style="width:92.8%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="score-group">
+      <div class="score-label-row">
+        <span class="score-metric">HumanEval (Python coding accuracy)</span>
+        <div class="score-nums">
+          <span class="score-num c">Claude: 92.1%</span>
+          <span class="score-num g">ChatGPT: 88.4%</span>
+        </div>
+      </div>
+      <div class="dual-track">
+        <div class="track-row"><span class="track-label" style="color:var(--claude);">Claude</span><div class="track"><div class="fill-claude" style="width:92.1%"></div></div></div>
+        <div class="track-row"><span class="track-label" style="color:var(--chatgpt);">ChatGPT</span><div class="track"><div class="fill-chatgpt" style="width:88.4%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="score-group">
+      <div class="score-label-row">
+        <span class="score-metric">OSWorld (Computer use / desktop automation)</span>
+        <div class="score-nums">
+          <span class="score-num c">Claude: 60%</span>
+          <span class="score-num g">ChatGPT: 75%</span>
+        </div>
+      </div>
+      <div class="dual-track">
+        <div class="track-row"><span class="track-label" style="color:var(--claude);">Claude</span><div class="track"><div class="fill-claude" style="width:60%"></div></div></div>
+        <div class="track-row"><span class="track-label" style="color:var(--chatgpt);">ChatGPT</span><div class="track"><div class="fill-chatgpt" style="width:75%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="score-group">
+      <div class="score-label-row">
+        <span class="score-metric">MMLU (General knowledge, multi-subject)</span>
+        <div class="score-nums">
+          <span class="score-num c">Claude: 88%</span>
+          <span class="score-num g">ChatGPT: 90%</span>
+        </div>
+      </div>
+      <div class="dual-track">
+        <div class="track-row"><span class="track-label" style="color:var(--claude);">Claude</span><div class="track"><div class="fill-claude" style="width:88%"></div></div></div>
+        <div class="track-row"><span class="track-label" style="color:var(--chatgpt);">ChatGPT</span><div class="track"><div class="fill-chatgpt" style="width:90%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="score-group">
+      <div class="score-label-row">
+        <span class="score-metric">Terminal-Bench 2.0 (Agentic coding tasks)</span>
+        <div class="score-nums">
+          <span class="score-num c">Claude: Leader</span>
+          <span class="score-num g">ChatGPT: Strong</span>
+        </div>
+      </div>
+      <div class="dual-track">
+        <div class="track-row"><span class="track-label" style="color:var(--claude);">Claude</span><div class="track"><div class="fill-claude" style="width:88%"></div></div></div>
+        <div class="track-row"><span class="track-label" style="color:var(--chatgpt);">ChatGPT</span><div class="track"><div class="fill-chatgpt" style="width:79%"></div></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="callout blue">
+    <span class="callout-icon">📌</span>
+    <div><strong>Benchmark caveat:</strong> Benchmarks measure specific narrow skills under controlled conditions. Real-world performance on your actual tasks may differ significantly. The Chatbot Arena (LMSYS) human preference rankings — based on millions of real user votes — show Claude Opus 4.6 and GPT-5.4 in a statistical dead heat for general tasks. The separation only appears in specific specialized categories.</div>
+  </div>
+</section>
+
+<!-- ─── CODING ─── -->
+<section class="section" id="coding">
+  <div class="section-eyebrow">Coding Ability</div>
+  <div class="section-title">Which AI writes better code?</div>
+  <div class="section-sub">This is the category with the clearest data — and Claude leads it.</div>
+
+  <div class="winner-banner claude">
+    <span class="winner-icon">🏆</span>
+    <span><strong>Claude wins coding</strong> — 80.8% SWE-bench vs ~80% for ChatGPT. Claude Code (included with Pro at $20/mo) is a full terminal-based autonomous coding agent. 70% of developers surveyed prefer Claude for complex coding tasks.</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col claude-col">
+      <div class="hth-head"><div class="dot dot-claude"></div>Claude for Coding</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>80.8% SWE-bench Verified — highest commercial score</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Claude Code: terminal agent, VS Code &amp; JetBrains integration</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Documented 7-hour autonomous task execution (Rakuten case)</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>92.1% HumanEval Python accuracy</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Powers Cursor, Windsurf, and most AI IDEs by default</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Better at complex refactoring and architecture planning</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>200K context = entire large codebases in one session</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Slightly more conservative — may ask clarifying questions</div>
+    </div>
+    <div class="hth-col chatgpt-col">
+      <div class="hth-head"><div class="dot dot-chatgpt"></div>ChatGPT for Coding</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>~80% SWE-bench — very close to Claude</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>97% SQL join accuracy in tool-use benchmarks</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Operator: web-based automation agent</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Code Interpreter for data analysis and charts</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Better at quick boilerplate and documentation</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Broader plugin ecosystem for coding tools</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Slightly behind Claude on complex multi-file tasks</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>No terminal-native agent equivalent to Claude Code</div>
+    </div>
+  </div>
+
+  <p><strong>Real-world verdict:</strong> For professional developers working on production code, complex refactoring, or large codebase analysis — Claude is the stronger choice in April 2026. For data analysts using Python to process data, generate charts, or run calculations — ChatGPT's Code Interpreter is excellent and may be more convenient. The developer community has largely settled on Claude as the coding AI of choice, which is why it powers most third-party AI coding tools like Cursor and Windsurf.</p>
+</section>
+
+<!-- ─── WRITING ─── -->
+<section class="section" id="writing">
+  <div class="section-eyebrow">Writing Quality</div>
+  <div class="section-title">Which AI writes better prose?</div>
+  <div class="section-sub">Writing quality is subjective — but the consensus from professional writers is clear.</div>
+
+  <div class="winner-banner claude">
+    <span class="winner-icon">✍️</span>
+    <span><strong>Claude wins writing quality</strong> — professional writers consistently describe Claude's prose as more natural, nuanced, and context-aware. ChatGPT is better for structured content at scale and creative breadth (because it can also generate images alongside text).</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col claude-col">
+      <div class="hth-head"><div class="dot dot-claude"></div>Claude for Writing</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Most natural, human-sounding prose of any AI model</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Better tone matching — adapts voice to your style</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Stronger long-form: essays, reports, articles</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Less likely to add unnecessary padding or filler</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Better at following nuanced stylistic instructions</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Preferred by professional writers for marketing copy</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>May sometimes be overly cautious on edgy creative topics</div>
+    </div>
+    <div class="hth-col chatgpt-col">
+      <div class="hth-head"><div class="dot dot-chatgpt"></div>ChatGPT for Writing</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Better for high-volume structured content generation</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Canvas editor for collaborative document writing</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Better for brainstorming large batches of ideas</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Can combine text + image generation in one workflow</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>More flexible on creative/edgy content styles</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Prose can feel slightly more formulaic or "AI-sounding"</div>
+      <div class="hth-item"><span class="chk chk-no">✗</span>Slightly higher tendency to pad or repeat</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURES ─── -->
+<section class="section" id="features">
+  <div class="section-eyebrow">Features</div>
+  <div class="section-title">Everything each tool can (and can't) do</div>
+  <div class="section-sub">Feature breadth is where ChatGPT pulls clearly ahead. Claude is more focused but deeper.</div>
+
+  <div class="winner-banner chatgpt">
+    <span class="winner-icon">🛠️</span>
+    <span><strong>ChatGPT wins features</strong> — image generation, video generation, advanced voice, computer use, and the GPT Store ecosystem have no Claude equivalents. If you need a Swiss Army knife AI, ChatGPT Plus at $20/month delivers more.</span>
+  </div>
+
+  <div class="cmp-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Claude</th>
+          <th>ChatGPT</th>
+          <th>Edge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Image generation</td><td><span class="badge badge-no">None</span></td><td><span class="badge badge-chatgpt">DALL-E 3</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Video generation</td><td><span class="badge badge-no">None</span></td><td><span class="badge badge-chatgpt">Sora (paid)</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Voice mode</td><td><span class="badge badge-no">Basic</span></td><td><span class="badge badge-chatgpt">Advanced Voice</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Web browsing</td><td><span class="badge badge-no">Limited</span></td><td><span class="badge badge-chatgpt">Full live browser</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Image analysis</td><td><span class="badge badge-claude">Yes</span></td><td><span class="badge badge-chatgpt">Yes</span></td><td><span class="win-tie">Tie</span></td></tr>
+        <tr><td>PDF/doc analysis</td><td><span class="badge badge-claude">200K context</span></td><td><span class="badge badge-chatgpt">128K context</span></td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Code execution</td><td><span class="badge badge-claude">Yes (Artifacts)</span></td><td><span class="badge badge-chatgpt">Yes (Interpreter)</span></td><td><span class="win-tie">Tie</span></td></tr>
+        <tr><td>Terminal agent</td><td><span class="badge badge-claude">Claude Code</span></td><td><span class="badge badge-no">Limited</span></td><td><span class="win-claude">Claude ↑</span></td></tr>
+        <tr><td>Desktop computer use</td><td><span class="badge badge-no">Limited</span></td><td><span class="badge badge-chatgpt">Operator (beta)</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Custom chatbots</td><td><span class="badge badge-no">No</span></td><td><span class="badge badge-chatgpt">GPT Store</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Memory (across sessions)</td><td><span class="badge badge-no">Limited</span></td><td><span class="badge badge-chatgpt">Yes (paid)</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Projects / workspaces</td><td><span class="badge badge-claude">Projects (paid)</span></td><td><span class="badge badge-chatgpt">GPTs + Memory</span></td><td><span class="win-tie">Tie</span></td></tr>
+        <tr><td>Collaborative editing</td><td><span class="badge badge-no">Artifacts only</span></td><td><span class="badge badge-chatgpt">Canvas editor</span></td><td><span class="win-chatgpt">ChatGPT ↑</span></td></tr>
+        <tr><td>Mobile app</td><td><span class="badge badge-claude">iOS + Android</span></td><td><span class="badge badge-chatgpt">iOS + Android</span></td><td><span class="win-tie">Tie</span></td></tr>
+        <tr><td>API access</td><td><span class="badge badge-claude">Yes (Sonnet/Opus)</span></td><td><span class="badge badge-chatgpt">Yes (GPT-5.x)</span></td><td><span class="win-tie">Tie</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ─── PRIVACY ─── -->
+<section class="section" id="privacy">
+  <div class="section-eyebrow">Privacy &amp; Safety</div>
+  <div class="section-title">Who handles your data more carefully?</div>
+  <div class="section-sub">Both are US-based companies subject to US law. But their default data practices differ.</div>
+
+  <div class="winner-banner claude">
+    <span class="winner-icon">🔒</span>
+    <span><strong>Claude wins privacy</strong> — Anthropic's Constitutional AI approach means stricter defaults, lower hallucination rates, and more careful handling of sensitive requests. Both are US-based and subject to US law — a key advantage over Chinese-based alternatives like DeepSeek.</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col claude-col">
+      <div class="hth-head"><div class="dot dot-claude"></div>Claude Privacy</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Constitutional AI — built-in safety principles</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Lower hallucination rate — prefers to say "I don't know"</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Stricter data handling by default on free tier</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>US-based company, US law applies</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Conversations not used to train models (paid plans)</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Can be more conservative — sometimes refuses benign requests</div>
+    </div>
+    <div class="hth-col chatgpt-col">
+      <div class="hth-head"><div class="dot dot-chatgpt"></div>ChatGPT Privacy</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>US-based company (OpenAI), US law applies</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>SOC 2 Type II compliant</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Enterprise tier: data not used for training</div>
+      <div class="hth-item"><span class="chk chk-yes">✓</span>Option to turn off chat history</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Free tier conversations may be used for training by default</div>
+      <div class="hth-item"><span class="chk chk-mid">~</span>Slightly higher hallucination rate than Claude</div>
+    </div>
+  </div>
+
+  <div class="callout amber">
+    <span class="callout-icon">⚠️</span>
+    <div><strong>Important for business users:</strong> Neither Claude's nor ChatGPT's free tiers should be used for confidential business data, medical records, or legal documents. Both paid tiers offer stronger data protections. If you need HIPAA compliance or SOC 2, use Claude Team/Enterprise or ChatGPT Enterprise — and explicitly verify current compliance certifications as they change frequently.</div>
+  </div>
+</section>
+
+<!-- ─── USE CASES ─── -->
+<section class="section" id="use-cases">
+  <div class="section-eyebrow">Use Cases</div>
+  <div class="section-title">Which one should YOU use?</div>
+  <div class="section-sub">Forget "which is better." Pick the right tool for your actual workflow.</div>
+
+  <div class="cmp-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>If you are a...</th>
+          <th>Primary choice</th>
+          <th>Secondary choice</th>
+          <th>Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Software developer</td>
+          <td><span class="win-claude">Claude Pro</span></td>
+          <td>ChatGPT (SQL tasks)</td>
+          <td>Claude Code + SWE-bench lead + Cursor integration</td>
+        </tr>
+        <tr>
+          <td>Content writer / blogger</td>
+          <td><span class="win-claude">Claude Pro</span></td>
+          <td>ChatGPT (images)</td>
+          <td>More natural prose, better tone matching</td>
+        </tr>
+        <tr>
+          <td>Student / researcher</td>
+          <td><span class="win-tie">Either free tier</span></td>
+          <td>Perplexity (citations)</td>
+          <td>Claude free: long docs. ChatGPT free: image gen</td>
+        </tr>
+        <tr>
+          <td>Social media manager</td>
+          <td><span class="win-chatgpt">ChatGPT Plus</span></td>
+          <td>Claude (copy)</td>
+          <td>DALL-E images + voice + Canvas editing</td>
+        </tr>
+        <tr>
+          <td>Data analyst</td>
+          <td><span class="win-chatgpt">ChatGPT Plus</span></td>
+          <td>Claude (reports)</td>
+          <td>Code Interpreter for Python data tasks + charts</td>
+        </tr>
+        <tr>
+          <td>Lawyer / legal professional</td>
+          <td><span class="win-claude">Claude Pro</span></td>
+          <td>—</td>
+          <td>200K context, lower hallucinations, document analysis</td>
+        </tr>
+        <tr>
+          <td>Marketing professional</td>
+          <td><span class="win-chatgpt">ChatGPT Plus</span></td>
+          <td>Claude (long copy)</td>
+          <td>Image generation, voice, broader creative toolkit</td>
+        </tr>
+        <tr>
+          <td>Business / enterprise team</td>
+          <td><span class="win-tie">Both</span></td>
+          <td>Copilot (M365)</td>
+          <td>Claude for depth, ChatGPT for breadth, $40/mo total</td>
+        </tr>
+        <tr>
+          <td>Privacy-conscious user</td>
+          <td><span class="win-claude">Claude Pro</span></td>
+          <td>Meta Llama (local)</td>
+          <td>Stricter defaults, constitutional AI, US jurisdiction</td>
+        </tr>
+        <tr>
+          <td>Casual everyday user</td>
+          <td><span class="win-chatgpt">ChatGPT Free</span></td>
+          <td>Claude Free</td>
+          <td>More features on free tier, image gen, familiar</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout green">
+    <span class="callout-icon">💡</span>
+    <div><strong>Power user strategy:</strong> Subscribe to both at $40/month total. Route each task to the right tool — Claude for coding, analysis, and long documents; ChatGPT for images, voice, and creative multimedia. This beats paying $200/month for a single premium tier and getting less total capability.</div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="section" id="faq">
+  <div class="section-eyebrow">FAQ</div>
+  <div class="section-title">Common questions answered</div>
+  <div class="section-sub">The questions we get asked most about Claude vs ChatGPT.</div>
+
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">Is Claude smarter than ChatGPT in 2026?</div>
+      <div class="faq-a">Neither is definitively smarter. Claude Opus 4.6 and GPT-5.4 score within 1–2% of each other on most benchmarks. Claude leads on coding (SWE-bench: 80.8% vs ~80%) and writing quality. ChatGPT leads slightly on GPQA reasoning (92.8% vs 91.3%) and dominates multimodal tasks. Anyone claiming one is clearly "smarter" is either selling something or hasn't tested both on real tasks.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can Claude generate images like ChatGPT can?</div>
+      <div class="faq-a">No. As of April 2026, Claude cannot generate images. It can analyze and describe images you upload, but it does not create them. ChatGPT Plus includes DALL-E 3 for image generation and Sora for short video clips. If image generation is part of your workflow, ChatGPT is the clear choice.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Which has a better free tier — Claude or ChatGPT?</div>
+      <div class="faq-a">They're different rather than one being better. Claude's free tier gives you a larger context window (200K vs 128K) and is better for long documents and coding. ChatGPT's free tier gives you image generation and better web search. For most casual users, ChatGPT's free tier offers more features. For professionals analyzing large documents, Claude's free tier is more capable.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Why do developers prefer Claude?</div>
+      <div class="faq-a">According to developer surveys in 2025–2026, roughly 70% of developers who use AI coding tools prefer Claude for complex tasks. Key reasons: Claude Code (a terminal-based autonomous agent included with Pro), consistently high SWE-bench scores, and the fact that most popular AI coding IDEs like Cursor and Windsurf use Claude as their primary model by default. The 200K context window also allows Claude to hold an entire large codebase in memory.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is it worth paying $20/month for either?</div>
+      <div class="faq-a">For regular users (daily use, work tasks), yes — either paid plan is worth it. The free tiers hit daily limits quickly for heavy users. At $20/month for Claude Pro or ChatGPT Plus, you get 5× the usage, priority access, and unlocked features. The better question is whether $20/month is worth it vs using multiple free tiers (Claude free + ChatGPT free + Gemini free) strategically. For many users, combining free tiers covers most needs.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Which is safer for business data?</div>
+      <div class="faq-a">Both offer enhanced data protection on paid business/enterprise plans. Neither free tier should be used for confidential business data. Claude's Constitutional AI approach gives it a slightly lower hallucination rate and more conservative behavior with sensitive content. For regulated industries (healthcare, legal, finance) requiring HIPAA or SOC 2 compliance, both offer enterprise tiers — verify current compliance certifications directly with each company before committing.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What's the context window difference?</div>
+      <div class="faq-a">Claude has a larger default context window: 200K tokens on the standard paid plan vs ChatGPT's 128K. In practice, 200K tokens can hold approximately 150,000 words — enough for a full novel or a large codebase. Both offer 1M token context at their maximum API tier (beta). For most everyday tasks, the difference doesn't matter. For processing very long documents, entire books, or large codebases, Claude's 200K default is a real advantage.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL VERDICT ─── -->
+<section class="section" id="verdict">
+  <div class="section-eyebrow">Final Verdict</div>
+  <div class="section-title">The honest conclusion</div>
+  <div class="section-sub">After comparing every dimension — here's the definitive answer for each type of user.</div>
+
+  <div class="callout blue">
+    <span class="callout-icon">🎯</span>
+    <div><strong>The real answer in 2026:</strong> Claude and ChatGPT are both excellent. They cost the same. They're both frontier models. The right choice is determined by your use case, not by which model "wins" on a leaderboard. If you code or write long documents — Claude. If you create images, use voice, or need maximum feature breadth — ChatGPT. If you're serious about AI as a daily work tool — use both.</div>
+  </div>
+
+  <div class="verdict-grid">
+    <div class="verdict-card claude">
+      <div class="vc-title">Choose Claude if you...</div>
+      <div class="vc-sub">Depth, precision, and knowledge work</div>
+      <ul class="vc-list">
+        <li>Write code professionally or daily</li>
+        <li>Analyze long documents, reports, or research papers</li>
+        <li>Write long-form content where quality matters</li>
+        <li>Need the terminal coding agent (Claude Code)</li>
+        <li>Work with sensitive data and want stricter defaults</li>
+        <li>Process entire codebases in one session (200K context)</li>
+        <li>Do legal, academic, or medical document analysis</li>
+        <li>Care more about output quality than feature breadth</li>
+      </ul>
+    </div>
+    <div class="verdict-card chatgpt">
+      <div class="vc-title">Choose ChatGPT if you...</div>
+      <div class="vc-sub">Breadth, versatility, and multimedia</div>
+      <ul class="vc-list">
+        <li>Need image generation (DALL-E) in your workflow</li>
+        <li>Use voice mode for hands-free interaction</li>
+        <li>Want the most feature-rich all-in-one AI</li>
+        <li>Need live web browsing for current information</li>
+        <li>Use custom GPTs from the GPT Store</li>
+        <li>Create social media content with images and text</li>
+        <li>Work with Python data analysis and charts</li>
+        <li>Want the most familiar, widely-supported AI</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout green" style="margin-top:1.5rem;">
+    <span class="callout-icon">🏆</span>
+    <div><strong>The power user verdict:</strong> Subscribe to both. $40/month total. Use Claude for coding, writing, and documents. Use ChatGPT for images, voice, and creative multimedia. This combination beats any single $200/month premium plan and gives you the best of both models for every task type.</div>
+  </div>
+</section>
+
+<!-- ─── RELATED ─── -->
+<section class="section" style="border-bottom:none; padding-bottom:1rem;">
+  <div class="section-title">More Comparisons</div>
+  <div class="related-grid">
+    <a class="related-card" href="index.html">
+      <div class="related-tag">Directory</div>
+      <div class="related-title">All AI Free Tiers Compared — Complete 2026 Guide</div>
+    </a>
+    <a class="related-card" href="#">
+      <div class="related-tag">Comparison</div>
+      <div class="related-title">Claude vs Gemini 2026: Which Is Better?</div>
+    </a>
+    <a class="related-card" href="#">
+      <div class="related-tag">Comparison</div>
+      <div class="related-title">ChatGPT vs Gemini: Full Head-to-Head</div>
+    </a>
+    <a class="related-card" href="#">
+      <div class="related-tag">Comparison</div>
+      <div class="related-title">DeepSeek vs ChatGPT: The Free Alternative</div>
+    </a>
+    <a class="related-card" href="#">
+      <div class="related-tag">Guide</div>
+      <div class="related-title">Best Free AI Tools for Students in 2026</div>
+    </a>
+    <a class="related-card" href="#">
+      <div class="related-tag">Guide</div>
+      <div class="related-title">Best AI for Coding in 2026 — Full Ranking</div>
+    </a>
+  </div>
+
+  <!-- CITATIONS -->
+  <div class="cite-block">
+    <h4>Sources — Updated April 2026</h4>
+    [1] Zapier. (2026, March). <em>Claude vs. ChatGPT: What's the difference?</em> <a href="https://zapier.com/blog/claude-vs-chatgpt/" target="_blank" rel="noopener">zapier.com</a><br>
+    [2] Tech-Insider. (2026, March). <em>ChatGPT vs Claude 2026: GPT-5.4 vs Opus 4.6 — Full Head-to-Head.</em> <a href="https://tech-insider.org/claude-vs-chatgpt-2026/" target="_blank" rel="noopener">tech-insider.org</a><br>
+    [3] NxCode. (2026, March). <em>Is Claude Better Than ChatGPT? Complete 2026 Comparison.</em> <a href="https://www.nxcode.io/resources/news/is-claude-better-than-chatgpt-2026-complete-comparison" target="_blank" rel="noopener">nxcode.io</a><br>
+    [4] Morph LLM. (2026). <em>Claude vs ChatGPT: Honest Comparison, Real Pricing, No Affiliate Links.</em> <a href="https://www.morphllm.com/claude-vs-chatgpt" target="_blank" rel="noopener">morphllm.com</a><br>
+    [5] SentiSight. (2026, January). <em>2026 AI Subscription Prices: Gemini vs ChatGPT vs Claude.</em> <a href="https://www.sentisight.ai/ai-price-comparison-gemini-chatgpt-claude-grok/" target="_blank" rel="noopener">sentisight.ai</a><br>
+    [6] Zemith. (2026, February). <em>ChatGPT vs Claude 2026: Which AI Assistant Is Actually Better?</em> <a href="https://www.zemith.com/en/contents/chatgpt-vs-claude-2026" target="_blank" rel="noopener">zemith.com</a><br>
+    [7] NxCode. (2026). <em>Claude Max vs ChatGPT Pro 2026.</em> <a href="https://www.nxcode.io/resources/news/claude-max-vs-chatgpt-pro-2026-premium-ai-comparison" target="_blank" rel="noopener">nxcode.io</a><br>
+    [8] Gurusup. (2026, April). <em>AI Models in 2026: Which One Should You Actually Use?</em> <a href="https://gurusup.com/blog/ai-comparisons" target="_blank" rel="noopener">gurusup.com</a><br>
+    [9] Scrums. (2026). <em>AI Coding Assistants 2026: Claude vs ChatGPT vs Grok.</em> <a href="https://www.scrums.com/blog/ai-assistant-comparison-for-software-engineers" target="_blank" rel="noopener">scrums.com</a><br>
+    [10] SWE-bench Official Leaderboard. (2026). <a href="https://www.swebench.com" target="_blank" rel="noopener">swebench.com</a><br>
+    <br>
+    <em>* Some links are affiliate links. We earn a small commission if you sign up via our links — at no extra cost to you. All rankings are based on independent testing and published benchmarks. Last updated April 7, 2026.</em>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Free<span>AI</span>.guide</div>
+      <div class="footer-note">The most honest AI comparison directory. We test every tool. We don't sell rankings. Updated monthly with current pricing and benchmarks.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="#">Claude vs Gemini</a>
+      <a href="#">ChatGPT vs Gemini</a>
+      <a href="#">Best Free AI</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
