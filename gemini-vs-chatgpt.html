@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini vs ChatGPT (2026): Full Comparison — Pricing, Benchmarks & Winner</title>
+<meta name="description" content="Gemini vs ChatGPT in 2026 — complete comparison of free tiers, pricing, benchmarks, multimodal, coding, Google Workspace, and who should use which. Updated April 2026.">
+<meta name="keywords" content="Gemini vs ChatGPT 2026, ChatGPT vs Gemini which is better, Gemini free vs ChatGPT free, Google Gemini vs ChatGPT comparison, Gemini Advanced vs ChatGPT Plus">
+<meta property="og:title" content="Gemini vs ChatGPT (2026): Full Comparison — Pricing, Benchmarks & Verdict">
+<meta property="og:description" content="Free tiers, pricing, benchmarks, Google Workspace integration, multimodal, coding — every dimension compared with real April 2026 data.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aimoran.com/gemini-vs-chatgpt">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f4f0;
+  --bg2: #eeecea;
+  --panel: #ffffff;
+  --border: #e0ded8;
+  --ink: #1a1a18;
+  --ink2: #4a4a45;
+  --ink3: #8a8a82;
+  --gemini: #1a73e8;
+  --gemini-bg: #eff6ff;
+  --gemini-light: #dbeafe;
+  --chatgpt: #10a37f;
+  --chatgpt-bg: #f0fdf9;
+  --chatgpt-light: #d1fae5;
+  --green: #16a34a;
+  --red: #dc2626;
+  --amber: #d97706;
+  --purple: #7c3aed;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Instrument Sans',sans-serif;font-size:16px;line-height:1.7;}
+
+/* NAV */
+nav{background:var(--ink);padding:0 2rem;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#fff;text-decoration:none;}
+.nav-logo span{color:#86efac;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;}
+.nav-links a{color:#9ca3af;text-decoration:none;font-size:.8rem;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav-cta{background:var(--green);color:#fff!important;padding:.3rem .9rem;border-radius:4px;}
+
+/* HERO */
+.hero{background:var(--ink);padding:5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 60%,rgba(26,115,232,.14) 0%,transparent 45%),radial-gradient(circle at 70% 40%,rgba(16,163,127,.1) 0%,transparent 45%);pointer-events:none;}
+.hero::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0px,transparent 1px,transparent 60px,rgba(255,255,255,.02) 61px),repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0px,transparent 1px,transparent 80px,rgba(255,255,255,.02) 81px);pointer-events:none;}
+.hero-badge{display:inline-block;font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#9ca3af;margin-bottom:1.2rem;position:relative;z-index:1;}
+.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2rem,6vw,4rem);line-height:1.05;letter-spacing:-.03em;color:#fff;max-width:820px;margin:0 auto 1.2rem;position:relative;z-index:1;}
+.vs-gradient{background:linear-gradient(135deg,var(--gemini),var(--chatgpt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{color:#9ca3af;font-size:1.05rem;max-width:580px;margin:0 auto 2.5rem;position:relative;z-index:1;}
+
+/* HERO SPLIT VERDICT */
+.hero-split{display:inline-flex;gap:1px;border:1px solid #374151;border-radius:8px;overflow:hidden;position:relative;z-index:1;margin-bottom:2.5rem;}
+.split-half{padding:1rem 2rem;text-align:center;min-width:150px;}
+.split-half.g{background:rgba(26,115,232,.1);}
+.split-half.c{background:rgba(16,163,127,.1);}
+.split-tool{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:.3rem;}
+.split-half.g .split-tool{color:#93c5fd;}
+.split-half.c .split-tool{color:#6ee7b7;}
+.split-wins{font-size:.7rem;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;}
+.split-tags{display:flex;flex-wrap:wrap;gap:.3rem;justify-content:center;}
+.stag{font-size:.65rem;padding:.15rem .5rem;border-radius:100px;font-weight:500;}
+.stag.g{background:rgba(26,115,232,.2);color:#93c5fd;}
+.stag.c{background:rgba(16,163,127,.2);color:#6ee7b7;}
+
+/* TOC */
+.toc-bar{background:var(--panel);border-bottom:1px solid var(--border);padding:.7rem 2rem;display:flex;gap:1rem;overflow-x:auto;position:sticky;top:52px;z-index:90;}
+.toc-bar a{color:var(--ink3);text-decoration:none;font-size:.78rem;white-space:nowrap;padding:.25rem .5rem;border-radius:4px;transition:all .15s;}
+.toc-bar a:hover{background:var(--bg2);color:var(--ink);}
+
+/* LAYOUT */
+.container{max-width:1040px;margin:0 auto;padding:0 1.5rem;}
+.section{padding:3.5rem 0;border-bottom:1px solid var(--border);}
+.section:last-of-type{border-bottom:none;}
+.eyebrow{font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);margin-bottom:.5rem;}
+.sec-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.5rem,3.5vw,2.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:.5rem;}
+.sec-sub{color:var(--ink3);font-size:.92rem;margin-bottom:2rem;max-width:600px;}
+
+/* WINNER BANNER */
+.winner{display:flex;align-items:center;gap:.8rem;padding:.8rem 1.2rem;border-radius:8px;font-size:.88rem;margin-bottom:1.5rem;font-weight:500;border:1px solid;}
+.winner.gemini{background:var(--gemini-bg);border-color:#bfdbfe;color:#1e3a8a;}
+.winner.chatgpt{background:var(--chatgpt-bg);border-color:#a7f3d0;color:#065f46;}
+.winner.tie{background:#f5f3ff;border-color:#ddd6fe;color:#4c1d95;}
+.w-icon{font-size:1.1rem;flex-shrink:0;}
+
+/* HTH */
+.hth{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin:1.5rem 0;}
+.hth-col{background:var(--panel);padding:1.4rem;}
+.hth-col.gc{border-top:3px solid var(--gemini);}
+.hth-col.cc{border-top:3px solid var(--chatgpt);}
+.hth-head{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;}
+.hth-col.gc .hth-head{color:var(--gemini);}
+.hth-col.cc .hth-head{color:var(--chatgpt);}
+.dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.dg{background:var(--gemini);}
+.dc{background:var(--chatgpt);}
+.hth-item{display:flex;gap:.6rem;font-size:.85rem;color:var(--ink2);margin-bottom:.55rem;align-items:flex-start;line-height:1.45;}
+.ck{flex-shrink:0;font-size:.85rem;}
+.yes{color:var(--green);}
+.no{color:var(--red);}
+.mid{color:var(--amber);}
+
+/* TABLE */
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--panel);margin:1.5rem 0;}
+table{width:100%;border-collapse:collapse;min-width:580px;}
+thead tr{background:var(--ink);}
+thead th{padding:.9rem 1.1rem;text-align:left;font-family:'Syne',sans-serif;font-weight:600;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;}
+thead th:nth-child(2){color:#93c5fd;}
+thead th:nth-child(3){color:#6ee7b7;}
+tbody tr{border-bottom:1px solid var(--bg2);transition:background .12s;}
+tbody tr:hover{background:var(--bg);}
+tbody tr:last-child{border-bottom:none;}
+td{padding:.8rem 1.1rem;font-size:.84rem;color:var(--ink2);vertical-align:middle;}
+td:first-child{font-weight:500;color:var(--ink);font-size:.82rem;}
+.wg{color:var(--gemini);font-weight:600;}
+.wc{color:var(--chatgpt);font-weight:600;}
+.wt{color:var(--purple);font-weight:500;}
+.pill{display:inline-block;padding:.15rem .55rem;border-radius:100px;font-size:.68rem;font-weight:600;}
+.pg{background:var(--gemini-light);color:#1e3a8a;}
+.pc{background:var(--chatgpt-light);color:#065f46;}
+.pt{background:#f5f3ff;color:#4c1d95;}
+.pn{background:#fef2f2;color:#dc2626;}
+.pa{background:#fffbeb;color:#92400e;}
+
+/* SCORES */
+.score-group{margin-bottom:1.4rem;}
+.slr{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem;}
+.smet{font-size:.82rem;font-weight:500;color:var(--ink);}
+.snums{display:flex;gap:1rem;}
+.snum{font-family:'Syne',sans-serif;font-weight:700;font-size:.82rem;}
+.sng{color:var(--gemini);}
+.snc{color:var(--chatgpt);}
+.dtrack{display:flex;flex-direction:column;gap:3px;}
+.trow{display:flex;align-items:center;gap:.6rem;}
+.tlbl{font-size:.7rem;color:var(--ink3);width:55px;flex-shrink:0;}
+.track{flex:1;height:5px;background:var(--bg2);border-radius:3px;overflow:hidden;}
+.fg{height:100%;background:var(--gemini);border-radius:3px;}
+.fc{height:100%;background:var(--chatgpt);border-radius:3px;}
+
+/* PRICING */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:1.5rem 0;}
+.pcard{background:var(--panel);padding:1.4rem;position:relative;}
+.ptier{font-family:'Syne',sans-serif;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.4rem;}
+.ptier.g{color:var(--gemini);}
+.ptier.c{color:var(--chatgpt);}
+.pamount{font-family:'Syne',sans-serif;font-weight:800;font-size:2rem;letter-spacing:-.03em;line-height:1;margin-bottom:.2rem;}
+.pperiod{font-size:.75rem;color:var(--ink3);margin-bottom:.8rem;}
+.pfeat{font-size:.79rem;color:var(--ink2);margin-bottom:.3rem;display:flex;gap:.5rem;align-items:flex-start;line-height:1.4;}
+.pfd{width:5px;height:5px;border-radius:50%;background:var(--border);margin-top:.45rem;flex-shrink:0;}
+.pcard.best::before{content:'Best value';position:absolute;top:.6rem;right:.8rem;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:#dcfce7;color:var(--green);padding:.15rem .5rem;border-radius:100px;}
+
+/* USE CASE CARDS */
+.ucgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:1.5rem 0;}
+.uccard{border-radius:10px;padding:1.4rem;border:1px solid;}
+.uccard.gw{background:var(--gemini-bg);border-color:#bfdbfe;}
+.uccard.cw{background:var(--chatgpt-bg);border-color:#a7f3d0;}
+.uccard.tw{background:#f5f3ff;border-color:#ddd6fe;}
+.uct{font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:.4rem;}
+.uccard.gw .uct{color:#1e3a8a;}
+.uccard.cw .uct{color:#065f46;}
+.uccard.tw .uct{color:#4c1d95;}
+.ucb{font-size:.82rem;line-height:1.55;}
+.uccard.gw .ucb{color:#1e40af;}
+.uccard.cw .ucb{color:#047857;}
+.uccard.tw .ucb{color:#5b21b6;}
+
+/* CALLOUT */
+.callout{padding:1.2rem 1.4rem;border-radius:8px;display:flex;gap:.8rem;font-size:.88rem;line-height:1.6;margin:1.5rem 0;border:1px solid;}
+.callout.blue{background:#eff6ff;border-color:#bfdbfe;color:#1e40af;}
+.callout.green{background:#f0fdf4;border-color:#bbf7d0;color:#14532d;}
+.callout.amber{background:#fffbeb;border-color:#fde68a;color:#92400e;}
+.ci{font-size:1rem;flex-shrink:0;}
+
+/* PROSE */
+p{color:var(--ink2);margin-bottom:1.2rem;}
+p:last-child{margin-bottom:0;}
+p strong{color:var(--ink);font-weight:500;}
+h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-.01em;margin:1.8rem 0 .6rem;color:var(--ink);}
+h3:first-child{margin-top:0;}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border);padding:1rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:.5rem;}
+.faq-a{font-size:.87rem;color:var(--ink2);line-height:1.65;}
+
+/* RELATED */
+.relgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem;margin-top:1.5rem;}
+.relcard{display:block;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem;text-decoration:none;transition:all .15s;}
+.relcard:hover{border-color:#9ca3af;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+.reltag{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:.3rem;font-weight:600;}
+.reltitle{font-weight:500;color:var(--ink);font-size:.88rem;line-height:1.4;}
+
+/* VERDICT CARDS */
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+.vcard{border-radius:10px;padding:1.4rem;border:1px solid;}
+.vcard.g{background:var(--gemini-bg);border-color:#bfdbfe;}
+.vcard.c{background:var(--chatgpt-bg);border-color:#a7f3d0;}
+.vt{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;margin-bottom:.3rem;}
+.vcard.g .vt{color:#1e3a8a;}
+.vcard.c .vt{color:#065f46;}
+.vs2{font-size:.8rem;margin-bottom:1rem;}
+.vcard.g .vs2{color:#1d4ed8;}
+.vcard.c .vs2{color:#047857;}
+.vlist{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+.vlist li{font-size:.82rem;display:flex;gap:.6rem;align-items:flex-start;line-height:1.4;}
+.vcard.g .vlist li{color:#1e3a8a;}
+.vcard.c .vlist li{color:#064e3b;}
+.vlist li::before{content:'→';flex-shrink:0;margin-top:.05rem;}
+
+/* CITATION */
+.cite{background:var(--bg2);border-radius:8px;padding:1.2rem 1.4rem;font-size:.75rem;color:var(--ink3);font-family:'Courier New',monospace;line-height:1.9;margin-top:2rem;}
+.cite h4{font-family:'Syne',sans-serif;font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;color:var(--ink2);margin-bottom:.8rem;}
+.cite a{color:var(--gemini);}
+
+/* FOOTER */
+footer{background:var(--ink);color:#6b7280;padding:2.5rem 2rem;}
+.fi{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;}
+.fl{font-family:'Syne',sans-serif;font-weight:800;color:#fff;font-size:1rem;margin-bottom:.4rem;}
+.fl span{color:#86efac;}
+.fn{font-size:.75rem;max-width:360px;line-height:1.6;}
+.flinks{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.flinks a{color:#6b7280;text-decoration:none;font-size:.8rem;}
+.flinks a:hover{color:#fff;}
+
+@media(max-width:680px){.hth{grid-template-columns:1fr;}.vgrid{grid-template-columns:1fr;}.hero-split{flex-direction:column;}.pgrid{grid-template-columns:1fr 1fr;}nav .nav-links{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Free<span>AI</span>.guide</a>
+  <ul class="nav-links">
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#benchmarks">Benchmarks</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#free-tiers">Free Tiers</a></li>
+    <li><a href="#use-cases">Use Cases</a></li>
+    <li><a href="#verdict">Verdict</a></li>
+    <li><a href="/" class="nav-cta">All Tools →</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">Updated April 2026 · Real benchmark data · Google vs OpenAI</div>
+  <h1>Gemini <span class="vs-gradient">vs</span> ChatGPT<br>The 2026 Complete Guide</h1>
+  <p class="hero-sub">Google's best against OpenAI's best. Pricing, benchmarks, multimodal, free tiers, Google Workspace, coding — every dimension tested and compared with real April 2026 data.</p>
+
+  <div class="hero-split">
+    <div class="split-half g">
+      <div class="split-tool">Gemini</div>
+      <div class="split-wins">Wins at</div>
+      <div class="split-tags">
+        <span class="stag g">Multimodal</span>
+        <span class="stag g">Google Workspace</span>
+        <span class="stag g">Context window</span>
+        <span class="stag g">API price</span>
+        <span class="stag g">Free tier value</span>
+      </div>
+    </div>
+    <div class="split-half c">
+      <div class="split-tool">ChatGPT</div>
+      <div class="split-wins">Wins at</div>
+      <div class="split-tags">
+        <span class="stag c">Coding</span>
+        <span class="stag c">Writing quality</span>
+        <span class="stag c">Desktop tasks</span>
+        <span class="stag c">Plugin ecosystem</span>
+        <span class="stag c">Conversation depth</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toc-bar">
+  <a href="#summary">Summary</a>
+  <a href="#models">Models</a>
+  <a href="#free-tiers">Free Tiers</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#benchmarks">Benchmarks</a>
+  <a href="#multimodal">Multimodal</a>
+  <a href="#coding">Coding</a>
+  <a href="#workspace">Google Workspace</a>
+  <a href="#features">All Features</a>
+  <a href="#use-cases">Use Cases</a>
+  <a href="#faq">FAQ</a>
+  <a href="#verdict">Verdict</a>
+</div>
+
+<div class="container">
+
+<!-- SUMMARY -->
+<section class="section" id="summary">
+  <div class="eyebrow">Quick Summary</div>
+  <div class="sec-title">Everything you need to know in 90 seconds</div>
+  <div class="sec-sub">The two most important AI platforms of 2026, head to head.</div>
+
+  <div class="callout blue">
+    <span class="ci">⚡</span>
+    <div><strong>The short version:</strong> Gemini 3.1 Pro and ChatGPT (GPT-5.4) cost nearly the same and score within a few percent on most benchmarks. Gemini wins on multimodal ability, context length, API cost, and Google ecosystem depth. ChatGPT wins on coding precision, writing quality, desktop automation, and plugin breadth. Both are genuinely excellent. The right choice depends on where you work, not which model is "smarter."</div>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Gemini</th><th>ChatGPT</th><th>Winner</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Current flagship model</td><td>Gemini 3.1 Pro</td><td>GPT-5.4</td><td><span class="wt">Tie</span></td></tr>
+        <tr><td>Free tier model</td><td class="wg">Gemini 3.1 Flash (generous)</td><td>GPT-5.2 (limited)</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Paid tier price</td><td>$19.99/mo (AI Pro)</td><td>$20/mo (Plus)</td><td><span class="wt">Tie</span></td></tr>
+        <tr><td>Context window (paid)</td><td class="wg">1M tokens (2M beta)</td><td>128K tokens default</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Output length</td><td class="wg">65,000 tokens</td><td>32,000 tokens</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Video understanding</td><td class="wg">Yes — up to 1 hour</td><td>No</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Audio understanding</td><td class="wg">Yes — up to 8 hours</td><td>No</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Image generation</td><td>Imagen (limited free)</td><td class="wc">DALL-E 3 (more generous)</td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Coding (SWE-bench)</td><td>63.8%</td><td class="wc">~80%</td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Reasoning (ARC-AGI-2)</td><td class="wg">77.1%</td><td>73.3%</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Desktop task automation</td><td>Limited</td><td class="wc">75% OSWorld (beats humans)</td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Google Workspace</td><td class="wg">Native, deep integration</td><td>Limited via plugins</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Web search quality</td><td class="wg">Google Search powered</td><td>Bing-based browsing</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Plugin / GPT ecosystem</td><td>Gems (limited)</td><td class="wc">GPT Store (massive)</td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>API cost per 1M tokens</td><td class="wg">$2.00 / $12.00</td><td>$2.50 / $15.00</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Writing prose quality</td><td>Good</td><td class="wc">More natural, polished</td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Real-time information</td><td class="wg">Google Search, superior</td><td>Live browsing, decent</td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Market share (2026)</td><td>~21.5%</td><td class="wc">~64%</td><td><span class="wc">ChatGPT ↑</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section class="section" id="models">
+  <div class="eyebrow">The Models</div>
+  <div class="sec-title">What you're actually using under the hood</div>
+  <div class="sec-sub">Both platforms have released major new models in early 2026 — understanding the difference matters.</div>
+
+  <div class="hth">
+    <div class="hth-col gc">
+      <div class="hth-head"><div class="dot dg"></div>Google Gemini — 3.1 Pro</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Built natively multimodal — processes text, image, video, audio in one model</div>
+      <div class="hth-item"><span class="ck yes">✓</span>1 million token context window standard (2M in beta)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Outputs up to 65,000 tokens — over 2× ChatGPT's limit</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Leads ARC-AGI-2 reasoning (77.1%) and GPQA science</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Deep Think variant for extended reasoning (Ultra tier)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Gemini 3 Flash as fast, free-tier default model</div>
+      <div class="hth-item"><span class="ck mid">~</span>SWE-bench coding: 63.8% — notably behind GPT-5.4</div>
+      <div class="hth-item"><span class="ck no">✗</span>Writing quality rated below ChatGPT by most professionals</div>
+    </div>
+    <div class="hth-col cc">
+      <div class="hth-head"><div class="dot dc"></div>OpenAI ChatGPT — GPT-5.4</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Released March 5, 2026 — unified frontier model</div>
+      <div class="hth-item"><span class="ck yes">✓</span>1M token context window (pricing increases above 272K)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>OSWorld desktop automation: 75% — first AI to beat humans</div>
+      <div class="hth-item"><span class="ck yes">✓</span>SWE-bench coding: ~80% — strongest commercial coding model</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Five reasoning effort levels from quick to deep analysis</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Natively handles images with DALL-E generation</div>
+      <div class="hth-item"><span class="ck mid">~</span>128K context at standard paid tier vs Gemini's 1M</div>
+      <div class="hth-item"><span class="ck no">✗</span>Cannot process video or audio natively</div>
+    </div>
+  </div>
+
+  <p>The key insight: <strong>these two models have evolved in opposite directions.</strong> Google built Gemini from the ground up as a multimodal system — it processes video, audio, and images the same way it processes text, natively, in a single pass. OpenAI built GPT-5.4 as a text-first reasoning powerhouse that added vision capabilities, rather than designing for media natively. This architectural difference explains why Gemini dominates multimodal tasks and ChatGPT dominates precision coding and writing.</p>
+</section>
+
+<!-- FREE TIERS -->
+<section class="section" id="free-tiers">
+  <div class="eyebrow">Free Tiers</div>
+  <div class="sec-title">What you get without spending a penny</div>
+  <div class="sec-sub">Gemini's free tier is the most generous of any major AI in 2026. Here's the full breakdown.</div>
+
+  <div class="winner gemini">
+    <span class="w-icon">🏆</span>
+    <span><strong>Gemini wins the free tier clearly.</strong> Gemini 3.1 Flash is powerful, fast, and has no aggressive daily message caps. ChatGPT's free tier gives you GPT-5.2 with strict daily limits and image generation. Gemini gives you more, more reliably, for $0.</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col gc">
+      <div class="hth-head"><div class="dot dg"></div>Gemini Free Tier</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Gemini 3.1 Flash — fast, capable, no hard message cap</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Access to "Thinking (3 Pro)" for complex reasoning (US)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Google Search integration — real-time, accurate web answers</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Gmail, Docs, Sheets integration on free (basic)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Image understanding and analysis</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Available on every Android phone and Chrome browser</div>
+      <div class="hth-item"><span class="ck mid">~</span>Image generation included but slower/limited on free</div>
+      <div class="hth-item"><span class="ck mid">~</span>Deep Research limited on free tier</div>
+      <div class="hth-item"><span class="ck no">✗</span>No full 1M context window on free (Flash model is smaller)</div>
+    </div>
+    <div class="hth-col cc">
+      <div class="hth-head"><div class="dot dc"></div>ChatGPT Free Tier</div>
+      <div class="hth-item"><span class="ck yes">✓</span>GPT-5.2 access — limited daily message quota</div>
+      <div class="hth-item"><span class="ck yes">✓</span>DALL-E image generation (limited daily)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Basic web search and browsing</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Image upload and analysis</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Canvas document editor (basic)</div>
+      <div class="hth-item"><span class="ck mid">~</span>128K context window — generous but smaller than Gemini</div>
+      <div class="hth-item"><span class="ck mid">~</span>Message limits hit faster during peak hours</div>
+      <div class="hth-item"><span class="ck no">✗</span>No Advanced Voice Mode on free</div>
+      <div class="hth-item"><span class="ck no">✗</span>No GPT-5.4 or o1 reasoning models on free</div>
+    </div>
+  </div>
+
+  <div class="callout green">
+    <span class="ci">💡</span>
+    <div><strong>Free tier recommendation:</strong> If you already use Google products (Gmail, Docs, Drive) — start with Gemini free. It integrates into tools you already use and gives you more capability for $0. If you primarily need image generation or want the best writing quality — try ChatGPT free. Both are free, so test both this week on your actual work tasks.</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="eyebrow">Pricing</div>
+  <div class="sec-title">Every plan, every price — April 2026</div>
+  <div class="sec-sub">Standard tiers are essentially identical at $20/month. The differences are what you get for that money.</div>
+
+  <div class="winner tie">
+    <span class="w-icon">🤝</span>
+    <span><strong>Tie at the standard tier.</strong> $19.99 vs $20/month — effectively the same. Gemini's API is 20% cheaper per token for developers. ChatGPT Plus packs more features (better image gen, voice, computer use). Gemini AI Pro bundles 2TB of Google storage alongside the AI features.</span>
+  </div>
+
+  <div class="pgrid">
+    <div class="pcard">
+      <div class="ptier g">Gemini — Free</div>
+      <div class="pamount">$0</div>
+      <div class="pperiod">per month, always free</div>
+      <div class="pfeat"><div class="pfd"></div>Gemini 3.1 Flash (generous limits)</div>
+      <div class="pfeat"><div class="pfd"></div>Google Search integration</div>
+      <div class="pfeat"><div class="pfd"></div>Gmail &amp; Docs (basic)</div>
+      <div class="pfeat"><div class="pfd"></div>Image understanding</div>
+    </div>
+    <div class="pcard best">
+      <div class="ptier g">Gemini — AI Pro</div>
+      <div class="pamount">$19.99</div>
+      <div class="pperiod">per month (was Gemini Advanced)</div>
+      <div class="pfeat"><div class="pfd"></div>Gemini 3.1 Pro — full access</div>
+      <div class="pfeat"><div class="pfd"></div>1M token context window</div>
+      <div class="pfeat"><div class="pfd"></div>Deep Research (full)</div>
+      <div class="pfeat"><div class="pfd"></div>2TB Google One storage included</div>
+      <div class="pfeat"><div class="pfd"></div>Full Workspace integration</div>
+    </div>
+    <div class="pcard">
+      <div class="ptier g">Gemini — AI Ultra</div>
+      <div class="pamount">$249</div>
+      <div class="pperiod">per month (first 3mo: $125)</div>
+      <div class="pfeat"><div class="pfd"></div>Highest model access &amp; limits</div>
+      <div class="pfeat"><div class="pfd"></div>Veo 2 &amp; Veo 3 video generation</div>
+      <div class="pfeat"><div class="pfd"></div>Deep Think reasoning model</div>
+      <div class="pfeat"><div class="pfd"></div>YouTube Premium included</div>
+    </div>
+    <div class="pcard">
+      <div class="ptier c">ChatGPT — Free</div>
+      <div class="pamount">$0</div>
+      <div class="pperiod">per month, daily limits apply</div>
+      <div class="pfeat"><div class="pfd"></div>GPT-5.2 (limited messages)</div>
+      <div class="pfeat"><div class="pfd"></div>DALL-E image gen (limited)</div>
+      <div class="pfeat"><div class="pfd"></div>Basic web search</div>
+      <div class="pfeat"><div class="pfd"></div>File &amp; image uploads</div>
+    </div>
+    <div class="pcard best">
+      <div class="ptier c">ChatGPT — Plus</div>
+      <div class="pamount">$20</div>
+      <div class="pperiod">per month</div>
+      <div class="pfeat"><div class="pfd"></div>Full GPT-5.4 access</div>
+      <div class="pfeat"><div class="pfd"></div>DALL-E image generation</div>
+      <div class="pfeat"><div class="pfd"></div>Sora video gen (720p)</div>
+      <div class="pfeat"><div class="pfd"></div>Advanced Voice Mode</div>
+      <div class="pfeat"><div class="pfd"></div>25 deep research reports/month</div>
+    </div>
+    <div class="pcard">
+      <div class="ptier c">ChatGPT — Pro</div>
+      <div class="pamount">$200</div>
+      <div class="pperiod">per month</div>
+      <div class="pfeat"><div class="pfd"></div>Unlimited GPT-5.4 access</div>
+      <div class="pfeat"><div class="pfd"></div>Priority GPU capacity</div>
+      <div class="pfeat"><div class="pfd"></div>o1 Pro reasoning mode</div>
+      <div class="pfeat"><div class="pfd"></div>Advanced computer use</div>
+    </div>
+  </div>
+
+  <div class="callout amber">
+    <span class="ci">💡</span>
+    <div><strong>API pricing matters for developers:</strong> Gemini 3.1 Pro API costs $2.00/$12.00 per million tokens (input/output). ChatGPT API costs $2.50/$15.00 per million tokens. That's roughly 20% cheaper for Gemini across the board. For high-volume applications, this difference compounds quickly — a million API calls per month at Gemini pricing saves thousands of dollars annually versus ChatGPT.</div>
+  </div>
+</section>
+
+<!-- BENCHMARKS -->
+<section class="section" id="benchmarks">
+  <div class="eyebrow">Benchmarks</div>
+  <div class="sec-title">The actual scores — no marketing, just data</div>
+  <div class="sec-sub">Real standardized test results from April 2026. Each model leads in different categories.</div>
+
+  <div class="winner tie">
+    <span class="w-icon">📊</span>
+    <span><strong>Overall tie with clear specialisations.</strong> Both score 57 on the Intelligence Index. Gemini leads reasoning benchmarks (ARC-AGI-2, GPQA). ChatGPT leads coding (SWE-bench) and desktop automation (OSWorld). Math is a dead heat at 97%+.</span>
+  </div>
+
+  <div class="score-group">
+    <div class="slr"><span class="smet">SWE-bench Verified (real-world software engineering)</span><div class="snums"><span class="snum sng">Gemini: 63.8%</span><span class="snum snc">ChatGPT: ~80%</span></div></div>
+    <div class="dtrack">
+      <div class="trow"><span class="tlbl" style="color:var(--gemini)">Gemini</span><div class="track"><div class="fg" style="width:63.8%"></div></div></div>
+      <div class="trow"><span class="tlbl" style="color:var(--chatgpt)">ChatGPT</span><div class="track"><div class="fc" style="width:80%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="score-group">
+    <div class="slr"><span class="smet">ARC-AGI-2 (abstract reasoning — hardest AI test)</span><div class="snums"><span class="snum sng">Gemini: 77.1%</span><span class="snum snc">ChatGPT: 73.3%</span></div></div>
+    <div class="dtrack">
+      <div class="trow"><span class="tlbl" style="color:var(--gemini)">Gemini</span><div class="track"><div class="fg" style="width:77.1%"></div></div></div>
+      <div class="trow"><span class="tlbl" style="color:var(--chatgpt)">ChatGPT</span><div class="track"><div class="fc" style="width:73.3%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="score-group">
+    <div class="slr"><span class="smet">GPQA Diamond (PhD-level science questions)</span><div class="snums"><span class="snum sng">Gemini: 94.3%</span><span class="snum snc">ChatGPT: 92.8%</span></div></div>
+    <div class="dtrack">
+      <div class="trow"><span class="tlbl" style="color:var(--gemini)">Gemini</span><div class="track"><div class="fg" style="width:94.3%"></div></div></div>
+      <div class="trow"><span class="tlbl" style="color:var(--chatgpt)">ChatGPT</span><div class="track"><div class="fc" style="width:92.8%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="score-group">
+    <div class="slr"><span class="smet">OSWorld (desktop computer automation)</span><div class="snums"><span class="snum sng">Gemini: ~50%</span><span class="snum snc">ChatGPT: 75%</span></div></div>
+    <div class="dtrack">
+      <div class="trow"><span class="tlbl" style="color:var(--gemini)">Gemini</span><div class="track"><div class="fg" style="width:50%"></div></div></div>
+      <div class="trow"><span class="tlbl" style="color:var(--chatgpt)">ChatGPT</span><div class="track"><div class="fc" style="width:75%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="score-group">
+    <div class="slr"><span class="smet">MATH-500 (mathematical problem solving)</span><div class="snums"><span class="snum sng">Gemini: 96.8%</span><span class="snum snc">ChatGPT: 97.3%</span></div></div>
+    <div class="dtrack">
+      <div class="trow"><span class="tlbl" style="color:var(--gemini)">Gemini</span><div class="track"><div class="fg" style="width:96.8%"></div></div></div>
+      <div class="trow"><span class="tlbl" style="color:var(--chatgpt)">ChatGPT</span><div class="track"><div class="fc" style="width:97.3%"></div></div></div>
+    </div>
+  </div>
+
+  <div class="score-group">
+    <div class="slr"><span class="smet">Terminal-Bench 2.0 (agentic coding tasks)</span><div class="snums"><span class="snum sng">Gemini: 68.5%</span><span class="snum snc">ChatGPT: 75.1%</span></div></div>
+    <div class="dtrack">
+      <div class="trow"><span class="tlbl" style="color:var(--gemini)">Gemini</span><div class="track"><div class="fg" style="width:68.5%"></div></div></div>
+      <div class="trow"><span class="tlbl" style="color:var(--chatgpt)">ChatGPT</span><div class="track"><div class="fc" style="width:75.1%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MULTIMODAL -->
+<section class="section" id="multimodal">
+  <div class="eyebrow">Multimodal Capabilities</div>
+  <div class="sec-title">Working with images, video, and audio</div>
+  <div class="sec-sub">This is Gemini's biggest and most decisive advantage over ChatGPT in 2026.</div>
+
+  <div class="winner gemini">
+    <span class="w-icon">🎬</span>
+    <span><strong>Gemini wins multimodal — it's not close.</strong> Gemini 3.1 Pro processes up to one hour of video and eight hours of audio natively. ChatGPT cannot process video or audio at all. If your work involves media, Gemini is the only viable choice.</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col gc">
+      <div class="hth-head"><div class="dot dg"></div>Gemini Multimodal</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Processes video natively — up to 1 hour in a single prompt</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Audio understanding — up to 8 hours of audio natively</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Image analysis, description, and comparison</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Imagen image generation (Nano Banana Pro on AI Pro)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Veo 2 &amp; Veo 3 video generation (Ultra tier)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Can combine video + text in one single analysis prompt</div>
+      <div class="hth-item"><span class="ck yes">✓</span>YouTube video summarization and Q&amp;A</div>
+      <div class="hth-item"><span class="ck mid">~</span>Image generation quality slightly behind DALL-E 3</div>
+    </div>
+    <div class="hth-col cc">
+      <div class="hth-head"><div class="dot dc"></div>ChatGPT Multimodal</div>
+      <div class="hth-item"><span class="ck yes">✓</span>DALL-E 3 image generation — high quality, generous on Plus</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Sora video generation (short clips, Plus tier)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Image analysis and visual understanding</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Advanced Voice Mode — real-time conversational voice</div>
+      <div class="hth-item"><span class="ck mid">~</span>Cannot process uploaded video files</div>
+      <div class="hth-item"><span class="ck no">✗</span>Cannot understand or transcribe audio files natively</div>
+      <div class="hth-item"><span class="ck no">✗</span>No YouTube integration or video Q&amp;A</div>
+    </div>
+  </div>
+
+  <p><strong>Real-world impact:</strong> If you work with video content — summarizing meetings, analysing YouTube lectures, reviewing footage — Gemini is the only option between these two. If you primarily need to generate images or want to use voice mode for hands-free interaction, ChatGPT's DALL-E and Advanced Voice Mode are excellent. The two tools have carved out completely non-overlapping multimedia capabilities.</p>
+</section>
+
+<!-- CODING -->
+<section class="section" id="coding">
+  <div class="eyebrow">Coding</div>
+  <div class="sec-title">Which is better for writing code?</div>
+  <div class="sec-sub">ChatGPT leads coding by a significant margin. Gemini is competitive on standard tasks but lags on complex engineering.</div>
+
+  <div class="winner chatgpt">
+    <span class="w-icon">💻</span>
+    <span><strong>ChatGPT wins coding clearly</strong> — SWE-bench 80% vs Gemini's 63.8%. That's a 16-point gap, the largest performance difference between these two models in any category. For professional developers, ChatGPT or Claude (even stronger at coding) are the right choices.</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col gc">
+      <div class="hth-head"><div class="dot dg"></div>Gemini for Coding</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Competitive for standard tasks in Python, JS, SQL</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Native Google Cloud / Firebase / Android Studio integration</div>
+      <div class="hth-item"><span class="ck yes">✓</span>1M context window — holds entire large codebases</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Good for analysing existing code and documentation</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Gemini Code Assist — integrated in Google Cloud dev tools</div>
+      <div class="hth-item"><span class="ck mid">~</span>SWE-bench: 63.8% — solid but well behind ChatGPT and Claude</div>
+      <div class="hth-item"><span class="ck no">✗</span>No terminal-based autonomous coding agent</div>
+    </div>
+    <div class="hth-col cc">
+      <div class="hth-head"><div class="dot dc"></div>ChatGPT for Coding</div>
+      <div class="hth-item"><span class="ck yes">✓</span>SWE-bench ~80% — strongest among the two here</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Terminal-Bench 2.0: 75.1% (vs Gemini's 68.5%)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Code Interpreter — runs Python, produces data analysis &amp; charts</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Operator: web browser automation agent</div>
+      <div class="hth-item"><span class="ck yes">✓</span>OSWorld desktop computer use: 75% (first AI to beat humans)</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Better for complex multi-step architecture tasks</div>
+      <div class="hth-item"><span class="ck mid">~</span>128K context at standard tier (less than Gemini's 1M)</div>
+    </div>
+  </div>
+
+  <div class="callout blue">
+    <span class="ci">📌</span>
+    <div><strong>Developer note:</strong> If coding is your primary use case, Claude Opus 4.6 (80.8% SWE-bench) and ChatGPT are the strongest options. Gemini is better suited to Google Cloud projects where the native integration with Firebase and Android Studio adds practical value that offsets the benchmark gap.</div>
+  </div>
+</section>
+
+<!-- GOOGLE WORKSPACE -->
+<section class="section" id="workspace">
+  <div class="eyebrow">Google Workspace Integration</div>
+  <div class="sec-title">The biggest reason to choose Gemini</div>
+  <div class="sec-sub">If you live in Gmail, Docs, Drive, or Sheets — Gemini's ecosystem advantage is decisive.</div>
+
+  <div class="winner gemini">
+    <span class="w-icon">📁</span>
+    <span><strong>Gemini wins Workspace — completely.</strong> Gemini works natively inside Gmail, Google Docs, Google Sheets, Google Slides, and Google Meet. It can draft emails in context, summarize documents, and extract insights from spreadsheets without ever leaving Google's apps. ChatGPT has no native equivalent.</span>
+  </div>
+
+  <div class="hth">
+    <div class="hth-col gc">
+      <div class="hth-head"><div class="dot dg"></div>Gemini in Google Workspace</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Gmail: draft context-aware replies, summarize threads</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Google Docs: write, edit, rewrite within the document</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Google Sheets: analyse data, create formulas, generate charts</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Google Slides: generate presentations from text</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Google Meet: real-time meeting notes and summaries</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Google Drive: search, summarize, and query your files</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Works across mobile, desktop, and web automatically</div>
+    </div>
+    <div class="hth-col cc">
+      <div class="hth-head"><div class="dot dc"></div>ChatGPT Workspace Equivalent</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Canvas: collaborative document writing and editing</div>
+      <div class="hth-item"><span class="ck yes">✓</span>GPT Store: third-party plugins for some Google tools</div>
+      <div class="hth-item"><span class="ck yes">✓</span>Code Interpreter works with uploaded spreadsheets</div>
+      <div class="hth-item"><span class="ck mid">~</span>Can analyse Google Docs exported as files (not in-app)</div>
+      <div class="hth-item"><span class="ck no">✗</span>No native Gmail integration</div>
+      <div class="hth-item"><span class="ck no">✗</span>No live Google Sheets analysis</div>
+      <div class="hth-item"><span class="ck no">✗</span>No Google Meet summaries</div>
+    </div>
+  </div>
+</section>
+
+<!-- ALL FEATURES -->
+<section class="section" id="features">
+  <div class="eyebrow">Feature Comparison</div>
+  <div class="sec-title">Every feature, side by side</div>
+  <div class="sec-sub">The complete picture of what each platform includes at the paid tier.</div>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>Gemini (AI Pro)</th><th>ChatGPT (Plus)</th><th>Edge</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Video processing</td><td><span class="pill pg">Yes — 1 hour</span></td><td><span class="pill pn">None</span></td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Audio processing</td><td><span class="pill pg">Yes — 8 hours</span></td><td><span class="pill pn">None</span></td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Image generation</td><td><span class="pill pa">Imagen (limited)</span></td><td><span class="pill pc">DALL-E 3 (generous)</span></td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Video generation</td><td><span class="pill pa">Veo 2 (Ultra only)</span></td><td><span class="pill pc">Sora (Plus tier)</span></td><td><span class="wt">Tie</span></td></tr>
+        <tr><td>Voice mode</td><td><span class="pill pn">Basic</span></td><td><span class="pill pc">Advanced Voice Mode</span></td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Web search</td><td><span class="pill pg">Google Search powered</span></td><td><span class="pill pc">Live Bing browsing</span></td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Context window</td><td><span class="pill pg">1M tokens (2M beta)</span></td><td><span class="pill pc">128K (1M+ premium)</span></td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Max output length</td><td><span class="pill pg">65,000 tokens</span></td><td><span class="pill pc">32,000 tokens</span></td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Custom chatbots</td><td><span class="pill pa">Gems</span></td><td><span class="pill pc">GPT Store (massive)</span></td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Desktop automation</td><td><span class="pill pn">Limited</span></td><td><span class="pill pc">Operator (beta)</span></td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Google Workspace</td><td><span class="pill pg">Native, deep</span></td><td><span class="pill pn">Plugins only</span></td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Google Storage bundle</td><td><span class="pill pg">2TB included</span></td><td><span class="pill pn">None</span></td><td><span class="wg">Gemini ↑</span></td></tr>
+        <tr><td>Memory (cross-session)</td><td><span class="pill pa">Limited</span></td><td><span class="pill pc">Yes (paid)</span></td><td><span class="wc">ChatGPT ↑</span></td></tr>
+        <tr><td>Deep Research</td><td><span class="pill pg">Yes (strong)</span></td><td><span class="pill pc">Yes (25/month Plus)</span></td><td><span class="wt">Tie</span></td></tr>
+        <tr><td>Mobile app</td><td><span class="pill pg">iOS + Android</span></td><td><span class="pill pc">iOS + Android</span></td><td><span class="wt">Tie</span></td></tr>
+        <tr><td>API availability</td><td><span class="pill pg">Yes (cheaper)</span></td><td><span class="pill pc">Yes (more mature)</span></td><td><span class="wt">Tie</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section" id="use-cases">
+  <div class="eyebrow">Use Cases</div>
+  <div class="sec-title">Which one should YOU use?</div>
+  <div class="sec-sub">Stop asking which is "better." Ask which is better for your specific situation.</div>
+
+  <div class="ucgrid">
+    <div class="uccard gw">
+      <div class="uct">🎓 Students &amp; researchers</div>
+      <div class="ucb"><strong>Choose Gemini.</strong> The free tier is more generous, Google Docs integration is invaluable for essays, and the superior web search with real-time citations makes research faster. The 1M context window lets you feed entire textbooks into one session.</div>
+    </div>
+    <div class="uccard gw">
+      <div class="uct">📧 Google Workspace users</div>
+      <div class="ucb"><strong>Choose Gemini.</strong> No contest. If your work lives in Gmail, Docs, Sheets, and Drive, Gemini's native integration eliminates the copy-paste workflow entirely. ChatGPT has no meaningful equivalent for these tools.</div>
+    </div>
+    <div class="uccard gw">
+      <div class="uct">🎬 Video &amp; audio creators</div>
+      <div class="ucb"><strong>Choose Gemini.</strong> Gemini can process up to one hour of video and eight hours of audio natively. Ask it to summarize a video, extract key moments, or analyse audio content. ChatGPT cannot do any of this.</div>
+    </div>
+    <div class="uccard gw">
+      <div class="uct">🔬 Science &amp; research professionals</div>
+      <div class="ucb"><strong>Choose Gemini.</strong> Leads GPQA Diamond (94.3% vs 92.8%) and ARC-AGI-2 reasoning. Better at science, medicine, and analytical reasoning tasks. The 1M context window handles long research papers effortlessly.</div>
+    </div>
+    <div class="uccard gw">
+      <div class="uct">💰 Budget-conscious developers</div>
+      <div class="ucb"><strong>Choose Gemini API.</strong> At $2.00/$12.00 per million tokens vs $2.50/$15.00 for ChatGPT, Gemini is about 20% cheaper. For high-volume production applications, this difference adds up to significant savings monthly.</div>
+    </div>
+    <div class="uccard cw">
+      <div class="uct">💻 Software developers</div>
+      <div class="ucb"><strong>Choose ChatGPT</strong> (or Claude for even stronger coding). SWE-bench 80% vs Gemini's 63.8% is a 16-point gap. ChatGPT also leads agentic coding, desktop automation, and has the Code Interpreter for data analysis.</div>
+    </div>
+    <div class="uccard cw">
+      <div class="uct">✍️ Writers &amp; content creators</div>
+      <div class="ucb"><strong>Choose ChatGPT.</strong> Writing quality benchmarks and professional writer surveys consistently favour ChatGPT and Claude over Gemini for natural prose. DALL-E image generation alongside text is also a major practical advantage.</div>
+    </div>
+    <div class="uccard cw">
+      <div class="uct">🎨 Social media managers</div>
+      <div class="ucb"><strong>Choose ChatGPT Plus.</strong> DALL-E image generation, Sora video clips, Advanced Voice Mode for audio content, and Canvas for collaborative editing — ChatGPT is the content creation Swiss Army knife.</div>
+    </div>
+    <div class="uccard tw">
+      <div class="uct">🏢 Enterprise / business teams</div>
+      <div class="ucb"><strong>Use both strategically.</strong> Google Workspace teams → Gemini. Microsoft / mixed environments → ChatGPT. Many organizations are routing: Gemini for document workflows and research, ChatGPT for coding and content creation.</div>
+    </div>
+    <div class="uccard tw">
+      <div class="uct">📱 Casual everyday users</div>
+      <div class="ucb"><strong>Try Gemini free first.</strong> Gemini's free tier is more generous with fewer daily limits. If you hit Gemini's limits or need image generation, add ChatGPT free. Combining both free tiers covers most everyday AI needs at $0/month.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="eyebrow">FAQ</div>
+  <div class="sec-title">The questions everyone is searching for</div>
+  <div class="sec-sub">Honest answers to the most common Gemini vs ChatGPT questions.</div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is Gemini better than ChatGPT in 2026?</div>
+    <div class="faq-a">Neither is definitively better — they lead in different categories. Gemini 3.1 Pro wins on multimodal (video, audio), context window (1M vs 128K), Google Workspace integration, and API pricing. ChatGPT GPT-5.4 wins on coding (80% vs 63.8% SWE-bench), writing quality, desktop automation, and plugin ecosystem breadth. Both score 57 on the Intelligence Index overall. The right tool depends on what you actually do, not on who "wins" a general ranking.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Which has a better free tier — Gemini or ChatGPT?</div>
+    <div class="faq-a">Gemini's free tier is more generous. Gemini 3.1 Flash is fast, capable, and doesn't impose aggressive daily message limits. US users also get access to "Thinking (3 Pro)" for complex tasks on the free tier. ChatGPT free gives you GPT-5.2 with stricter daily limits plus DALL-E image generation (limited). For most everyday users, Gemini free provides more usable capacity per day.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can Gemini replace ChatGPT?</div>
+    <div class="faq-a">For many users — especially those in the Google ecosystem — yes. If your work centres on Gmail, Docs, Drive, and research, Gemini handles everything you'd use ChatGPT for, and does several things (video, audio, Workspace integration) that ChatGPT simply cannot do. For developers, content creators needing image generation, or users who rely on ChatGPT's plugin ecosystem, Gemini is not a full replacement. The smartest approach in 2026 is using both free tiers and upgrading only the one that matches your primary use case.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is the context window difference between Gemini and ChatGPT?</div>
+    <div class="faq-a">Significant. Gemini AI Pro (paid) gives you a 1 million token context window — enough to process entire books, hours of transcripts, or full large codebases in a single session. Gemini even offers 2 million tokens in beta. ChatGPT Plus gives you 128,000 tokens by default — still large by most standards but 8× smaller than Gemini's standard paid window. Both offer 1M+ tokens at their maximum API tier but Gemini makes it available at the standard $19.99/month plan.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is Gemini free with Google account?</div>
+    <div class="faq-a">Yes. Any Google account gives you access to Gemini free at gemini.google.com, in the Google app, and through Android devices. The free tier uses Gemini 3.1 Flash with reasonable daily limits. You don't need to pay anything to start. The paid Google AI Pro plan ($19.99/month) unlocks Gemini 3.1 Pro, the full 1M context window, unlimited Deep Research, and 2TB of Google storage.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Which is better for writing — Gemini or ChatGPT?</div>
+    <div class="faq-a">ChatGPT produces more natural, polished prose according to professional writer surveys and independent tests. Gemini's writing is good but can feel slightly more mechanical. For long-form articles, marketing copy, and creative writing, ChatGPT (and Claude) are preferred. For structured, factual writing — reports, summaries, technical documentation — Gemini's accuracy and research capabilities make it very competitive.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Which is cheaper — Gemini or ChatGPT?</div>
+    <div class="faq-a">At the consumer subscription level, they're essentially identical: $19.99 vs $20/month. At the API level, Gemini is cheaper — $2.00/$12.00 per million tokens versus ChatGPT's $2.50/$15.00, roughly a 20% saving. Gemini AI Pro also bundles 2TB of Google storage, which adds value compared to ChatGPT Plus which includes no storage.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can Gemini process video? Can ChatGPT?</div>
+    <div class="faq-a">Gemini can process up to one hour of video natively — meaning you can upload a video and ask it questions, request a summary, identify key moments, or analyse visual content within it. ChatGPT cannot process video files at all as of April 2026. This is one of the most significant practical differences between the two tools, particularly for anyone working with recorded meetings, lectures, YouTube content, or video production.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is Gemini good for coding?</div>
+    <div class="faq-a">Gemini is adequate for coding tasks, particularly within Google's ecosystem (Firebase, Android, Cloud). However, its SWE-bench score of 63.8% significantly trails ChatGPT's ~80% and Claude's 80.8% on standardised coding benchmarks. For professional development work, ChatGPT or Claude are stronger choices. Gemini is best for coding when you're working in Google Cloud or need to combine code with large context — for example, analysing an entire codebase alongside documentation.</div>
+  </div>
+</section>
+
+<!-- VERDICT -->
+<section class="section" id="verdict">
+  <div class="eyebrow">Final Verdict</div>
+  <div class="sec-title">The honest conclusion — April 2026</div>
+  <div class="sec-sub">After testing every dimension, here is the definitive recommendation.</div>
+
+  <div class="callout blue">
+    <span class="ci">🎯</span>
+    <div><strong>The real answer:</strong> Gemini 3.1 Pro and ChatGPT GPT-5.4 are the two best general-purpose AI platforms available at $20/month. They've evolved in opposite directions — Gemini toward multimodal breadth and Google ecosystem depth, ChatGPT toward coding precision and creative feature breadth. Pick the one that matches where you work, not which has the higher average benchmark score.</div>
+  </div>
+
+  <div class="vgrid">
+    <div class="vcard g">
+      <div class="vt">Choose Gemini if you...</div>
+      <div class="vs2">Breadth, ecosystem, and media</div>
+      <ul class="vlist">
+        <li>Use Gmail, Docs, Drive, or Sheets daily</li>
+        <li>Work with video or audio content</li>
+        <li>Need to process very long documents (books, codebases)</li>
+        <li>Build on Google Cloud, Firebase, or Android</li>
+        <li>Want the best free tier with fewest limits</li>
+        <li>Research topics needing real-time Google Search accuracy</li>
+        <li>Need cheaper API pricing for high-volume applications</li>
+        <li>Want 2TB Google storage bundled with your AI plan</li>
+      </ul>
+    </div>
+    <div class="vcard c">
+      <div class="vt">Choose ChatGPT if you...</div>
+      <div class="vs2">Precision, writing, and creativity</div>
+      <ul class="vlist">
+        <li>Write code professionally and need the strongest model</li>
+        <li>Create content requiring DALL-E image generation</li>
+        <li>Use Advanced Voice Mode for hands-free interaction</li>
+        <li>Need the broadest plugin and GPT Store ecosystem</li>
+        <li>Want desktop computer automation (Operator)</li>
+        <li>Produce long-form writing where quality matters most</li>
+        <li>Need Sora for short video clip generation</li>
+        <li>Work in a non-Google environment (Microsoft, mixed tools)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout green" style="margin-top:1.5rem;">
+    <span class="ci">💡</span>
+    <div><strong>Power user move:</strong> Use both free tiers simultaneously. Gemini free for research, Google tasks, and video analysis. ChatGPT free for writing, image generation, and coding. When you're ready to pay, upgrade only the one that hit its limits most often for your actual workflow. At $19.99–$20/month each, running both paid tiers at $40/month total gives you the complete 2026 AI toolkit.</div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section" style="border-bottom:none;padding-bottom:1rem;">
+  <div class="sec-title">More Comparisons</div>
+  <div class="relgrid">
+    <a class="relcard" href="/claude-vs-chatgpt"><div class="reltag">Comparison</div><div class="reltitle">Claude vs ChatGPT 2026 — Full Head-to-Head</div></a>
+    <a class="relcard" href="/"><div class="reltag">Directory</div><div class="reltitle">All AI Free Tiers Compared — Complete Guide</div></a>
+    <a class="relcard" href="#"><div class="reltag">Comparison</div><div class="reltitle">DeepSeek vs ChatGPT — The Free Alternative</div></a>
+    <a class="relcard" href="#"><div class="reltag">Comparison</div><div class="reltitle">Claude vs Gemini 2026 — Which Is Better?</div></a>
+    <a class="relcard" href="#"><div class="reltag">Guide</div><div class="reltitle">Best Free AI Tools for Students 2026</div></a>
+    <a class="relcard" href="#"><div class="reltag">Guide</div><div class="reltitle">Best AI for Coding in 2026 — Full Ranking</div></a>
+  </div>
+
+  <div class="cite">
+    <h4>Sources — Updated April 2026</h4>
+    [1] Tech-Insider. (2026). <em>ChatGPT vs Gemini 2026: Benchmarks, Pricing &amp; Verdict.</em> <a href="https://tech-insider.org/chatgpt-vs-gemini-2026/" target="_blank" rel="noopener">tech-insider.org</a><br>
+    [2] FelloAI. (2026). <em>ChatGPT vs Gemini 2026: Benchmarks, Pricing Compared.</em> <a href="https://felloai.com/chatgpt-vs-gemini/" target="_blank" rel="noopener">felloai.com</a><br>
+    [3] Gurusup. (2026). <em>Gemini vs ChatGPT: Complete Comparison 2026.</em> <a href="https://gurusup.com/blog/gemini-vs-chatgpt" target="_blank" rel="noopener">gurusup.com</a><br>
+    [4] DigitalOcean. (2026). <em>ChatGPT vs Gemini: How AI Assistants Stack Up in 2026.</em> <a href="https://www.digitalocean.com/resources/articles/gemini-vs-chatgpt" target="_blank" rel="noopener">digitalocean.com</a><br>
+    [5] SentiSight. (2026). <em>2026 AI Subscription Prices: Gemini vs ChatGPT vs Claude.</em> <a href="https://www.sentisight.ai/ai-price-comparison-gemini-chatgpt-claude-grok/" target="_blank" rel="noopener">sentisight.ai</a><br>
+    [6] Sybill. (2025). <em>Gemini vs GPT: Comprehensive AI Chatbots 2026 Comparison.</em> <a href="https://www.sybill.ai/blogs/gemini-vs-gpt" target="_blank" rel="noopener">sybill.ai</a><br>
+    [7] IntuitionLabs. (2026). <em>AI API Pricing Comparison 2026: Grok vs Gemini vs GPT vs Claude.</em> <a href="https://intuitionlabs.ai/articles/ai-api-pricing-comparison-grok-gemini-openai-claude" target="_blank" rel="noopener">intuitionlabs.ai</a><br>
+    [8] DataStudios. (2026). <em>ChatGPT vs Gemini vs Claude Full 2026 Comparison.</em> <a href="https://www.datastudios.org/post/chatgpt-vs-gemini-vs-claude-full-2026-comparison" target="_blank" rel="noopener">datastudios.org</a><br>
+    [9] Overchat AI Hub. (2026). <em>Gemini vs ChatGPT: Which Chatbot Should You Choose?</em> <a href="https://overchat.ai/ai-hub/gemini-vs-chatgpt" target="_blank" rel="noopener">overchat.ai</a><br>
+    <br>
+    <em>* This page contains affiliate links. Clicking and purchasing may earn us a small commission at no extra cost to you. All rankings are independent and based on published benchmarks and real-world testing. Last updated April 8, 2026.</em>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="fi">
+    <div>
+      <div class="fl">Free<span>AI</span>.guide</div>
+      <div class="fn">The most honest AI comparison directory. Every tool tested. Rankings never for sale. Updated monthly with current pricing and benchmark data.</div>
+    </div>
+    <div class="flinks">
+      <a href="/">Home</a>
+      <a href="/claude-vs-chatgpt">Claude vs ChatGPT</a>
+      <a href="/gemini-vs-chatgpt">Gemini vs ChatGPT</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
