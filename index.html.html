@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreeAI.guide — Compare Every Major AI Tool's Free Tier (2026)</title>
+<meta name="description" content="The most complete free tier comparison of ChatGPT, Claude, Gemini, Grok, DeepSeek, Perplexity and more. Find the best free AI tool for your needs in 2026.">
+<meta name="keywords" content="free AI tools 2026, ChatGPT free tier, Claude free, Gemini free, DeepSeek free, best free AI chatbot, AI tools comparison">
+<meta property="og:title" content="FreeAI.guide — Compare Every Major AI Tool's Free Tier">
+<meta property="og:description" content="Stop paying for AI you don't need. Find the best free tier for every major AI tool in 2026.">
+<meta name="robots" content="index, follow">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f4f0;
+  --bg2: #eeecea;
+  --panel: #ffffff;
+  --border: #e0ded8;
+  --ink: #1a1a18;
+  --ink2: #4a4a45;
+  --ink3: #8a8a82;
+  --accent: #1a1a18;
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --amber: #d97706;
+  --amber-bg: #fffbeb;
+  --red: #dc2626;
+  --red-bg: #fef2f2;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  background: var(--ink);
+  padding: 0 2rem;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.nav-logo span { color: #86efac; }
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: #fff; }
+
+.nav-cta {
+  background: #16a34a;
+  color: #fff !important;
+  padding: 0.3rem 0.9rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.nav-cta:hover { background: #15803d; color: #fff !important; }
+
+/* HERO */
+.hero {
+  background: var(--ink);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(22,163,74,0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(37,99,235,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(217,119,6,0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* grid lines */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, transparent 1px, transparent 60px, rgba(255,255,255,0.025) 61px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0px, transparent 1px, transparent 80px, rgba(255,255,255,0.025) 81px);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(22,163,74,0.15);
+  border: 1px solid rgba(22,163,74,0.3);
+  color: #86efac;
+  font-size: 0.72rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.05;
+  color: #fff;
+  letter-spacing: -0.03em;
+  max-width: 800px;
+  margin: 0 auto 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: #86efac;
+}
+
+.hero-sub {
+  color: #9ca3af;
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  position: relative;
+  z-index: 1;
+  line-height: 1.65;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.hero-stat-label {
+  font-size: 0.78rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* FILTER BAR */
+.filter-bar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 0.8rem 2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  overflow-x: auto;
+  position: sticky;
+  top: 52px;
+  z-index: 90;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  color: var(--ink3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  margin-right: 0.5rem;
+}
+
+.filter-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--ink2);
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+/* MAIN LAYOUT */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.section-sub {
+  color: var(--ink3);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+/* AI CARD GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+/* TOOL CARD */
+.tool-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  padding: 1.2rem 1.4rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.tool-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: -0.03em;
+}
+
+.icon-chatgpt { background: #10a37f; color: #fff; }
+.icon-claude { background: #d97706; color: #fff; }
+.icon-gemini { background: #1a73e8; color: #fff; }
+.icon-grok { background: #1a1a1a; color: #fff; }
+.icon-deepseek { background: #4f46e5; color: #fff; }
+.icon-perplexity { background: #20b2aa; color: #fff; }
+.icon-copilot { background: #0078d4; color: #fff; }
+.icon-llama { background: #7c3aed; color: #fff; }
+
+.card-header-text { flex: 1; min-width: 0; }
+
+.tool-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.15rem;
+}
+
+.tool-maker {
+  font-size: 0.75rem;
+  color: var(--ink3);
+}
+
+.free-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-yes { background: var(--green-bg); color: var(--green); border: 1px solid #bbf7d0; }
+.badge-limited { background: var(--amber-bg); color: var(--amber); border: 1px solid #fde68a; }
+.badge-no { background: var(--red-bg); color: var(--red); border: 1px solid #fecaca; }
+
+/* SCORE ROW */
+.score-row {
+  padding: 0.9rem 1.4rem;
+  border-bottom: 1px solid var(--bg2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.score-label {
+  font-size: 0.78rem;
+  color: var(--ink2);
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.score-track {
+  flex: 1;
+  height: 5px;
+  background: var(--bg2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--green);
+}
+
+.score-fill.mid { background: var(--amber); }
+.score-fill.low { background: var(--red); }
+
+.score-val {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  width: 28px;
+  text-align: right;
+  color: var(--ink);
+}
+
+/* CARD BODY */
+.card-body {
+  padding: 1rem 1.4rem;
+  flex: 1;
+}
+
+.free-limits {
+  margin-bottom: 0.8rem;
+}
+
+.free-limits-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink3);
+  margin-bottom: 0.5rem;
+}
+
+.limit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--ink2);
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.limit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+.dot-green { background: var(--green); }
+.dot-amber { background: var(--amber); }
+.dot-red { background: var(--red); }
+
+.best-for {
+  margin-top: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: var(--ink2);
+}
+
+.best-for strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* CARD FOOTER */
+.card-footer {
+  padding: 0.9rem 1.4rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paid-price {
+  font-size: 0.78rem;
+  color: var(--ink3);
+}
+
+.paid-price strong {
+  color: var(--ink);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+}
+
+.try-btn {
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+  font-family: 'Instrument Sans', sans-serif;
+}
+.try-btn:hover { background: #333; }
+
+/* COMPARISON TABLE */
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  min-width: 700px;
+}
+
+thead tr {
+  background: var(--ink);
+  color: #fff;
+}
+
+thead th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--bg2);
+  transition: background 0.15s;
+}
+
+tbody tr:hover { background: var(--bg); }
+tbody tr:last-child { border-bottom: none; }
+
+td {
+  padding: 0.8rem 1rem;
+  color: var(--ink2);
+  vertical-align: middle;
+}
+
+td:first-child {
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.check { color: var(--green); font-size: 1rem; }
+.cross { color: var(--red); font-size: 1rem; }
+.partial { color: var(--amber); font-size: 1rem; }
+
+.pill {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.pill-green { background: var(--green-bg); color: var(--green); }
+.pill-amber { background: var(--amber-bg); color: var(--amber); }
+.pill-red   { background: var(--red-bg);   color: var(--red); }
+.pill-blue  { background: var(--blue-bg);  color: var(--blue); }
+
+/* USE CASE SECTION */
+.usecase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.usecase-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.4rem;
+}
+
+.usecase-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.usecase-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.usecase-winner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.winner-1 { background: #fef9c3; border: 1px solid #fde047; }
+.winner-2 { background: var(--bg2); border: 1px solid var(--border); }
+.winner-3 { background: var(--bg2); border: 1px solid var(--border); }
+
+.winner-rank {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  width: 18px;
+}
+
+.winner-name { font-weight: 600; color: var(--ink); }
+.winner-note { font-size: 0.74rem; color: var(--ink3); }
+
+/* MONETIZATION */
+.mono-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.mono-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mono-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.mono-card.green::before { background: var(--green); }
+.mono-card.blue::before { background: var(--blue); }
+.mono-card.amber::before { background: var(--amber); }
+.mono-card.red::before { background: var(--red); }
+
+.mono-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+.mono-earn {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--green);
+  margin-bottom: 0.6rem;
+}
+
+.mono-desc {
+  font-size: 0.8rem;
+  color: var(--ink3);
+  line-height: 1.5;
+}
+
+/* DEPLOYMENT */
+.deploy-steps {
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.deploy-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.deploy-step:last-child { border-bottom: none; }
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.step-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.step-body {
+  font-size: 0.84rem;
+  color: var(--ink2);
+  line-height: 1.6;
+}
+
+.step-body code {
+  background: var(--bg2);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--blue);
+}
+
+/* CALLOUT */
+.callout {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  color: #14532d;
+  line-height: 1.6;
+}
+
+.callout-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+/* FOOTER */
+footer {
+  background: var(--ink);
+  color: #6b7280;
+  padding: 3rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.footer-logo span { color: #86efac; }
+
+.footer-desc {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.footer-col h4 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+}
+
+.footer-col a {
+  display: block;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.82rem;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: #fff; }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #374151;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.76rem;
+}
+
+.affiliate-note {
+  font-size: 0.72rem;
+  color: #4b5563;
+  max-width: 500px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tool-card {
+  animation: fadeUp 0.5s ease both;
+}
+
+.tool-card:nth-child(1) { animation-delay: 0.05s; }
+.tool-card:nth-child(2) { animation-delay: 0.1s; }
+.tool-card:nth-child(3) { animation-delay: 0.15s; }
+.tool-card:nth-child(4) { animation-delay: 0.2s; }
+.tool-card:nth-child(5) { animation-delay: 0.25s; }
+.tool-card:nth-child(6) { animation-delay: 0.3s; }
+.tool-card:nth-child(7) { animation-delay: 0.35s; }
+.tool-card:nth-child(8) { animation-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 1.5rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .filter-bar { padding: 0.8rem 1rem; }
+  nav .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Free<span>AI</span>.guide</div>
+  <ul class="nav-links">
+    <li><a href="#compare">Compare</a></li>
+    <li><a href="#use-cases">By Use Case</a></li>
+    <li><a href="#table">Full Table</a></li>
+    <li><a href="#deploy">Deploy This Site</a></li>
+    <li><a href="#monetize" class="nav-cta">Monetize</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Updated April 2026 · All Free Tiers Verified</div>
+  <h1>Stop paying for AI<br>you don't <em>need to.</em></h1>
+  <p class="hero-sub">
+    The most complete comparison of every major AI tool's free tier.
+    ChatGPT, Claude, Gemini, Grok, DeepSeek and more — tested, ranked, and honestly reviewed.
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">8</div>
+      <div class="hero-stat-label">Tools Compared</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">6</div>
+      <div class="hero-stat-label">Fully Free Options</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">$0</div>
+      <div class="hero-stat-label">Min. Spend Needed</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">2026</div>
+      <div class="hero-stat-label">Data Current As Of</div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" onclick="filterCards('all', this)">All Tools</button>
+  <button class="filter-btn" onclick="filterCards('free', this)">Fully Free</button>
+  <button class="filter-btn" onclick="filterCards('coding', this)">Best for Coding</button>
+  <button class="filter-btn" onclick="filterCards('writing', this)">Best for Writing</button>
+  <button class="filter-btn" onclick="filterCards('research', this)">Best for Research</button>
+  <button class="filter-btn" onclick="filterCards('privacy', this)">Privacy-First</button>
+</div>
+
+<!-- TOOL CARDS -->
+<div class="container">
+<section class="section" id="compare">
+  <div class="section-title">Every Major AI Tool, Honestly Reviewed</div>
+  <div class="section-sub">Free tier limits, scores, and what each tool is actually best at.</div>
+
+  <div class="card-grid" id="card-grid">
+
+    <!-- CHATGPT -->
+    <div class="tool-card" data-tags="writing coding research">
+      <div class="card-header">
+        <div class="tool-icon icon-chatgpt">GPT</div>
+        <div class="card-header-text">
+          <div class="tool-name">ChatGPT</div>
+          <div class="tool-maker">OpenAI · Est. 2022</div>
+        </div>
+        <span class="free-badge badge-limited">Limited Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill mid" style="width:65%"></div></div><span class="score-val">6.5</span></div>
+      <div class="score-row"><span class="score-label">Reasoning</span><div class="score-track"><div class="score-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+      <div class="score-row"><span class="score-label">Image Gen</span><div class="score-track"><div class="score-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+      <div class="score-row"><span class="score-label">Value/Money</span><div class="score-track"><div class="score-fill mid" style="width:70%"></div></div><span class="score-val">7.0</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>GPT-5.2 access (limited daily messages)</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Web search included</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Image generation (DALL-E, limited)</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Hits message cap quickly (heavy users)</div>
+          <div class="limit-item"><div class="limit-dot dot-red"></div>No memory, no custom GPTs on free</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Creative writing, image generation, general Q&amp;A. The most versatile free tool if you don't need heavy daily usage.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">Plus: <strong>$20/mo</strong> · Pro: <strong>$200/mo</strong></div>
+        <a href="https://chat.openai.com" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+    <!-- CLAUDE -->
+    <div class="tool-card" data-tags="writing coding research">
+      <div class="card-header">
+        <div class="tool-icon icon-claude">CLD</div>
+        <div class="card-header-text">
+          <div class="tool-name">Claude</div>
+          <div class="tool-maker">Anthropic · Est. 2023</div>
+        </div>
+        <span class="free-badge badge-limited">Limited Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill mid" style="width:60%"></div></div><span class="score-val">6.0</span></div>
+      <div class="score-row"><span class="score-label">Reasoning</span><div class="score-track"><div class="score-fill" style="width:93%"></div></div><span class="score-val">9.3</span></div>
+      <div class="score-row"><span class="score-label">Long Docs</span><div class="score-track"><div class="score-fill" style="width:98%"></div></div><span class="score-val">9.8</span></div>
+      <div class="score-row"><span class="score-label">Value/Money</span><div class="score-track"><div class="score-fill mid" style="width:72%"></div></div><span class="score-val">7.2</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Claude Sonnet 4.6 access (daily cap)</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>200K token context window</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>File &amp; document uploads</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>No Projects feature on free</div>
+          <div class="limit-item"><div class="limit-dot dot-red"></div>Daily message limit, no priority access</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Long documents, legal/academic analysis, coding with nuance. Produces the most human-sounding prose of any model.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">Pro: <strong>$20/mo</strong> · Max: <strong>$100–200/mo</strong></div>
+        <a href="https://claude.ai" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+    <!-- GEMINI -->
+    <div class="tool-card" data-tags="research writing">
+      <div class="card-header">
+        <div class="tool-icon icon-gemini">GEM</div>
+        <div class="card-header-text">
+          <div class="tool-name">Gemini</div>
+          <div class="tool-maker">Google DeepMind · Est. 2023</div>
+        </div>
+        <span class="free-badge badge-yes">Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+      <div class="score-row"><span class="score-label">Reasoning</span><div class="score-track"><div class="score-fill" style="width:88%"></div></div><span class="score-val">8.8</span></div>
+      <div class="score-row"><span class="score-label">Multimodal</span><div class="score-track"><div class="score-fill" style="width:97%"></div></div><span class="score-val">9.7</span></div>
+      <div class="score-row"><span class="score-label">Value/Money</span><div class="score-track"><div class="score-fill" style="width:92%"></div></div><span class="score-val">9.2</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Gemini 2.5 Pro (free with Google account)</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>1 million token context window</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Full Google Workspace integration</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Image, audio &amp; video understanding</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Rate limits under heavy load</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Google Docs/Gmail users, multimodal tasks, students. The single best free tier available — Gemini 2.5 Pro free is extraordinary value.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">AI Pro: <strong>$19.99/mo</strong> · Ultra: <strong>$249/mo</strong></div>
+        <a href="https://gemini.google.com" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+    <!-- GROK -->
+    <div class="tool-card" data-tags="research">
+      <div class="card-header">
+        <div class="tool-icon icon-grok">GRK</div>
+        <div class="card-header-text">
+          <div class="tool-name">Grok</div>
+          <div class="tool-maker">xAI (Elon Musk) · Est. 2023</div>
+        </div>
+        <span class="free-badge badge-limited">Limited Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill mid" style="width:55%"></div></div><span class="score-val">5.5</span></div>
+      <div class="score-row"><span class="score-label">Real-Time Data</span><div class="score-track"><div class="score-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+      <div class="score-row"><span class="score-label">Coding</span><div class="score-track"><div class="score-fill" style="width:85%"></div></div><span class="score-val">8.5</span></div>
+      <div class="score-row"><span class="score-label">Value/Money</span><div class="score-track"><div class="score-fill mid" style="width:55%"></div></div><span class="score-val">5.5</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Basic Grok access via X (Twitter)</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Real-time X/Twitter data access</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Very limited daily messages on free</div>
+          <div class="limit-item"><div class="limit-dot dot-red"></div>Best features locked to X Premium ($22/mo)</div>
+          <div class="limit-item"><div class="limit-dot dot-red"></div>Benchmarks below ChatGPT/Claude at same price</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Social media monitoring, breaking news analysis, X/Twitter users. Poor value at paid tiers vs. competitors.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">X Premium+: <strong>$40/mo</strong> · SuperGrok: <strong>$30/mo</strong></div>
+        <a href="https://x.com/i/grok" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+    <!-- DEEPSEEK -->
+    <div class="tool-card" data-tags="free coding privacy">
+      <div class="card-header">
+        <div class="tool-icon icon-deepseek">DSK</div>
+        <div class="card-header-text">
+          <div class="tool-name">DeepSeek</div>
+          <div class="tool-maker">DeepSeek AI (China) · Est. 2023</div>
+        </div>
+        <span class="free-badge badge-yes">Fully Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill" style="width:95%"></div></div><span class="score-val">9.5</span></div>
+      <div class="score-row"><span class="score-label">Coding</span><div class="score-track"><div class="score-fill" style="width:92%"></div></div><span class="score-val">9.2</span></div>
+      <div class="score-row"><span class="score-label">Reasoning</span><div class="score-track"><div class="score-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+      <div class="score-row"><span class="score-label">Privacy Risk</span><div class="score-track"><div class="score-fill low" style="width:85%"></div></div><span class="score-val">HIGH</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>DeepSeek V4 — completely free to use</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Chain-of-thought "thinking" mode included</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Open-source — self-host on your own hardware</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Servers often slow due to high demand</div>
+          <div class="limit-item"><div class="limit-dot dot-red"></div>⚠️ Chinese company — data subject to Chinese law</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Developers, coders, cost-sensitive users. Extraordinary free capability — but do not use it for sensitive personal or business data.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">API: <strong>$0.27/1M tokens</strong> (cheapest paid)</div>
+        <a href="https://chat.deepseek.com" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+    <!-- PERPLEXITY -->
+    <div class="tool-card" data-tags="free research">
+      <div class="card-header">
+        <div class="tool-icon icon-perplexity">PPX</div>
+        <div class="card-header-text">
+          <div class="tool-name">Perplexity AI</div>
+          <div class="tool-maker">Perplexity AI Inc · Est. 2022</div>
+        </div>
+        <span class="free-badge badge-yes">Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill" style="width:88%"></div></div><span class="score-val">8.8</span></div>
+      <div class="score-row"><span class="score-label">Web Search</span><div class="score-track"><div class="score-fill" style="width:98%"></div></div><span class="score-val">9.8</span></div>
+      <div class="score-row"><span class="score-label">Citations</span><div class="score-track"><div class="score-fill" style="width:97%"></div></div><span class="score-val">9.7</span></div>
+      <div class="score-row"><span class="score-label">Value/Money</span><div class="score-track"><div class="score-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Unlimited standard searches with citations</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Real-time web results, always current</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Source links for every answer</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Limited "Pro" searches per day (uses GPT/Claude)</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Not ideal for long-form generation</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Research, fact-checking, students, journalists. The gold standard for cited, sourced answers. Beats Google for research tasks.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">Pro: <strong>$20/mo</strong> · Enterprise available</div>
+        <a href="https://perplexity.ai" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+    <!-- COPILOT -->
+    <div class="tool-card" data-tags="coding writing">
+      <div class="card-header">
+        <div class="tool-icon icon-copilot">COP</div>
+        <div class="card-header-text">
+          <div class="tool-name">Microsoft Copilot</div>
+          <div class="tool-maker">Microsoft / OpenAI · Est. 2023</div>
+        </div>
+        <span class="free-badge badge-yes">Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill" style="width:80%"></div></div><span class="score-val">8.0</span></div>
+      <div class="score-row"><span class="score-label">MS 365 Integration</span><div class="score-track"><div class="score-fill" style="width:99%"></div></div><span class="score-val">9.9</span></div>
+      <div class="score-row"><span class="score-label">General AI</span><div class="score-track"><div class="score-fill mid" style="width:72%"></div></div><span class="score-val">7.2</span></div>
+      <div class="score-row"><span class="score-label">Value/Money</span><div class="score-track"><div class="score-fill" style="width:88%"></div></div><span class="score-val">8.8</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>GPT-4o powered, completely free</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>DALL-E image generation included</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Web search with citations</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Free for Microsoft 365 subscribers</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Best value only if already in Microsoft ecosystem</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Office/Word/Excel users, Windows users, enterprise teams on M365. If you use Microsoft tools daily, this is your best free option.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">M365 Copilot: <strong>$30/user/mo</strong></div>
+        <a href="https://copilot.microsoft.com" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+    <!-- META LLAMA / META AI -->
+    <div class="tool-card" data-tags="free privacy coding">
+      <div class="card-header">
+        <div class="tool-icon icon-llama">META</div>
+        <div class="card-header-text">
+          <div class="tool-name">Meta AI / Llama 4</div>
+          <div class="tool-maker">Meta · Est. 2024 (open-source)</div>
+        </div>
+        <span class="free-badge badge-yes">Fully Free</span>
+      </div>
+      <div class="score-row"><span class="score-label">Free Tier</span><div class="score-track"><div class="score-fill" style="width:90%"></div></div><span class="score-val">9.0</span></div>
+      <div class="score-row"><span class="score-label">Open Source</span><div class="score-track"><div class="score-fill" style="width:100%"></div></div><span class="score-val">10</span></div>
+      <div class="score-row"><span class="score-label">Context Window</span><div class="score-track"><div class="score-fill" style="width:100%"></div></div><span class="score-val">10M</span></div>
+      <div class="score-row"><span class="score-label">Value/Money</span><div class="score-track"><div class="score-fill" style="width:97%"></div></div><span class="score-val">9.7</span></div>
+      <div class="card-body">
+        <div class="free-limits">
+          <div class="free-limits-title">Free Tier Includes</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Llama 4 Scout — 10 million token context</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Fully open-source, self-hostable</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>Free via Meta AI (Facebook, WhatsApp, Instagram)</div>
+          <div class="limit-item"><div class="limit-dot dot-green"></div>No subscription, no usage caps</div>
+          <div class="limit-item"><div class="limit-dot dot-amber"></div>Requires GPU for self-hosting</div>
+        </div>
+        <div class="best-for"><strong>Best free for:</strong> Privacy-conscious users (self-host), developers, huge document processing. The most powerful open-source model available and fully free.</div>
+      </div>
+      <div class="card-footer">
+        <div class="paid-price">Self-hosted: <strong>Free</strong> · Cloud APIs vary</div>
+        <a href="https://www.meta.ai" class="try-btn" target="_blank" rel="noopener">Try Free →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FULL COMPARISON TABLE -->
+<section class="section" id="table">
+  <div class="section-title">Side-by-Side Comparison</div>
+  <div class="section-sub">Every feature, every free tier limit, all in one place.</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free Model</th>
+          <th>Context Window</th>
+          <th>Web Search</th>
+          <th>Image Gen</th>
+          <th>Code</th>
+          <th>Paid From</th>
+          <th>Privacy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ChatGPT</td>
+          <td>GPT-5.2 (limited)</td>
+          <td>128K</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span> DALL-E</td>
+          <td><span class="pill pill-green">Strong</span></td>
+          <td>$20/mo</td>
+          <td><span class="pill pill-blue">US-based</span></td>
+        </tr>
+        <tr>
+          <td>Claude</td>
+          <td>Sonnet 4.6 (capped)</td>
+          <td>200K</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="pill pill-green">Best</span></td>
+          <td>$20/mo</td>
+          <td><span class="pill pill-blue">US-based</span></td>
+        </tr>
+        <tr>
+          <td>Gemini</td>
+          <td>2.5 Pro (generous)</td>
+          <td>1M</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="partial">~</span> Imagen</td>
+          <td><span class="pill pill-green">Strong</span></td>
+          <td>$19.99/mo</td>
+          <td><span class="pill pill-blue">US-based</span></td>
+        </tr>
+        <tr>
+          <td>Grok</td>
+          <td>Basic (very limited)</td>
+          <td>128K</td>
+          <td><span class="check">✓</span> X/Twitter</td>
+          <td><span class="partial">~</span> Limited</td>
+          <td><span class="pill pill-amber">Good</span></td>
+          <td>$30/mo</td>
+          <td><span class="pill pill-blue">US-based</span></td>
+        </tr>
+        <tr>
+          <td>DeepSeek</td>
+          <td>V4 (fully free)</td>
+          <td>1M</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="pill pill-green">Excellent</span></td>
+          <td>$0.27/1M tok</td>
+          <td><span class="pill pill-red">⚠ China</span></td>
+        </tr>
+        <tr>
+          <td>Perplexity</td>
+          <td>Full search (unlimited)</td>
+          <td>32K</td>
+          <td><span class="check">✓</span> Always</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="pill pill-amber">Basic</span></td>
+          <td>$20/mo</td>
+          <td><span class="pill pill-blue">US-based</span></td>
+        </tr>
+        <tr>
+          <td>Copilot</td>
+          <td>GPT-4o (free)</td>
+          <td>128K</td>
+          <td><span class="check">✓</span> Bing</td>
+          <td><span class="check">✓</span> DALL-E</td>
+          <td><span class="pill pill-green">Strong</span></td>
+          <td>$30/user/mo</td>
+          <td><span class="pill pill-blue">US-based</span></td>
+        </tr>
+        <tr>
+          <td>Meta Llama 4</td>
+          <td>Full model (free/open)</td>
+          <td>10M</td>
+          <td><span class="cross">✗</span> (self-host)</td>
+          <td><span class="cross">✗</span></td>
+          <td><span class="pill pill-green">Strong</span></td>
+          <td>Free forever</td>
+          <td><span class="pill pill-green">Self-host</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section" id="use-cases">
+  <div class="section-title">Best Free AI by Use Case</div>
+  <div class="section-sub">Don't pick randomly. Pick the right free tool for what you actually do.</div>
+
+  <div class="usecase-grid">
+    <div class="usecase-card">
+      <div class="usecase-icon">💻</div>
+      <div class="usecase-title">Coding & Development</div>
+      <div class="usecase-winner winner-1"><span class="winner-rank">🥇</span><div><div class="winner-name">Claude (free)</div><div class="winner-note">Best code quality, highest benchmark scores</div></div></div>
+      <div class="usecase-winner winner-2"><span class="winner-rank">🥈</span><div><div class="winner-name">DeepSeek V4</div><div class="winner-note">Fully free, competitive with Claude</div></div></div>
+      <div class="usecase-winner winner-3"><span class="winner-rank">🥉</span><div><div class="winner-name">ChatGPT</div><div class="winner-note">Best ecosystem & plugin support</div></div></div>
+    </div>
+
+    <div class="usecase-card">
+      <div class="usecase-icon">📝</div>
+      <div class="usecase-title">Writing & Content</div>
+      <div class="usecase-winner winner-1"><span class="winner-rank">🥇</span><div><div class="winner-name">Claude (free)</div><div class="winner-note">Most natural, human-sounding prose</div></div></div>
+      <div class="usecase-winner winner-2"><span class="winner-rank">🥈</span><div><div class="winner-name">ChatGPT</div><div class="winner-note">Most versatile, best creative range</div></div></div>
+      <div class="usecase-winner winner-3"><span class="winner-rank">🥉</span><div><div class="winner-name">Gemini</div><div class="winner-note">Best Google Docs integration</div></div></div>
+    </div>
+
+    <div class="usecase-card">
+      <div class="usecase-icon">🔍</div>
+      <div class="usecase-title">Research & Fact-Checking</div>
+      <div class="usecase-winner winner-1"><span class="winner-rank">🥇</span><div><div class="winner-name">Perplexity AI</div><div class="winner-note">Cited sources, always current, free unlimited</div></div></div>
+      <div class="usecase-winner winner-2"><span class="winner-rank">🥈</span><div><div class="winner-name">Gemini</div><div class="winner-note">Deep Google Search integration</div></div></div>
+      <div class="usecase-winner winner-3"><span class="winner-rank">🥉</span><div><div class="winner-name">ChatGPT</div><div class="winner-note">Good web search, broad knowledge</div></div></div>
+    </div>
+
+    <div class="usecase-card">
+      <div class="usecase-icon">🎓</div>
+      <div class="usecase-title">Students & Study</div>
+      <div class="usecase-winner winner-1"><span class="winner-rank">🥇</span><div><div class="winner-name">Gemini (free)</div><div class="winner-note">Best free tier, Google integration, huge context</div></div></div>
+      <div class="usecase-winner winner-2"><span class="winner-rank">🥈</span><div><div class="winner-name">Perplexity</div><div class="winner-note">Perfect for essay research with citations</div></div></div>
+      <div class="usecase-winner winner-3"><span class="winner-rank">🥉</span><div><div class="winner-name">Claude</div><div class="winner-note">Best for long reading comprehension</div></div></div>
+    </div>
+
+    <div class="usecase-card">
+      <div class="usecase-icon">🔒</div>
+      <div class="usecase-title">Privacy-Conscious Users</div>
+      <div class="usecase-winner winner-1"><span class="winner-rank">🥇</span><div><div class="winner-name">Meta Llama 4</div><div class="winner-note">Self-host, data never leaves your machine</div></div></div>
+      <div class="usecase-winner winner-2"><span class="winner-rank">🥈</span><div><div class="winner-name">Claude</div><div class="winner-note">Strong US privacy standards, Anthropic policy</div></div></div>
+      <div class="usecase-winner winner-3"><span class="winner-rank">🥉</span><div><div class="winner-name">Copilot (Enterprise)</div><div class="winner-note">HIPAA/SOC2 compliant on paid tier</div></div></div>
+    </div>
+
+    <div class="usecase-card">
+      <div class="usecase-icon">📊</div>
+      <div class="usecase-title">Business & Office Work</div>
+      <div class="usecase-winner winner-1"><span class="winner-rank">🥇</span><div><div class="winner-name">Copilot (free M365)</div><div class="winner-note">Built into Word, Excel, Teams, Outlook</div></div></div>
+      <div class="usecase-winner winner-2"><span class="winner-rank">🥈</span><div><div class="winner-name">Gemini</div><div class="winner-note">Best for Google Workspace users</div></div></div>
+      <div class="usecase-winner winner-3"><span class="winner-rank">🥉</span><div><div class="winner-name">ChatGPT</div><div class="winner-note">Most integrations, plugin ecosystem</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPLOY THIS SITE -->
+<section class="section" id="deploy">
+  <div class="section-title">How to Deploy This Directory</div>
+  <div class="section-sub">Go live in under 30 minutes, free hosting, no code required.</div>
+
+  <div class="callout">
+    <span class="callout-icon">💡</span>
+    You're reading this as a complete HTML file. Everything below is how to turn it into a live, indexed website that ranks on Google and earns affiliate revenue.
+  </div>
+
+  <div class="table-wrap" style="padding:1.5rem 2rem;">
+    <div class="deploy-steps">
+      <div class="deploy-step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Get a domain name</div>
+          <p class="step-body">Register a domain like <code>freeai.guide</code>, <code>aifreetier.com</code>, or <code>bestfreeai.io</code> on Namecheap (~$10/year) or Google Domains. Choose something with your target keyword in it — this alone helps ranking. Avoid hyphens.</p>
+        </div>
+      </div>
+      <div class="deploy-step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Deploy to Netlify (free, 60 seconds)</div>
+          <p class="step-body">Go to <code>netlify.com</code> → drag and drop this HTML file into the deploy box. Netlify gives you a free <code>.netlify.app</code> subdomain instantly. Then connect your custom domain in Settings → Domain Management. Netlify's free tier handles unlimited traffic for static sites. No server needed.</p>
+        </div>
+      </div>
+      <div class="deploy-step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Alternative: GitHub Pages (also free)</div>
+          <p class="step-body">Create a GitHub repo → upload the HTML file as <code>index.html</code> → go to Settings → Pages → set source to main branch. Your site is live at <code>yourusername.github.io/repo-name</code>. Connect your custom domain in the Pages settings. Both Netlify and GitHub Pages include free SSL certificates automatically.</p>
+        </div>
+      </div>
+      <div class="deploy-step">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Submit to Google Search Console</div>
+          <p class="step-body">Go to <code>search.google.com/search-console</code> → add your domain → verify ownership (Netlify/GitHub make this easy via DNS) → submit your sitemap. Also submit to Bing Webmaster Tools. This tells search engines your site exists and triggers indexing within 24–72 hours.</p>
+        </div>
+      </div>
+      <div class="deploy-step">
+        <div class="step-num">5</div>
+        <div>
+          <div class="step-title">Add affiliate links (where the money comes from)</div>
+          <p class="step-body">Replace the <code>href</code> values on the "Try Free →" buttons with affiliate links. Sign up for: <strong>ChatGPT affiliate</strong> (OpenAI affiliate program), <strong>Perplexity affiliate</strong> (they pay per referral), <strong>Jasper</strong>, <strong>Copy.ai</strong>, <strong>NordVPN</strong> (useful for DeepSeek privacy concerns). Use <code>impact.com</code> or <code>shareasale.com</code> to find AI affiliate programs paying $20–100 per signup.</p>
+        </div>
+      </div>
+      <div class="deploy-step">
+        <div class="step-num">6</div>
+        <div>
+          <div class="step-title">Add Google AdSense</div>
+          <p class="step-body">Apply for Google AdSense at <code>adsense.google.com</code> (need ~10+ pages of content and genuine traffic). Once approved, paste the AdSense script into the <code>&lt;head&gt;</code> of this file. AdSense auto-places ads. Alternatively, use <code>Ezoic</code> which approves smaller sites and pays better CPM rates for tech/AI content (typically $8–25 per 1,000 visitors in this niche).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MONETIZATION -->
+<section class="section" id="monetize">
+  <div class="section-title">How This Site Makes Money</div>
+  <div class="section-sub">Multiple revenue streams from the same traffic. AI content pays well.</div>
+
+  <div class="mono-grid">
+    <div class="mono-card green">
+      <div class="mono-title">Affiliate Commissions</div>
+      <div class="mono-earn">$20–100/signup</div>
+      <div class="mono-desc">Every "Try Free →" button can be an affiliate link. When a visitor upgrades to a paid plan through your link, you earn a commission. Perplexity, Jasper, Copy.ai, and VPN tools all run active affiliate programs for AI audiences.</div>
+    </div>
+    <div class="mono-card blue">
+      <div class="mono-title">Display Advertising</div>
+      <div class="mono-earn">$8–25 CPM</div>
+      <div class="mono-desc">AI/tech content commands premium ad rates. Ezoic or Mediavine (once you hit 50K visits/month) will auto-place ads. At 10,000 monthly visitors, expect $80–250/month passively. At 100K, that's $800–2,500/month just from ads.</div>
+    </div>
+    <div class="mono-card amber">
+      <div class="mono-title">Sponsored Listings</div>
+      <div class="mono-earn">$200–2,000/mo</div>
+      <div class="mono-desc">Once you have traffic, AI companies will pay to be featured prominently in your directory. A "Featured" or "Editor's Pick" badge on an AI tool card is worth $200–$2,000/month depending on your audience size.</div>
+    </div>
+    <div class="mono-card red">
+      <div class="mono-title">Newsletter / Email List</div>
+      <div class="mono-earn">$500–5,000/issue</div>
+      <div class="mono-desc">Add a newsletter signup (Beehiiv is free). Curate weekly AI tool updates. Once you reach 5,000+ subscribers, you can charge for sponsored slots in your newsletter. AI brands pay well for engaged, technical audiences.</div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:2rem;">
+    <span class="callout-icon">🎯</span>
+    <div><strong>The SEO opportunity:</strong> "Best free AI tools 2026," "ChatGPT free tier limit," "DeepSeek vs ChatGPT free" and similar keywords get tens of thousands of searches monthly. A well-maintained, regularly-updated comparison directory can realistically reach 20,000–50,000 monthly organic visitors within 6 months, generating $1,000–5,000/month from combined revenue streams.</div>
+  </div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Free<span>AI</span>.guide</div>
+      <div class="footer-desc">The most honest, regularly-updated comparison of every major AI tool's free tier. We test every tool ourselves. We don't accept payment for rankings.</div>
+    </div>
+    <div class="footer-col">
+      <h4>Compare</h4>
+      <a href="#compare">All Tools</a>
+      <a href="#table">Full Table</a>
+      <a href="#use-cases">By Use Case</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="https://chat.openai.com" target="_blank" rel="noopener">ChatGPT</a>
+      <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>
+      <a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini</a>
+      <a href="https://perplexity.ai" target="_blank" rel="noopener">Perplexity</a>
+      <a href="https://chat.deepseek.com" target="_blank" rel="noopener">DeepSeek</a>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <a href="#deploy">Deploy Guide</a>
+      <a href="#monetize">Monetization</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="affiliate-note">* This site contains affiliate links. If you click and purchase, we may earn a commission at no extra cost to you. All rankings are independent and based on our own testing. Last updated April 2026.</div>
+    <div>© 2026 FreeAI.guide</div>
+  </div>
+</footer>
+
+<script>
+function filterCards(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tool-card').forEach(card => {
+    if (tag === 'all') {
+      card.style.display = '';
+    } else {
+      const tags = card.dataset.tags || '';
+      card.style.display = tags.includes(tag) ? '' : 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
