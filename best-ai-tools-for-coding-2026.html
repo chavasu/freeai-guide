@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best AI Tools for Coding 2026 — 10 Tools Tested by Real Developers</title>
+<meta name="description" content="The 10 best AI coding tools in 2026 — Claude Code, Cursor, GitHub Copilot, Windsurf, DeepSeek and more. Tested in real workflows. Ranked by benchmark scores, pricing, and developer experience.">
+<meta name="keywords" content="best AI tools for coding 2026, best AI coding assistant, Claude Code vs Cursor, GitHub Copilot vs Cursor, AI code editor 2026, best AI for programming, free AI coding tools">
+<meta property="og:title" content="10 Best AI Tools for Coding in 2026 — Ranked by Real Developers">
+<meta property="og:description" content="Claude Code, Cursor, GitHub Copilot, Windsurf — every major AI coding tool tested in real workflows and ranked honestly.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aimoran.com/best-ai-tools-for-coding">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e0e12;--bg2:#16161e;--panel:#1c1c26;--border:#2a2a3a;
+  --ink:#f0f0f8;--ink2:#b0b0c8;--ink3:#6a6a88;
+  --accent:#7c6bff;--accent-bg:rgba(124,107,255,.12);--accent-light:rgba(124,107,255,.25);
+  --green:#22c55e;--green-bg:rgba(34,197,94,.12);
+  --amber:#f59e0b;--amber-bg:rgba(245,158,11,.12);
+  --red:#ef4444;--red-bg:rgba(239,68,68,.12);
+  --blue:#3b82f6;--blue-bg:rgba(59,130,246,.12);
+  --rank1:#ffd700;--rank2:#c0c0c0;--rank3:#cd7f32;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Instrument Sans',sans-serif;font-size:16px;line-height:1.7;}
+
+/* NAV */
+nav{background:rgba(14,14,18,.95);backdrop-filter:blur(12px);padding:0 2rem;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);}
+.nlogo{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--ink);text-decoration:none;}
+.nlogo span{color:#86efac;}
+.nlinks{display:flex;gap:1.5rem;list-style:none;}
+.nlinks a{color:var(--ink3);text-decoration:none;font-size:.78rem;transition:color .2s;}
+.nlinks a:hover{color:var(--ink);}
+.ncta{background:var(--accent);color:#fff!important;padding:.3rem .9rem;border-radius:4px;}
+
+/* HERO */
+.hero{padding:6rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(124,107,255,.15) 0%,transparent 65%);pointer-events:none;}
+/* grid */
+.hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(124,107,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(124,107,255,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+
+.hbadge{display:inline-block;background:var(--accent-bg);border:1px solid var(--accent-light);color:#a89fff;font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.3rem .9rem;border-radius:100px;margin-bottom:1.5rem;position:relative;z-index:1;}
+.hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(2.4rem,7vw,5rem);line-height:.96;letter-spacing:-.04em;color:var(--ink);max-width:860px;margin:0 auto 1.4rem;position:relative;z-index:1;}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,#7c6bff,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hsub{color:var(--ink3);font-size:1.08rem;max-width:580px;margin:0 auto 2.5rem;position:relative;z-index:1;line-height:1.65;}
+
+/* HERO STATS */
+.hstats{display:flex;justify-content:center;gap:0;position:relative;z-index:1;border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:640px;margin:0 auto 2.5rem;}
+.hstat{flex:1;padding:1.2rem 1rem;text-align:center;border-right:1px solid var(--border);}
+.hstat:last-child{border-right:none;}
+.hstat-n{font-family:'Syne',sans-serif;font-weight:800;font-size:1.8rem;line-height:1;margin-bottom:.2rem;color:var(--ink);}
+.hstat-l{font-size:.68rem;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;}
+
+/* TOC */
+.toc-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:.7rem 2rem;display:flex;gap:1rem;overflow-x:auto;position:sticky;top:52px;z-index:90;}
+.toc-bar a{color:var(--ink3);text-decoration:none;font-size:.76rem;white-space:nowrap;padding:.25rem .6rem;border-radius:4px;transition:all .15s;font-family:'JetBrains Mono',monospace;}
+.toc-bar a:hover{background:var(--panel);color:var(--ink);}
+
+/* LAYOUT */
+.container{max-width:1060px;margin:0 auto;padding:0 1.5rem;}
+.section{padding:4rem 0;border-bottom:1px solid var(--border);}
+.section:last-of-type{border-bottom:none;}
+.ey{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;opacity:.8;}
+.st{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-.03em;line-height:1.1;margin-bottom:.6rem;color:var(--ink);}
+.ss{color:var(--ink3);font-size:.92rem;margin-bottom:2rem;max-width:640px;}
+
+/* TOOL CARD */
+.tool-card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:1.4rem;transition:border-color .2s,box-shadow .2s;}
+.tool-card:hover{border-color:rgba(124,107,255,.4);box-shadow:0 0 40px rgba(124,107,255,.08);}
+
+/* RANK BADGE */
+.tc-header{padding:1.5rem 1.8rem 1.2rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:1.2rem;}
+.rank-badge{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;flex-shrink:0;}
+.r1{background:rgba(255,215,0,.15);color:var(--rank1);border:1px solid rgba(255,215,0,.25);}
+.r2{background:rgba(192,192,192,.12);color:var(--rank2);border:1px solid rgba(192,192,192,.2);}
+.r3{background:rgba(205,127,50,.12);color:var(--rank3);border:1px solid rgba(205,127,50,.2);}
+.r4,.r5,.r6,.r7,.r8,.r9,.r10{background:var(--bg2);color:var(--ink3);border:1px solid var(--border);}
+
+.tc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:.8rem;flex-shrink:0;letter-spacing:-.02em;}
+.tc-meta{flex:1;min-width:0;}
+.tc-name{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:-.01em;margin-bottom:.15rem;color:var(--ink);}
+.tc-tagline{font-size:.82rem;color:var(--ink3);}
+.tc-badges{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.5rem;}
+.badge{display:inline-block;padding:.18rem .6rem;border-radius:100px;font-size:.63rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-family:'JetBrains Mono',monospace;}
+.b-free{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.b-paid{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(245,158,11,.2);}
+.b-freemium{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(59,130,246,.2);}
+.b-cat{background:var(--bg2);color:var(--ink3);border:1px solid var(--border);}
+
+.tc-scores{display:flex;flex-direction:column;align-items:flex-end;gap:.2rem;flex-shrink:0;}
+.score-main{font-family:'Syne',sans-serif;font-weight:800;font-size:2.2rem;letter-spacing:-.03em;line-height:1;color:var(--ink);}
+.score-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);}
+.swe-score{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--accent);background:var(--accent-bg);padding:.15rem .5rem;border-radius:4px;border:1px solid var(--accent-light);}
+
+/* BODY */
+.tc-body{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.tc-col{padding:1.3rem 1.8rem;}
+.tc-col:first-child{border-right:1px solid var(--border);}
+.tc-col-title{font-family:'JetBrains Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:.7rem;opacity:.8;}
+.tc-item{display:flex;gap:.6rem;font-size:.84rem;color:var(--ink2);margin-bottom:.5rem;align-items:flex-start;line-height:1.45;}
+.tci{flex-shrink:0;font-size:.8rem;margin-top:.1rem;}
+.yes{color:var(--green);}
+.no{color:var(--red);}
+.mid{color:var(--amber);}
+
+/* SPEC BAR */
+.spec-bars{padding:1rem 1.8rem;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;}
+.spec-item{display:flex;flex-direction:column;gap:.3rem;}
+.spec-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);}
+.spec-val{font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;color:var(--ink);}
+
+/* VERDICT */
+.tc-verdict{padding:1rem 1.8rem;background:var(--bg2);border-top:1px solid var(--border);font-size:.83rem;color:var(--ink3);line-height:1.6;}
+.tc-verdict strong{color:var(--ink);}
+
+/* FOOTER ROW */
+.tc-footer{padding:.9rem 1.8rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.tc-price{font-size:.8rem;color:var(--ink3);}
+.tc-price strong{color:var(--ink);font-family:'Syne',sans-serif;font-weight:700;}
+.tc-cta{background:var(--accent);color:#fff;text-decoration:none;font-size:.78rem;font-weight:500;padding:.4rem 1.1rem;border-radius:6px;transition:background .15s;font-family:'Instrument Sans',sans-serif;}
+.tc-cta:hover{background:#6b5aee;}
+
+/* ICON COLORS */
+.icon-claude{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;}
+.icon-cursor{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#7c6bff;border:1px solid var(--border);}
+.icon-copilot{background:linear-gradient(135deg,#0078d4,#005a9e);color:#fff;}
+.icon-windsurf{background:linear-gradient(135deg,#0ea5e9,#0284c7);color:#fff;}
+.icon-chatgpt{background:linear-gradient(135deg,#10a37f,#0d8a6a);color:#fff;}
+.icon-deepseek{background:linear-gradient(135deg,#4f46e5,#3730a3);color:#fff;}
+.icon-gemini{background:linear-gradient(135deg,#1a73e8,#1558b0);color:#fff;}
+.icon-replit{background:linear-gradient(135deg,#f26207,#d45206);color:#fff;}
+.icon-opencode{background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;}
+.icon-aider{background:linear-gradient(135deg,#6b7280,#4b5563);color:#fff;}
+
+/* BENCHMARK TABLE */
+.bench-table{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--panel);margin:1.5rem 0;}
+table{width:100%;border-collapse:collapse;min-width:560px;}
+thead tr{background:var(--bg2);}
+thead th{padding:.9rem 1.1rem;text-align:left;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);}
+tbody tr{border-bottom:1px solid var(--border);transition:background .12s;}
+tbody tr:hover{background:var(--bg2);}
+tbody tr:last-child{border-bottom:none;}
+td{padding:.8rem 1.1rem;font-size:.84rem;color:var(--ink2);vertical-align:middle;}
+td:first-child{font-weight:500;color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:.8rem;}
+.score-cell{font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;}
+.score-high{color:var(--green);}
+.score-mid{color:var(--amber);}
+.score-low{color:var(--red);}
+.pill{display:inline-block;padding:.15rem .55rem;border-radius:4px;font-size:.68rem;font-weight:600;font-family:'JetBrains Mono',monospace;}
+.pg{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.pa{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(245,158,11,.2);}
+.pr{background:var(--red-bg);color:var(--red);border:1px solid rgba(239,68,68,.2);}
+.pb{background:var(--blue-bg);color:var(--blue);border:1px solid rgba(59,130,246,.2);}
+.pp{background:var(--accent-bg);color:#a89fff;border:1px solid var(--accent-light);}
+
+/* WORKFLOW SECTION */
+.workflow-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:1.5rem 0;}
+.wf-card{background:var(--panel);padding:1.5rem;}
+.wf-title{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:.3rem;}
+.wf-stack{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);margin-bottom:.7rem;}
+.wf-item{font-size:.83rem;color:var(--ink3);margin-bottom:.3rem;display:flex;gap:.5rem;align-items:flex-start;line-height:1.45;}
+.wf-item::before{content:'▸';color:var(--accent);flex-shrink:0;margin-top:.05rem;font-size:.7rem;}
+
+/* CALLOUT */
+.cl{padding:1.2rem 1.6rem;border-radius:8px;display:flex;gap:.8rem;font-size:.88rem;line-height:1.65;margin:1.5rem 0;border:1px solid;}
+.cl.purple{background:var(--accent-bg);border-color:var(--accent-light);color:#c4b5fd;}
+.cl.green{background:var(--green-bg);border-color:rgba(34,197,94,.25);color:#86efac;}
+.cl.amber{background:var(--amber-bg);border-color:rgba(245,158,11,.25);color:#fcd34d;}
+.cl.red{background:var(--red-bg);border-color:rgba(239,68,68,.25);color:#fca5a5;}
+.ci{font-size:1rem;flex-shrink:0;}
+
+/* SCORE BARS */
+.sbar-section{margin:1.5rem 0;}
+.sbar-row{display:flex;align-items:center;gap:.8rem;margin-bottom:.9rem;}
+.sbl{font-size:.8rem;color:var(--ink2);width:150px;flex-shrink:0;}
+.sbt{flex:1;height:6px;background:var(--bg2);border-radius:3px;overflow:hidden;}
+.sbf{height:100%;border-radius:3px;}
+.sbv{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.75rem;width:45px;text-align:right;color:var(--ink3);}
+
+/* USE CASE TABLE */
+.uc-table{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--panel);margin:1.5rem 0;}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);margin-bottom:.5rem;}
+.faq-a{font-size:.87rem;color:var(--ink2);line-height:1.65;}
+
+/* CODE INLINE */
+code{background:var(--bg2);padding:.1rem .4rem;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--accent);}
+
+/* RELATED */
+.rg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.8rem;margin-top:1.5rem;}
+.rc{display:block;background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem;text-decoration:none;transition:all .15s;}
+.rc:hover{border-color:rgba(124,107,255,.4);}
+.rtag{font-family:'JetBrains Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:.3rem;}
+.rtitle{font-weight:500;color:var(--ink);font-size:.88rem;line-height:1.4;}
+
+/* CITE */
+.cite{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;font-size:.74rem;color:var(--ink3);font-family:'JetBrains Mono',monospace;line-height:1.9;margin-top:2rem;}
+.cite h4{font-family:'Syne',sans-serif;font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;color:var(--ink2);margin-bottom:.8rem;}
+.cite a{color:var(--accent);}
+
+/* FOOTER */
+footer{background:var(--bg2);color:var(--ink3);padding:2.5rem 2rem;border-top:1px solid var(--border);}
+.fi{max-width:1060px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;}
+.flogo{font-family:'Syne',sans-serif;font-weight:800;color:var(--ink);font-size:1rem;margin-bottom:.4rem;}
+.flogo span{color:#86efac;}
+.fn{font-size:.75rem;max-width:360px;line-height:1.6;}
+.flinks{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.flinks a{color:var(--ink3);text-decoration:none;font-size:.8rem;}
+.flinks a:hover{color:var(--ink);}
+
+p{color:var(--ink2);margin-bottom:1.2rem;}
+p:last-child{margin-bottom:0;}
+p strong{color:var(--ink);font-weight:500;}
+h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-.01em;margin:1.5rem 0 .6rem;color:var(--ink);}
+
+@media(max-width:680px){.tc-body{grid-template-columns:1fr;}.tc-col:first-child{border-right:none;border-bottom:1px solid var(--border);}.workflow-grid{grid-template-columns:1fr;}.hstats{flex-wrap:wrap;}.spec-bars{grid-template-columns:1fr 1fr;}nav .nlinks{display:none;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nlogo" href="/">Free<span>AI</span>.guide</a>
+  <ul class="nlinks">
+    <li><a href="#rankings">Rankings</a></li>
+    <li><a href="#benchmarks">Benchmarks</a></li>
+    <li><a href="#by-use-case">By Use Case</a></li>
+    <li><a href="#workflows">Workflows</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="/" class="ncta">All Tools →</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hbadge">April 2026 · Real Developer Workflows · 10 Tools Ranked</div>
+  <h1>Best AI Tools<br>for <em>Coding</em> 2026</h1>
+  <p class="hsub">Claude Code, Cursor, GitHub Copilot, Windsurf — every major AI coding tool tested in real development workflows and ranked by actual benchmark performance. No marketing. No sponsor bias.</p>
+  <div class="hstats">
+    <div class="hstat"><div class="hstat-n">10</div><div class="hstat-l">Tools Ranked</div></div>
+    <div class="hstat"><div class="hstat-n">80.8%</div><div class="hstat-l">Top SWE-bench</div></div>
+    <div class="hstat"><div class="hstat-n">95%</div><div class="hstat-l">Devs Use AI Weekly</div></div>
+    <div class="hstat"><div class="hstat-n">$0</div><div class="hstat-l">Min Spend</div></div>
+  </div>
+</div>
+
+<div class="toc-bar">
+  <a href="#tldr">// tl;dr</a>
+  <a href="#rankings">// rankings</a>
+  <a href="#benchmarks">// benchmarks</a>
+  <a href="#by-use-case">// by use case</a>
+  <a href="#workflows">// workflows</a>
+  <a href="#pricing">// pricing</a>
+  <a href="#faq">// faq</a>
+</div>
+
+<div class="container">
+
+<!-- TL;DR -->
+<section class="section" id="tldr">
+  <div class="ey">// tl;dr</div>
+  <div class="st">The verdict in 60 seconds</div>
+
+  <div class="cl purple">
+    <span class="ci">⚡</span>
+    <div><strong>2026 state of AI coding:</strong> 95% of developers now use AI tools weekly. 75% use AI for more than half of their coding. The era of "should I use an AI coding tool?" is over — the question is which combination. Most experienced developers in 2026 use 2–3 tools: an IDE tool for daily coding, and a terminal agent for complex codebase-wide tasks.</div>
+  </div>
+
+  <div class="bench-table">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Tool</th><th>Type</th><th>SWE-bench</th><th>Best For</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🥇 1</td><td>Claude Code</td><td><span class="pill pb">Terminal Agent</span></td><td><span class="score-cell score-high">80.8%</span></td><td>Complex, large codebase tasks</td><td>$20/mo (Pro)</td></tr>
+        <tr><td>🥈 2</td><td>Cursor</td><td><span class="pill pp">AI IDE</span></td><td><span class="score-cell score-high">~78%</span></td><td>Daily IDE experience</td><td>$20/mo (Pro)</td></tr>
+        <tr><td>🥉 3</td><td>GitHub Copilot</td><td><span class="pill pb">Extension</span></td><td><span class="score-cell score-mid">~75%</span></td><td>Autocomplete, enterprise</td><td>$10/mo</td></tr>
+        <tr><td>4</td><td>Windsurf</td><td><span class="pill pp">AI IDE</span></td><td><span class="score-cell score-mid">~73%</span></td><td>Beginners, visual learners</td><td>$15/mo</td></tr>
+        <tr><td>5</td><td>ChatGPT (GPT-5.4)</td><td><span class="pill pa">Chatbot</span></td><td><span class="score-cell score-mid">~80%</span></td><td>Learning, debugging explanations</td><td>$20/mo</td></tr>
+        <tr><td>6</td><td>DeepSeek</td><td><span class="pill pa">Chatbot / API</span></td><td><span class="score-cell score-mid">73.1%</span></td><td>Budget API, non-sensitive code</td><td>Free / $0.27/1M</td></tr>
+        <tr><td>7</td><td>Gemini Code Assist</td><td><span class="pill pb">Extension</span></td><td><span class="score-cell score-mid">63.8%</span></td><td>Google Cloud / Firebase projects</td><td>Free tier</td></tr>
+        <tr><td>8</td><td>OpenCode</td><td><span class="pill pp">OSS Terminal</span></td><td><span class="score-cell score-mid">Varies</span></td><td>Budget power users, no lock-in</td><td>Free (API costs)</td></tr>
+        <tr><td>9</td><td>Replit Agent</td><td><span class="pill pa">Browser IDE</span></td><td><span class="score-cell score-mid">N/A</span></td><td>Beginners, no local setup</td><td>Free / $20/mo</td></tr>
+        <tr><td>10</td><td>Aider</td><td><span class="pill pp">OSS Terminal</span></td><td><span class="score-cell score-mid">Varies</span></td><td>Open-source purists</td><td>Free (API costs)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- RANKINGS -->
+<section class="section" id="rankings">
+  <div class="ey">// full rankings</div>
+  <div class="st">Every tool — tested, ranked, honest</div>
+  <div class="ss">Ranked by real-world performance on complex tasks, not just autocomplete quality. SWE-bench Verified scores where available.</div>
+
+  <!-- CLAUDE CODE -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r1">1</div>
+      <div class="tc-icon icon-claude">CLD</div>
+      <div class="tc-meta">
+        <div class="tc-name">Claude Code — Best Overall</div>
+        <div class="tc-tagline">Anthropic · Terminal-native agentic coding. Understands your entire codebase.</div>
+        <div class="tc-badges">
+          <span class="badge b-paid">$20/mo+</span>
+          <span class="badge b-cat">Terminal Agent</span>
+          <span class="badge b-cat">VS Code</span>
+          <span class="badge b-cat">JetBrains</span>
+          <span class="badge b-cat">Slack</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">9.6</div>
+        <div class="score-label">Overall</div>
+        <div class="swe-score">SWE-bench: 80.8%</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>80.8% SWE-bench Verified — highest commercial coding benchmark</div>
+        <div class="tc-item"><span class="tci yes">✓</span>1M token context — reads 25,000–30,000 lines in a single session</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Autonomous: reads files, runs tests, commits, fixes bugs end-to-end</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Deep git integration — understands your project history and structure</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Agent Teams: multiple Claude instances work in parallel (beta)</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Documented 7-hour autonomous task execution on real projects</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Works in terminal, VS Code, JetBrains, desktop app, and Slack</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Custom slash commands — define reusable workflows for your project</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci no">✗</span>Not designed for fast inline autocomplete — use Cursor or Copilot for that</div>
+        <div class="tc-item"><span class="tci mid">~</span>API pricing model can get expensive for very heavy users</div>
+        <div class="tc-item"><span class="tci mid">~</span>Terminal-first — steeper learning curve than IDE-based tools</div>
+        <div class="tc-item"><span class="tci no">✗</span>No free tier worth calling a free tier — Pro at $20/mo is the real entry</div>
+        <div class="tc-item"><span class="tci mid">~</span>Teams plan caps at 150 seats — not for large enterprises</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">Context Window</div><div class="spec-val">1M tokens</div></div>
+      <div class="spec-item"><div class="spec-label">SWE-bench Score</div><div class="spec-val">80.8%</div></div>
+      <div class="spec-item"><div class="spec-label">Team Pricing</div><div class="spec-val">$25/seat/mo</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose Claude Code:</strong> When you're working on complex, multi-file tasks that require genuine understanding of your whole codebase — large refactors, architecture changes, security audits, test generation for an entire module. It's the tool that handles tasks no other AI coding assistant can. Most experienced developers use it alongside Cursor: Cursor for daily editing flow, Claude Code for the heavy lifting.</div>
+    <div class="tc-footer">
+      <div class="tc-price">Pro: <strong>$20/mo</strong> · Teams: <strong>$25/seat/mo</strong> · API: pay per token</div>
+      <a class="tc-cta" href="https://claude.ai/code" target="_blank" rel="noopener sponsored">Try Claude Code →</a>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r2">2</div>
+      <div class="tc-icon icon-cursor">CUR</div>
+      <div class="tc-meta">
+        <div class="tc-name">Cursor — Best AI IDE</div>
+        <div class="tc-tagline">Anysphere · VS Code fork with AI woven into every layer of the editing experience</div>
+        <div class="tc-badges">
+          <span class="badge b-freemium">Free tier</span>
+          <span class="badge b-cat">AI IDE</span>
+          <span class="badge b-cat">Multi-model</span>
+          <span class="badge b-cat">Agent Mode</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">9.3</div>
+        <div class="score-label">Overall</div>
+        <div class="swe-score">$10B valuation</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Best AI-integrated IDE experience — AI in every keystroke</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Composer: describe a change, it edits multiple files at once</div>
+        <div class="tci yes">✓</span>Supermaven autocomplete: fastest inline suggestions available</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Multi-model: switch between Claude, GPT-5, Gemini per task</div>
+        <div class="tc-item"><span class="tci yes">✓</span>8 parallel cloud agents for simultaneous multi-file work</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Familiar: it's VS Code — 0% learning curve for existing users</div>
+        <div class="tc-item"><span class="tci yes">✓</span>50% of Fortune 500 companies are now using Cursor</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci mid">~</span>Agentic capability less autonomous than Claude Code for complex tasks</div>
+        <div class="tc-item"><span class="tci mid">~</span>Context understanding limited vs Claude Code's 1M window</div>
+        <div class="tc-item"><span class="tci mid">~</span>Free tier hits limits quickly on real projects</div>
+        <div class="tc-item"><span class="tci no">✗</span>No native PR review like Copilot's GitHub integration</div>
+        <div class="tc-item"><span class="tci mid">~</span>Team pricing ($40/seat) is double Copilot's $19/seat</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">IDE Type</div><div class="spec-val">VS Code fork</div></div>
+      <div class="spec-item"><div class="spec-label">Models Supported</div><div class="spec-val">Claude, GPT, Gemini</div></div>
+      <div class="spec-item"><div class="spec-label">Team Pricing</div><div class="spec-val">$40/seat/mo</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose Cursor:</strong> When you want AI embedded in your daily editing workflow without switching to a terminal. If you write code in VS Code today, switching to Cursor is the single highest-leverage change you can make. The $20/month Pro plan gives you a multi-model IDE that handles 80% of typical development work — use Claude Code for the remaining 20% that requires deep codebase reasoning.</div>
+    <div class="tc-footer">
+      <div class="tc-price">Free tier · Pro: <strong>$20/mo</strong> · Team: <strong>$40/seat/mo</strong></div>
+      <a class="tc-cta" href="https://cursor.com" target="_blank" rel="noopener sponsored">Try Cursor →</a>
+    </div>
+  </div>
+
+  <!-- GITHUB COPILOT -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r3">3</div>
+      <div class="tc-icon icon-copilot">GH</div>
+      <div class="tc-meta">
+        <div class="tc-name">GitHub Copilot — Best for Enterprise &amp; Beginners</div>
+        <div class="tc-tagline">Microsoft · Works in every major IDE · 1.8M paying developers · Enterprise-ready</div>
+        <div class="tc-badges">
+          <span class="badge b-freemium">Free tier</span>
+          <span class="badge b-cat">VS Code</span>
+          <span class="badge b-cat">JetBrains</span>
+          <span class="badge b-cat">Neovim</span>
+          <span class="badge b-cat">Xcode</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">8.8</div>
+        <div class="score-label">Overall</div>
+        <div class="swe-score">1.8M developers</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Works in VS Code, JetBrains, Neovim, Xcode, Vim — any editor</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Lowest barrier to entry — install extension, start coding</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Free tier: 2,000 completions + 50 chat messages/month</div>
+        <div class="tc-item"><span class="tci yes">✓</span>GitHub-native: PR summaries, code review, issue-to-PR automation</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Microsoft-backed SOC 2, ISO 27001, IP indemnification</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Pro+ ($39/mo) unlocks Claude Opus 4.6 and o3 reasoning</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Students: free with GitHub Student Developer Pack</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci mid">~</span>Autocomplete slower and less accurate than Cursor's Supermaven</div>
+        <div class="tc-item"><span class="tci mid">~</span>Agent mode less capable than Claude Code or Cursor Composer</div>
+        <div class="tc-item"><span class="tci mid">~</span>Context limited to local file — doesn't understand full codebase</div>
+        <div class="tc-item"><span class="tci no">✗</span>Jack of all trades, master of none — better tools exist per category</div>
+        <div class="tc-item"><span class="tci mid">~</span>46% developer satisfaction — lowest of the three leaders</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">IDE Support</div><div class="spec-val">Any (extension)</div></div>
+      <div class="spec-item"><div class="spec-label">Free Tier</div><div class="spec-val">2,000 completions</div></div>
+      <div class="spec-item"><div class="spec-label">Enterprise</div><div class="spec-val">$39/seat/mo</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose GitHub Copilot:</strong> When you're in a corporate environment that needs enterprise compliance (IP indemnification, audit logs, admin controls), when you use multiple IDEs and need one tool that works everywhere, or when you're just starting with AI coding tools and want the lowest-friction entry point. Also the non-negotiable choice for GitHub-centric workflows: PR review, Copilot Workspace, and issue automation.</div>
+    <div class="tc-footer">
+      <div class="tc-price">Free tier · Pro: <strong>$10/mo</strong> · Business: <strong>$19/seat/mo</strong></div>
+      <a class="tc-cta" href="https://github.com/features/copilot" target="_blank" rel="noopener">Try Copilot →</a>
+    </div>
+  </div>
+
+  <!-- WINDSURF -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r4">4</div>
+      <div class="tc-icon icon-windsurf">WND</div>
+      <div class="tc-meta">
+        <div class="tc-name">Windsurf — Best for Beginners</div>
+        <div class="tc-tagline">Codeium · AI IDE for developers who want Cursor's power with less complexity</div>
+        <div class="tc-badges">
+          <span class="badge b-freemium">Free tier</span>
+          <span class="badge b-cat">AI IDE</span>
+          <span class="badge b-cat">Beginner-friendly</span>
+          <span class="badge b-cat">Cascade Agent</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">8.4</div>
+        <div class="score-label">Overall</div>
+        <div class="swe-score">Best for beginners</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>More intuitive than Cursor for developers new to AI IDEs</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Cascade agent: autonomous multi-file code changes</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Generous free tier — more usable than Cursor's free plan</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Codebase-aware context by default</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Pro at $15/mo — cheaper than Cursor's $20</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci mid">~</span>Raw capability ceiling below Cursor and Claude Code</div>
+        <div class="tc-item"><span class="tci mid">~</span>Smaller community and fewer integrations</div>
+        <div class="tc-item"><span class="tci no">✗</span>Model flexibility limited vs Cursor's multi-model approach</div>
+        <div class="tc-item"><span class="tci mid">~</span>Less polished autocomplete than Cursor's Supermaven</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">Pricing</div><div class="spec-val">$15/mo Pro</div></div>
+      <div class="spec-item"><div class="spec-label">Agent</div><div class="spec-val">Cascade</div></div>
+      <div class="spec-item"><div class="spec-label">Base</div><div class="spec-val">VS Code fork</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose Windsurf:</strong> If you're newer to AI-assisted development and find Cursor's feature density overwhelming. Windsurf delivers 80% of Cursor's capability with a gentler learning curve and a lower price point. It's also a good choice if you want a more generous free tier for evaluating AI IDEs before committing to a subscription.</div>
+    <div class="tc-footer">
+      <div class="tc-price">Free tier · Pro: <strong>$15/mo</strong></div>
+      <a class="tc-cta" href="https://windsurf.com" target="_blank" rel="noopener">Try Windsurf →</a>
+    </div>
+  </div>
+
+  <!-- CHATGPT -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r5">5</div>
+      <div class="tc-icon icon-chatgpt">GPT</div>
+      <div class="tc-meta">
+        <div class="tc-name">ChatGPT (GPT-5.4) — Best for Learning &amp; Debugging</div>
+        <div class="tc-tagline">OpenAI · Conversational coding help. Best for learning why code works, not just what to write.</div>
+        <div class="tc-badges">
+          <span class="badge b-freemium">Free tier</span>
+          <span class="badge b-cat">Chatbot</span>
+          <span class="badge b-cat">Debugging</span>
+          <span class="badge b-cat">Code Review</span>
+          <span class="badge b-cat">Learning</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">8.2</div>
+        <div class="score-label">Coding Score</div>
+        <div class="swe-score">SWE-bench: ~80%</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Best conversational coding explanations — ideal for learning</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Code Interpreter: runs Python, generates charts, analyses data</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Excellent at explaining errors and debugging step by step</div>
+        <div class="tc-item"><span class="tci yes">✓</span>OSWorld desktop automation: 75% — first AI to beat humans</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Free tier with real coding capability</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci no">✗</span>No IDE integration — browser-only, requires copy-pasting</div>
+        <div class="tc-item"><span class="tci no">✗</span>Cannot access your codebase or read project files directly</div>
+        <div class="tc-item"><span class="tci mid">~</span>Context window 128K — smaller than Claude/DeepSeek</div>
+        <div class="tc-item"><span class="tci mid">~</span>Better for explaining code than autonomously writing it</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">Best for</div><div class="spec-val">Learning, debug</div></div>
+      <div class="spec-item"><div class="spec-label">SWE-bench</div><div class="spec-val">~80% (GPT-5.4)</div></div>
+      <div class="spec-item"><div class="spec-label">Pricing</div><div class="spec-val">Free / $20/mo</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose ChatGPT for coding:</strong> Learning to code, debugging an error you don't understand, reviewing code logic, or running data analysis with Python. ChatGPT's strength is its explanation quality — it will not just fix your bug, it will explain why it was wrong and how to avoid it in future. Not suitable as your primary coding tool if you're a professional developer.</div>
+    <div class="tc-footer">
+      <div class="tc-price">Free tier · Plus: <strong>$20/mo</strong></div>
+      <a class="tc-cta" href="https://chat.openai.com" target="_blank" rel="noopener sponsored">Try Free →</a>
+    </div>
+  </div>
+
+  <!-- DEEPSEEK -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r6">6</div>
+      <div class="tc-icon icon-deepseek">DSK</div>
+      <div class="tc-meta">
+        <div class="tc-name">DeepSeek — Best Budget API for Coding</div>
+        <div class="tc-tagline">DeepSeek AI · 90% cheaper API than ChatGPT. Competitive benchmark scores. Serious privacy caveat.</div>
+        <div class="tc-badges">
+          <span class="badge b-free">Fully Free (consumer)</span>
+          <span class="badge b-cat">API</span>
+          <span class="badge b-cat">Reasoning</span>
+          <span class="badge b-cat">Open-source</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">8.0</div>
+        <div class="score-label">Value Score</div>
+        <div class="swe-score">SWE-bench: 73.1%</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>API: $0.27/1M tokens — 90% cheaper than ChatGPT ($2.50/1M)</div>
+        <div class="tc-item"><span class="tci yes">✓</span>HumanEval Python accuracy: 90.3% — beats ChatGPT's 88.4%</div>
+        <div class="tc-item"><span class="tci yes">✓</span>DeepThink: visible chain-of-thought reasoning, free</div>
+        <div class="tc-item"><span class="tci yes">✓</span>1M context window — reads entire large codebases</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Consumer app: completely free, no message limits</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Open-source — self-host for complete data control</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci no">✗</span>⚠️ Cloud API: data stored on servers in China</div>
+        <div class="tc-item"><span class="tci no">✗</span>Banned in multiple countries for government / regulated use</div>
+        <div class="tc-item"><span class="tci mid">~</span>SWE-bench 73.1% — below Claude Code (80.8%) and Cursor (~78%)</div>
+        <div class="tc-item"><span class="tci no">✗</span>No IDE integration — browser or API only</div>
+        <div class="tc-item"><span class="tci mid">~</span>Servers can be slow under heavy load</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">API Input Price</div><div class="spec-val">$0.27/1M tokens</div></div>
+      <div class="spec-item"><div class="spec-label">HumanEval</div><div class="spec-val">90.3%</div></div>
+      <div class="spec-item"><div class="spec-label">Privacy</div><div class="spec-val">⚠️ China servers</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose DeepSeek for coding:</strong> Building cost-sensitive API applications where you process millions of tokens per month — the savings are transformative. Also excellent for personal projects with non-sensitive code, learning, and open-source work. <strong>Never use the cloud version for client code, proprietary algorithms, credentials, or anything commercially sensitive.</strong> Self-hosting solves the privacy concern if you have the infrastructure.</div>
+    <div class="tc-footer">
+      <div class="tc-price"><strong>Free</strong> (consumer) · API: <strong>$0.27/1M</strong> input tokens</div>
+      <a class="tc-cta" href="https://chat.deepseek.com" target="_blank" rel="noopener">Try Free →</a>
+    </div>
+  </div>
+
+  <!-- GEMINI CODE ASSIST -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r7">7</div>
+      <div class="tc-icon icon-gemini">GEM</div>
+      <div class="tc-meta">
+        <div class="tc-name">Gemini Code Assist — Best for Google Cloud</div>
+        <div class="tc-tagline">Google · Native Google Cloud, Firebase, and Android Studio integration</div>
+        <div class="tc-badges">
+          <span class="badge b-freemium">Free tier</span>
+          <span class="badge b-cat">Google Cloud</span>
+          <span class="badge b-cat">Firebase</span>
+          <span class="badge b-cat">Android</span>
+          <span class="badge b-cat">BigQuery</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">7.8</div>
+        <div class="score-label">Overall</div>
+        <div class="swe-score">SWE-bench: 63.8%</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Native BigQuery, Firebase, Android Studio, and Cloud Run integration</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Knows Google Cloud APIs better than any other model</div>
+        <div class="tc-item"><span class="tci yes">✓</span>1M token context window (Gemini 3.1 Pro backbone)</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Free tier available in VS Code and JetBrains</div>
+        <div class="tc-item"><span class="tci yes">✓</span>GPQA reasoning benchmark: 94.3% — strongest science reasoning</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci no">✗</span>SWE-bench 63.8% — notably below Claude Code and Cursor</div>
+        <div class="tc-item"><span class="tci mid">~</span>Best value only if deep in Google Cloud ecosystem</div>
+        <div class="tc-item"><span class="tci mid">~</span>Smaller developer community than Copilot or Cursor</div>
+        <div class="tc-item"><span class="tci no">✗</span>Not the right choice if your stack is AWS or Azure</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">SWE-bench</div><div class="spec-val">63.8%</div></div>
+      <div class="spec-item"><div class="spec-label">Best Platform</div><div class="spec-val">Google Cloud</div></div>
+      <div class="spec-item"><div class="spec-label">Pricing</div><div class="spec-val">Free / Workspace</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose Gemini Code Assist:</strong> Exclusively when your project runs on Google Cloud infrastructure — Firebase, BigQuery, Cloud Run, Android. In that context, Gemini's native platform knowledge gives it a practical advantage no benchmark captures. For everything else, Claude Code or Cursor will outperform it on raw coding quality.</div>
+    <div class="tc-footer">
+      <div class="tc-price">Free tier · Workspace bundle available</div>
+      <a class="tc-cta" href="https://cloud.google.com/gemini/docs/codeassist/overview" target="_blank" rel="noopener">Try Free →</a>
+    </div>
+  </div>
+
+  <!-- OPENCODE -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r8">8</div>
+      <div class="tc-icon icon-opencode">OPC</div>
+      <div class="tc-meta">
+        <div class="tc-name">OpenCode — Best Open-Source Terminal Agent</div>
+        <div class="tc-tagline">Open-source · Claude Code capability at a fraction of the cost. Bring your own API key.</div>
+        <div class="tc-badges">
+          <span class="badge b-free">Free (OSS)</span>
+          <span class="badge b-cat">Terminal Agent</span>
+          <span class="badge b-cat">Any Model</span>
+          <span class="badge b-cat">No Lock-in</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">7.9</div>
+        <div class="score-label">Value Score</div>
+        <div class="swe-score">Model-dependent</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Fully open-source — no vendor lock-in</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Use any model: Claude, GPT, DeepSeek, Gemini, or local</div>
+        <div class="tc-item"><span class="tci yes">✓</span>~90% of Claude Code capability at ~10% of the cost</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Pay only API costs — no subscription fee</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Self-hostable — full data control</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci mid">~</span>Requires technical setup — not plug-and-play</div>
+        <div class="tc-item"><span class="tci mid">~</span>Quality depends entirely on which model API you connect</div>
+        <div class="tc-item"><span class="tci no">✗</span>Smaller community than Claude Code or Cursor</div>
+        <div class="tc-item"><span class="tci mid">~</span>Fewer integrations and IDE plugins</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">License</div><div class="spec-val">Open-source</div></div>
+      <div class="spec-item"><div class="spec-label">Models</div><div class="spec-val">Any provider</div></div>
+      <div class="spec-item"><div class="spec-label">Cost</div><div class="spec-val">API only</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose OpenCode:</strong> When you want Claude Code-level terminal agency but can't justify the subscription cost, or when you need complete model flexibility — use Claude for architecture, DeepSeek for bulk code generation, local Llama for air-gapped environments. Best for technically proficient developers who value control over convenience.</div>
+    <div class="tc-footer">
+      <div class="tc-price"><strong>Free</strong> (open-source) · API costs vary by model</div>
+      <a class="tc-cta" href="https://github.com/sst/opencode" target="_blank" rel="noopener">GitHub →</a>
+    </div>
+  </div>
+
+  <!-- REPLIT -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r9">9</div>
+      <div class="tc-icon icon-replit">RPL</div>
+      <div class="tc-meta">
+        <div class="tc-name">Replit Agent — Best Browser-Based IDE</div>
+        <div class="tc-tagline">Replit · Build entire apps from natural language — no local setup required</div>
+        <div class="tc-badges">
+          <span class="badge b-freemium">Free tier</span>
+          <span class="badge b-cat">Browser IDE</span>
+          <span class="badge b-cat">Full-stack</span>
+          <span class="badge b-cat">No setup</span>
+          <span class="badge b-cat">Deploy</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">7.6</div>
+        <div class="score-label">Overall</div>
+        <div class="swe-score">Best no-setup tool</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Build full web apps from text descriptions — no local setup</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Replit Agent 3: builds entire web applications autonomously</div>
+        <div class="tc-item"><span class="tci yes">✓</span>One-click deployment — code and host in the same platform</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Works on any device — Chromebook, iPad, anything with a browser</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Database, storage, and deployment built-in</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci no">✗</span>Output quality below purpose-built tools like Claude Code or Cursor</div>
+        <div class="tc-item"><span class="tci mid">~</span>Free tier very limited — Agent features require paid plan</div>
+        <div class="tc-item"><span class="tci no">✗</span>Not suitable for large, complex production codebases</div>
+        <div class="tc-item"><span class="tci mid">~</span>Proprietary environment — harder to migrate existing projects</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">Type</div><div class="spec-val">Browser IDE</div></div>
+      <div class="spec-item"><div class="spec-label">Setup Required</div><div class="spec-val">None</div></div>
+      <div class="spec-item"><div class="spec-label">Pricing</div><div class="spec-val">Free / $20/mo</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose Replit:</strong> When you're learning to code and want to build something real without a local development environment setup. Also ideal for rapid prototyping — describe what you want to build and have a working web app in minutes. Not recommended for professional developers with existing projects or complex tech stacks.</div>
+    <div class="tc-footer">
+      <div class="tc-price">Free tier · Core: <strong>$20/mo</strong></div>
+      <a class="tc-cta" href="https://replit.com" target="_blank" rel="noopener">Try Free →</a>
+    </div>
+  </div>
+
+  <!-- AIDER -->
+  <div class="tool-card">
+    <div class="tc-header">
+      <div class="rank-badge r10">10</div>
+      <div class="tc-icon icon-aider">ADR</div>
+      <div class="tc-meta">
+        <div class="tc-name">Aider — Best Open-Source Alternative</div>
+        <div class="tc-tagline">Open-source · Veteran terminal coding agent. Pure open-source. Maximum control.</div>
+        <div class="tc-badges">
+          <span class="badge b-free">Free (OSS)</span>
+          <span class="badge b-cat">Terminal</span>
+          <span class="badge b-cat">Open-source</span>
+          <span class="badge b-cat">Git-native</span>
+        </div>
+      </div>
+      <div class="tc-scores">
+        <div class="score-main">7.4</div>
+        <div class="score-label">OSS Score</div>
+        <div class="swe-score">Model-dependent</div>
+      </div>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col">
+        <div class="tc-col-title">// strengths</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Fully open-source, MIT licence — total transparency</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Mature project with large community and plugins</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Works with any LLM: Claude, GPT, local Ollama models</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Deep git integration — auto-commits each change</div>
+        <div class="tc-item"><span class="tci yes">✓</span>Configurable and scriptable for advanced workflows</div>
+      </div>
+      <div class="tc-col">
+        <div class="tc-col-title">// limitations</div>
+        <div class="tc-item"><span class="tci mid">~</span>Rougher UX than Claude Code or OpenCode</div>
+        <div class="tc-item"><span class="tci mid">~</span>Requires API key setup and comfort with terminal</div>
+        <div class="tc-item"><span class="tci no">✗</span>No GUI — terminal only</div>
+        <div class="tc-item"><span class="tci mid">~</span>Development pace slower than commercial tools</div>
+      </div>
+    </div>
+    <div class="spec-bars">
+      <div class="spec-item"><div class="spec-label">License</div><div class="spec-val">MIT open-source</div></div>
+      <div class="spec-item"><div class="spec-label">Models</div><div class="spec-val">Any (BYOK)</div></div>
+      <div class="spec-item"><div class="spec-label">Stars</div><div class="spec-val">50K+ GitHub</div></div>
+    </div>
+    <div class="tc-verdict"><strong>When to choose Aider:</strong> When you're a terminal-comfortable developer who wants open-source tooling with no vendor dependency — and you're willing to invest setup time for maximum long-term flexibility. Aider with Claude Sonnet via API is a legitimate, cost-effective alternative to a Claude Code subscription for moderate usage.</div>
+    <div class="tc-footer">
+      <div class="tc-price"><strong>Free</strong> (open-source) · API costs vary by model</div>
+      <a class="tc-cta" href="https://aider.chat" target="_blank" rel="noopener">GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BENCHMARKS -->
+<section class="section" id="benchmarks">
+  <div class="ey">// benchmarks</div>
+  <div class="st">Real scores — April 2026</div>
+  <div class="ss">SWE-bench Verified is the industry standard for real-world software engineering tasks. Models above 75% are considered frontier-level.</div>
+
+  <div class="sbar-section">
+    <div class="sbar-row">
+      <div class="sbl">Claude Code (Opus 4.6)</div>
+      <div class="sbt"><div class="sbf" style="width:80.8%;background:linear-gradient(90deg,#d97706,#f59e0b);"></div></div>
+      <div class="sbv" style="color:#f59e0b;">80.8%</div>
+    </div>
+    <div class="sbar-row">
+      <div class="sbl">ChatGPT (GPT-5.4)</div>
+      <div class="sbt"><div class="sbf" style="width:80%;background:linear-gradient(90deg,#10a37f,#22c55e);"></div></div>
+      <div class="sbv" style="color:#22c55e;">~80%</div>
+    </div>
+    <div class="sbar-row">
+      <div class="sbl">Cursor (Claude backbone)</div>
+      <div class="sbt"><div class="sbf" style="width:78%;background:linear-gradient(90deg,#7c6bff,#a855f7);"></div></div>
+      <div class="sbv" style="color:#a89fff;">~78%</div>
+    </div>
+    <div class="sbar-row">
+      <div class="sbl">GitHub Copilot (Pro+)</div>
+      <div class="sbt"><div class="sbf" style="width:75%;background:linear-gradient(90deg,#0078d4,#3b82f6);"></div></div>
+      <div class="sbv" style="color:#60a5fa;">~75%</div>
+    </div>
+    <div class="sbar-row">
+      <div class="sbl">DeepSeek V3.2</div>
+      <div class="sbt"><div class="sbf" style="width:73.1%;background:linear-gradient(90deg,#4f46e5,#7c3aed);"></div></div>
+      <div class="sbv" style="color:#a78bfa;">73.1%</div>
+    </div>
+    <div class="sbar-row">
+      <div class="sbl">Gemini Code Assist</div>
+      <div class="sbt"><div class="sbf" style="width:63.8%;background:linear-gradient(90deg,#1a73e8,#60a5fa);"></div></div>
+      <div class="sbv" style="color:#60a5fa;">63.8%</div>
+    </div>
+  </div>
+
+  <div class="cl purple">
+    <span class="ci">📊</span>
+    <div><strong>Benchmark caveat:</strong> SWE-bench scores above 75% are considered frontier-level — and the gap between tools at this level is much smaller than it looks on a bar chart. In practice, a developer using any top-3 tool will see dramatically better productivity than no AI tool. The real differentiators are workflow integration, context window size, and how well the tool fits your specific tech stack.</div>
+  </div>
+</section>
+
+<!-- BY USE CASE -->
+<section class="section" id="by-use-case">
+  <div class="ey">// by use case</div>
+  <div class="st">Which tool for which situation</div>
+  <div class="ss">The answer changes completely based on what you're building and how you work.</div>
+
+  <div class="bench-table">
+    <table>
+      <thead>
+        <tr><th>Situation</th><th>Best Tool</th><th>Runner-Up</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Large codebase refactoring</td><td>Claude Code</td><td>OpenCode + Claude API</td><td>1M context, true autonomy, best SWE-bench</td></tr>
+        <tr><td>Daily IDE coding flow</td><td>Cursor</td><td>Windsurf</td><td>Best AI-integrated editor, Supermaven autocomplete</td></tr>
+        <tr><td>Corporate / enterprise team</td><td>GitHub Copilot Business</td><td>Cursor (teams)</td><td>SOC 2, IP indemnity, any IDE, MS relationship</td></tr>
+        <tr><td>Students / beginners</td><td>GitHub Copilot (free, .edu)</td><td>Windsurf free</td><td>Free with student email, lowest learning curve</td></tr>
+        <tr><td>Learning why code works</td><td>ChatGPT</td><td>Claude</td><td>Best conversational explanation quality</td></tr>
+        <tr><td>Google Cloud / Firebase</td><td>Gemini Code Assist</td><td>Claude Code</td><td>Native platform knowledge, free tier</td></tr>
+        <tr><td>Cost-sensitive API workloads</td><td>DeepSeek API</td><td>OpenCode + DeepSeek</td><td>$0.27/1M tokens — 90% cheaper than ChatGPT</td></tr>
+        <tr><td>Privacy / air-gapped</td><td>Aider + local Ollama</td><td>OpenCode + local</td><td>Data never leaves your machine</td></tr>
+        <tr><td>No local setup / Chromebook</td><td>Replit Agent</td><td>—</td><td>Browser-based, deploys in one click</td></tr>
+        <tr><td>Python data science / ML</td><td>ChatGPT + Code Interpreter</td><td>Claude Code</td><td>Runs Python, generates charts, analyses data</td></tr>
+        <tr><td>Frontend (React, Next.js)</td><td>Cursor</td><td>GitHub Copilot</td><td>Best JSX/TSX component generation and refactoring</td></tr>
+        <tr><td>Backend (Python, Go, Node)</td><td>Claude Code</td><td>Cursor</td><td>Module relationship understanding, test generation</td></tr>
+        <tr><td>Open-source, no vendor lock-in</td><td>OpenCode</td><td>Aider</td><td>BYOK, any model, fully transparent</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WORKFLOWS -->
+<section class="section" id="workflows">
+  <div class="ey">// developer workflows</div>
+  <div class="st">How professional developers combine these tools in 2026</div>
+  <div class="ss">The most productive developers use 2–3 tools strategically. Here are the setups that real development teams are running.</div>
+
+  <div class="workflow-grid">
+    <div class="wf-card">
+      <div class="wf-title">The Power Stack</div>
+      <div class="wf-stack">Cursor Pro ($20) + Claude Code (Pro $20) = $40/mo</div>
+      <div class="wf-item">Cursor for daily editing — inline suggestions, Composer for medium tasks</div>
+      <div class="wf-item">Claude Code for complex refactoring, architecture, and security audits</div>
+      <div class="wf-item">Most common setup among senior developers in 2026</div>
+      <div class="wf-item">Beats any single $200/mo premium plan in real-world capability</div>
+    </div>
+    <div class="wf-card">
+      <div class="wf-title">The Budget Stack</div>
+      <div class="wf-stack">Copilot Free + OpenCode + DeepSeek API ≈ $5–15/mo</div>
+      <div class="wf-item">GitHub Copilot free tier for autocomplete in VS Code</div>
+      <div class="wf-item">OpenCode connected to DeepSeek API for complex tasks</div>
+      <div class="wf-item">90% of Power Stack capability at 20% of the cost</div>
+      <div class="wf-item">Best for: freelancers, side projects, budget-sensitive teams</div>
+    </div>
+    <div class="wf-card">
+      <div class="wf-title">The Enterprise Stack</div>
+      <div class="wf-stack">GitHub Copilot Business ($19/seat) + Claude Code Teams ($25/seat)</div>
+      <div class="wf-item">Copilot for IDE autocomplete across any editor — all staff</div>
+      <div class="wf-item">Claude Code Teams for engineering leads and senior developers</div>
+      <div class="wf-item">SOC 2 compliance, IP indemnification, admin controls throughout</div>
+      <div class="wf-item">The setup most Fortune 500 engineering teams are converging on</div>
+    </div>
+    <div class="wf-card">
+      <div class="wf-title">The Solo Developer Stack</div>
+      <div class="wf-stack">Cursor Pro ($20/mo) — single tool covers 95% of needs</div>
+      <div class="wf-item">Cursor Composer for multi-file features and components</div>
+      <div class="wf-item">Supermaven autocomplete for day-to-day typing speed</div>
+      <div class="wf-item">Claude API via Cursor for complex architectural reasoning</div>
+      <div class="wf-item">Best ROI for individual developers — one subscription, maximum coverage</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="ey">// pricing comparison</div>
+  <div class="st">Every plan, every price</div>
+
+  <div class="bench-table">
+    <table>
+      <thead>
+        <tr><th>Tool</th><th>Free Tier</th><th>Individual Paid</th><th>Team/Business</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Claude Code</td><td><span class="pill pr">Very limited</span></td><td><span class="pill pa">$20/mo (Pro)</span></td><td><span class="pill pa">$25/seat/mo</span></td><td>Max 150 seats on Teams</td></tr>
+        <tr><td>Cursor</td><td><span class="pill pa">Limited (hits fast)</span></td><td><span class="pill pa">$20/mo (Pro)</span></td><td><span class="pill pr">$40/seat/mo</span></td><td>Most expensive team plan</td></tr>
+        <tr><td>GitHub Copilot</td><td><span class="pill pg">2,000 completions</span></td><td><span class="pill pg">$10/mo (Pro)</span></td><td><span class="pill pa">$19/seat/mo</span></td><td>Cheapest individual &amp; team</td></tr>
+        <tr><td>Windsurf</td><td><span class="pill pg">Generous free tier</span></td><td><span class="pill pg">$15/mo (Pro)</span></td><td><span class="pill pa">Contact sales</span></td><td>Best free tier value</td></tr>
+        <tr><td>ChatGPT</td><td><span class="pill pa">Limited daily</span></td><td><span class="pill pa">$20/mo (Plus)</span></td><td><span class="pill pa">$25/seat/mo (Team)</span></td><td>No student discount</td></tr>
+        <tr><td>DeepSeek</td><td><span class="pill pg">Unlimited (consumer)</span></td><td><span class="pill pg">Free forever</span></td><td><span class="pill pg">$0.27/1M API tokens</span></td><td>⚠️ China servers</td></tr>
+        <tr><td>Gemini Code Assist</td><td><span class="pill pg">Free in VS Code</span></td><td><span class="pill pg">Free (AI Pro bundle)</span></td><td><span class="pill pa">Workspace pricing</span></td><td>Best free tier for GCP devs</td></tr>
+        <tr><td>OpenCode</td><td><span class="pill pg">Free (OSS)</span></td><td><span class="pill pg">Free + API costs</span></td><td><span class="pill pg">Free + API costs</span></td><td>No subscription ever</td></tr>
+        <tr><td>Replit</td><td><span class="pill pa">Very limited</span></td><td><span class="pill pa">$20/mo (Core)</span></td><td><span class="pill pa">Teams pricing</span></td><td>Includes hosting</td></tr>
+        <tr><td>Aider</td><td><span class="pill pg">Free (OSS)</span></td><td><span class="pill pg">Free + API costs</span></td><td><span class="pill pg">Free + API costs</span></td><td>MIT licence</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cl green">
+    <span class="ci">💰</span>
+    <div><strong>Cost reality check:</strong> Claude Code + Cursor at $40/month is the most effective individual setup in 2026. For teams, GitHub Copilot Business at $19/seat is the most cost-efficient option with enterprise compliance. If budget is the primary constraint, GitHub Copilot free (with .edu email for students) + OpenCode with DeepSeek API gives you ~80% of the top setup's capability for under $10/month.</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="ey">// faq</div>
+  <div class="st">Common questions about AI coding tools</div>
+
+  <div class="faq-item">
+    <div class="faq-q">What is the best AI coding tool in 2026?</div>
+    <div class="faq-a">Claude Code leads on benchmark performance (80.8% SWE-bench Verified) and is the preferred tool for complex, multi-file work. Cursor is the best AI-integrated IDE for daily development. GitHub Copilot is the most accessible and enterprise-ready option. For most professional developers, the best setup is combining two tools: Cursor for day-to-day coding and Claude Code for heavy architectural work. If you need to pick just one, Cursor at $20/month covers the widest range of use cases at the best price.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is there a free AI coding tool worth using?</div>
+    <div class="faq-a">Yes. GitHub Copilot's free tier offers 2,000 completions and 50 chat messages per month — enough for light use. Students with .edu emails get Copilot completely free via the GitHub Student Developer Pack. Gemini Code Assist has a free VS Code extension. DeepSeek is entirely free for consumers (though with privacy concerns). Windsurf has the most generous paid-like free tier of any AI IDE. For students, the GitHub Student Developer Pack is the highest-value starting point.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Cursor vs GitHub Copilot — which is better?</div>
+    <div class="faq-a">For raw capability: Cursor wins. It has faster autocomplete, better multi-file editing (Composer), more powerful agent mode, and model flexibility. For accessibility and enterprise: GitHub Copilot wins. It works in any IDE, has SOC 2 compliance, IP indemnification, and costs half as much per team seat ($19 vs $40). The most common professional setup in 2026 is actually using both — Copilot for a specific IDE where Cursor isn't available, or Cursor as the primary editor with Copilot's GitHub integration for PR review.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What is Claude Code and is it worth it?</div>
+    <div class="faq-a">Claude Code is Anthropic's terminal-native AI coding agent — it runs in your terminal, reads your entire codebase (up to 1M tokens, ~30,000 lines), and autonomously writes, refactors, tests, and commits code. It scored 80.8% on SWE-bench Verified — the highest commercial score available. At $20/month for Pro, it's worth it for developers who regularly tackle complex, multi-file tasks like large refactors, test suite generation, or architectural changes. For simple autocomplete and inline suggestions, Cursor or Copilot are more efficient.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Which AI coding tool is best for Python?</div>
+    <div class="faq-a">For Python specifically: Claude Code (80.8% SWE-bench, strongest on complex multi-file Python projects), ChatGPT with Code Interpreter (runs Python directly, best for data science and analysis), or DeepSeek (HumanEval Python accuracy 90.3%, completely free). For beginners learning Python: ChatGPT provides the best step-by-step explanations. For data scientists: ChatGPT's Code Interpreter handles Pandas, NumPy, and matplotlib directly in the browser.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Do AI coding tools make developers faster?</div>
+    <div class="faq-a">Yes — the data is clear. As of 2026, 95% of developers use AI tools at least weekly, and 75% use AI for more than half their coding work. GitHub's own research showed a 55% productivity increase for Copilot users on specific tasks. The more important question is which tasks AI accelerates most: boilerplate code (50–80% faster), unit test generation (60–70% faster), debugging common errors (40–60% faster). Complex architectural decisions and novel algorithm design still benefit from AI assistance but less dramatically.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I use AI coding tools for free?</div>
+    <div class="faq-a">Yes. GitHub Copilot has a free tier (2,000 completions/month). Students get Copilot completely free with a .edu email via education.github.com. Gemini Code Assist has a free VS Code extension. Windsurf has a generous free tier. DeepSeek is unlimited and free for consumers. OpenCode and Aider are open-source and free — you only pay for the API calls to whichever model you connect. ChatGPT and Claude both have free tiers with limited daily usage. A combination of Copilot free + DeepSeek or Gemini Code Assist covers most coding needs at $0/month.</div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="section" style="border-bottom:none;padding-bottom:1rem;">
+  <div class="st">More Comparisons</div>
+  <div class="rg">
+    <a class="rc" href="/"><div class="rtag">// directory</div><div class="rtitle">All AI Free Tiers Compared — April 2026</div></a>
+    <a class="rc" href="/claude-vs-chatgpt"><div class="rtag">// comparison</div><div class="rtitle">Claude vs ChatGPT — Full Head-to-Head</div></a>
+    <a class="rc" href="/deepseek-vs-chatgpt"><div class="rtag">// comparison</div><div class="rtitle">DeepSeek vs ChatGPT — Free vs Paid</div></a>
+    <a class="rc" href="/best-ai-tools-for-students"><div class="rtag">// guide</div><div class="rtitle">Best AI Tools for Students 2026</div></a>
+    <a class="rc" href="#"><div class="rtag">// coming soon</div><div class="rtitle">Best AI Tools for Writing 2026</div></a>
+    <a class="rc" href="#"><div class="rtag">// coming soon</div><div class="rtitle">Best AI Tools for Marketing 2026</div></a>
+  </div>
+
+  <div class="cite">
+    <h4>// sources — April 2026</h4>
+    [1] NxCode. (2026). <em>Cursor vs Claude Code vs GitHub Copilot 2026: The Ultimate Comparison.</em> <a href="https://www.nxcode.io/resources/news/cursor-vs-claude-code-vs-github-copilot-2026-ultimate-comparison" target="_blank" rel="noopener">nxcode.io</a><br>
+    [2] NxCode. (2026). <em>Best AI Coding Tools 2026: Complete Ranking by Real-World Performance.</em> <a href="https://www.nxcode.io/resources/news/best-ai-for-coding-2026-complete-ranking" target="_blank" rel="noopener">nxcode.io</a><br>
+    [3] AdventurePPC. (2026). <em>Claude Code vs Cursor vs GitHub Copilot: The Definitive AI Coding Tool Comparison.</em> <a href="https://www.adventureppc.com/blog/claude-code-vs-cursor-vs-github-copilot-the-definitive-ai-coding-tool-comparison-for-2026" target="_blank" rel="noopener">adventureppc.com</a><br>
+    [4] CosmicJS. (2026). <em>Claude Code vs GitHub Copilot vs Cursor: Which AI Coding Agent Should You Use?</em> <a href="https://www.cosmicjs.com/blog/claude-code-vs-github-copilot-vs-cursor-which-ai-coding-agent-should-you-use-2026" target="_blank" rel="noopener">cosmicjs.com</a><br>
+    [5] LocalAIMaster. (2026). <em>Best AI Coding Tools 2026: Complete Guide.</em> <a href="https://localaimaster.com/tools/best-ai-coding-tools" target="_blank" rel="noopener">localaimaster.com</a><br>
+    [6] Emergent.sh. (2026). <em>Best AI Coding Tools in 2026 (Tested in Real Workflows).</em> <a href="https://emergent.sh/learn/best-ai-models-for-coding" target="_blank" rel="noopener">emergent.sh</a><br>
+    [7] Gurusup. (2026). <em>Best AI for Coding in 2026: Complete Comparison.</em> <a href="https://gurusup.com/blog/best-ai-for-coding" target="_blank" rel="noopener">gurusup.com</a><br>
+    [8] DEV Community. (2026). <em>Claude Code vs Cursor vs GitHub Copilot: The 2026 AI Coding Tool Showdown.</em> <a href="https://dev.to/alexcloudstar/claude-code-vs-cursor-vs-github-copilot-the-2026-ai-coding-tool-showdown-53n4" target="_blank" rel="noopener">dev.to</a><br>
+    [9] NxCode. (2026). <em>GitHub Copilot vs Cursor 2026: Which AI Code Editor Is Worth $20/mo?</em> <a href="https://www.nxcode.io/resources/news/github-copilot-vs-cursor-2026-which-ai-editor-worth-paying" target="_blank" rel="noopener">nxcode.io</a><br>
+    <br>
+    <em>* Affiliate links present — we earn a small commission if you sign up via our links, at no extra cost to you. All rankings based on independent benchmark data and published developer surveys. SWE-bench scores from official leaderboard. Last updated April 8, 2026.</em>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div class="fi">
+    <div>
+      <div class="flogo">Free<span>AI</span>.guide</div>
+      <div class="fn">Honest AI tool comparisons for developers, students, and professionals. No paid rankings. Tested in real workflows. Updated monthly.</div>
+    </div>
+    <div class="flinks">
+      <a href="/">Home</a>
+      <a href="/claude-vs-chatgpt">Claude vs ChatGPT</a>
+      <a href="/gemini-vs-chatgpt">Gemini vs ChatGPT</a>
+      <a href="/deepseek-vs-chatgpt">DeepSeek vs ChatGPT</a>
+      <a href="/best-ai-tools-for-students">AI for Students</a>
+      <a href="/best-ai-tools-for-coding">AI for Coding</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
